@@ -5,7 +5,7 @@
     <div class="d-none d-md-flex">
       <v-btn text color="#071C87" to="/">Home</v-btn>
       <v-btn text color="#071C87" to="/about-us">About US</v-btn>
-      <v-btn text color="#071C87">Services</v-btn>
+      <v-btn text color="#071C87" to="/services">Services</v-btn>
       <v-btn text color="#071C87">Coverge</v-btn>
       <v-btn text color="#071C87">Contact US</v-btn>
     </div>
