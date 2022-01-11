@@ -144,6 +144,12 @@
 
 <script>
 export default {
+  nuxtI18n: {
+    paths: {
+      en: '/about-us',
+      es: '/sobre'
+    }
+  },
   data: () => ({
     valid: false,
     destinationRules: [(value) => !!value || 'Required.'],
