@@ -1,8 +1,199 @@
 <template>
-  <div>
-    <p>{{ $t('welcome') }}</p>
-    <v-btn @click="$i18n.setLocale('es')">ES</v-btn>
-    <v-btn @click="$i18n.setLocale('en')">EN</v-btn>
+  <div id="home">
+    <v-container>
+      <v-row justify="center" align="center">
+        <v-col class="col-md-8">
+          <h2 class="text-center home-subtitle">
+            We want to be part of your supply and distribution chain!
+          </h2>
+        </v-col>
+      </v-row>
+      <v-row class="my-10">
+        <v-col class="col-12 col-md-6">
+          <v-card class="home-card-bg" elevation="0">
+            <v-card-text>
+              <v-row>
+                <v-col class="col-8">
+                  <v-img
+                    height="320"
+                    src="https://blog.citytroops.com/wp-content/uploads/2021/03/Untitled-design-41.png"
+                  />
+                </v-col>
+                <v-col class="d-flex justify-center flex-column">
+                  <h3 class="card-title-home">Storage</h3>
+                  <v-btn color="#E30707" class="mt-8" text>
+                    View Service
+                  </v-btn>
+                </v-col>
+              </v-row>
+            </v-card-text>
+          </v-card>
+        </v-col>
+        <v-col class="col-12 col-md-6">
+          <v-card class="home-card-bg" elevation="0">
+            <v-card-text>
+              <v-row>
+                <v-col class="col-8">
+                  <v-img
+                    height="320"
+                    src="https://nulinetransport.com/wp-content/uploads/2019/09/NulineSocialShare-1.jpg"
+                  />
+                </v-col>
+                <v-col class="d-flex justify-center flex-column">
+                  <h3 class="card-title-home">Land Transport</h3>
+                  <v-btn color="#E30707" class="mt-8" text>
+                    View Service
+                  </v-btn>
+                </v-col>
+              </v-row>
+            </v-card-text>
+          </v-card>
+        </v-col>
+        <v-col class="col-12 col-md-6">
+          <v-card class="home-card-bg" elevation="0">
+            <v-card-text>
+              <v-row class="home-flex-wrap">
+                <v-col class="col-8">
+                  <v-img
+                    height="320"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmjtV31wOvqAapnpMCQgPcmAlG9g99X_d3zg&usqp=CAU"
+                  />
+                </v-col>
+                <v-col class="d-flex justify-center flex-column">
+                  <h3 class="card-title-home">Transport & Distributiont</h3>
+                  <v-btn color="#E30707" class="mt-8" text>
+                    View Service
+                  </v-btn>
+                </v-col>
+              </v-row>
+            </v-card-text>
+          </v-card>
+        </v-col>
+        <v-col class="col-12 col-md-6">
+          <v-card class="home-card-bg" elevation="0">
+            <v-card-text>
+              <v-row>
+                <v-col class="col-8">
+                  <v-img
+                    height="320"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmjtV31wOvqAapnpMCQgPcmAlG9g99X_d3zg&usqp=CAU"
+                  />
+                </v-col>
+                <v-col class="d-flex justify-center flex-column">
+                  <h3 class="card-title-home">Import & Export</h3>
+                  <v-btn color="#E30707" class="mt-8" text>
+                    View Service
+                  </v-btn>
+                </v-col>
+              </v-row>
+            </v-card-text>
+          </v-card>
+        </v-col>
+      </v-row>
+      <v-row justify="center" align="center" class="my-10">
+        <v-col class="col-md-8">
+          <h2 class="text-center home-subtitle">
+            Reasons why we are your best option!
+          </h2>
+        </v-col>
+      </v-row>
+    </v-container>
+    <v-container class="my-10">
+      <v-row>
+        <v-col class="col-12 col-md-3">
+          <p>
+            Solutions up to scale: We offer experience and flexibility to
+            satisfy any type of project
+          </p>
+        </v-col>
+        <v-col class="col-12 col-md-3">
+          <p>
+            Track & Trace: Constant monitoring of merchandise visualizing load’s
+            location at all times
+          </p>
+        </v-col>
+        <v-col class="col-12 col-md-3">
+          <p>
+            Competitive rates: Maintaining quality in our services every time
+          </p>
+        </v-col>
+        <v-col class="col-12 col-md-3">
+          <p>
+            Guaranteed safety: Making sure our strategic partners comply with
+            our necesary permits in order to be part of our operation and
+            guarantee the safety of your load
+          </p>
+        </v-col>
+      </v-row>
+    </v-container>
+    <div class="home-bg-coverge">
+      <v-container>
+        <v-row align="center" justify="center">
+          <v-col class="col-12 col-md-10">
+            <h3 class="card-title-home">Coverage</h3>
+            <p class="mt-4">Expand your company’s horizons!</p>
+            <v-btn color="#E30707" dark depressed>More info</v-btn>
+          </v-col>
+        </v-row>
+      </v-container>
+    </div>
+
+    <v-container class="my-10">
+      <v-row justify="center" align="center">
+        <v-col class="col-12 col-md-10 mb-10">
+          <v-row>
+            <div class="col-md-6">
+              <h4 class="home-subtitle-1">Contact us</h4>
+              <p class="mt-4">
+                Find out how we can help out and bring solutions to all your
+                logistics needs.
+              </p>
+            </div>
+            <div class="col-md-6">
+              <v-img
+                height="200"
+                src="https://blog.citytroops.com/wp-content/uploads/2021/03/Untitled-design-41.png"
+              />
+            </div>
+          </v-row>
+        </v-col>
+        <v-col class="col-12 col-md-10 mb-10">
+          <v-row>
+            <v-col class="col-md-6">
+              <h4 class="home-subtitle-1">Certified & Safe Transport</h4>
+              <p class="mt-4">
+                We certify only the best carrier in the business to transport
+                our clients loads in a fast & safe way. Want to be an OMNI
+                Carrier?
+              </p>
+            </v-col>
+            <div class="col-md-6">
+              <v-img
+                height="200"
+                src="https://blog.citytroops.com/wp-content/uploads/2021/03/Untitled-design-41.png"
+              />
+            </div>
+          </v-row>
+        </v-col>
+        <v-col class="col-12 col-md-10 mb-10"> </v-col>
+      </v-row>
+    </v-container>
+
+    <v-container class="mb-10">
+      <v-row align="center" justify="center">
+        <v-col class="col-12 col-md-10">
+          <h3 class="home-subtitle-1">
+            We guarantee the safety of your loads by working with today's
+            standard carrier certifications.
+          </h3>
+          <p class="mt-4">
+            We make sure our strategic partners comply with necessary
+            certifications and permits in order to be a part of our operation
+            and offer excellent service.
+          </p>
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
 
@@ -11,23 +202,44 @@ export default {
   nuxtI18n: {
     paths: {
       en: '/home',
-      es: '/inicio'
-    }
+      es: '/inicio',
+    },
   },
   name: 'IndexPage',
 }
 </script>
 <style scoped>
-.color-about-us {
+.home-subtitle {
+  font-size: 48px;
   color: #00126a;
 }
 
-.about-us__text {
-  line-height: 32px;
+.home-subtitle-1 {
+  font-size: 36px;
+  color: #00126a;
 }
 
-.about-us__background-container {
-  padding: 48px 0;
-  background-color: #f4f4f4;
+.home-flex-wrap {
+  flex-wrap: nowrap;
+}
+
+.home-card-bg {
+  background-color: #f2f4f6;
+}
+
+.card-title-home {
+  line-height: normal;
+  color: #00126a;
+  font-size: 32px;
+}
+
+.home-bg-coverge {
+  height: 436px;
+  display: flex;
+  align-items: center;
+  background-color: #f2f4f6;
+  background-position-x: right;
+  background-size: auto 100%;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Worldmap-blank.svg/1280px-Worldmap-blank.svg.png');
 }
 </style>
