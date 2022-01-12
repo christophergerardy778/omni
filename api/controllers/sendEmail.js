@@ -18,16 +18,16 @@ module.exports = (req, res) => {
     text: 'Contenido del email',
   }
 
-  transporter.sendMail(mailOptions, (err) => {
+  transport.sendMail(mailOptions, (err) => {
     if (!err) {
       return res.status(200).json({ ok: true, message: 'OK' })
     }
 
     console.log(err);
 
-    return res.status(500).json({
+    return res.status(200).json({
       ok: false,
-      err,
+      err: err.message,
       error: 'server error',
     })
   })
