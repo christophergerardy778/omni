@@ -2,6 +2,7 @@
 <v-container fluid class="pa-0">
   <v-card
     :height="$vuetify.breakpoint.smAndDown ? '':'346px'"
+    elevation="0"
     color="#F2F4F6"
   >
     <v-card-text class="pa-0">
@@ -76,23 +77,3 @@ export default {
   }
 }
 </script>
-<style scoped>
-  .subTituloSimple {
-    font-size: 24px;
-    color: #071C87;
-    margin: 14px 0 0 12px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    /* padding: 0 0 0 0; */
-    font-weight: 600;
-    line-height: 32px;
-  }
-  .textoSimple {
-    font-size: 16px;
-    line-height: 26px;
-    margin: 8px 0 0 12px;
-    padding-top: 0px;
-    color: black;
-    font-weight: normal;
-  }
-</style>

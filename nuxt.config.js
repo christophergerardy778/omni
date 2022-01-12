@@ -38,7 +38,40 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/i18n',
   ],
+  i18n: {
+    seo: true,
+    parsePages: true,
+    detectBrowserLanguage: {
+      alwaysRedirect: false,
+      fallbackLocale: '',
+      redirectOn: 'root',
+      useCookie: true,
+      cookieCrossOrigin: false,
+      cookieDomain: null,
+      cookieKey: 'i18n_redirected',
+      cookieSecure: false,
+    },
+    rootRedirect: '/en/home',
+    strategy: 'prefix_and_default',
+    locales: ['en', 'es'],
+    vueI18n: {
+      fallbackLocale: 'en',
+      messages: {
+        en: {
+          welcome: 'Welcome',
+        },
+        es: {
+          welcome: 'Bienvenido',
+        },
+      },
+    },
+  },
+  sitemap: {
+    hostname: 'http://localhost:3000',
+    i18n: true,
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
@@ -48,7 +81,7 @@ export default {
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
-    customVariables: ['~/assets/variables.scss'],
+    customVariables: ['~/assets/sass/index.scss'],
     theme: {
       dark: false,
       themes: {
