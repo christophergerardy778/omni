@@ -3,7 +3,7 @@
     <v-container>
       <v-row>
         <v-col class="col-12 pb-0">
-          <img src="~/assets/img/logo.png" width="150" />
+          <img src="~/assets/img/logo_white.png" width="150" />
         </v-col>
         <v-col class="col-12 col-md-3 white--text">
           <p class="mt-4">
