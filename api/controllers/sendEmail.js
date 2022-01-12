@@ -7,7 +7,7 @@ module.exports = (req, res) => {
     service: 'gmail',
     auth: {
       user: 'chrtophergerardy778@gmail.com',
-      pass: 'GEO9900',
+      pass: '123456',
     },
   })
 
