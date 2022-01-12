@@ -100,6 +100,13 @@ export default {
   font-weight: 600;
   line-height: 32px;
 }
+.miniTituloSimple {
+  font-size: 16px;
+  color: #071c87;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+}
 .subTituloMobile {
   font-size: 20px;
   color: #071c87;

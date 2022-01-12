@@ -12,7 +12,7 @@
         >
           <v-row>
             <v-col
-              lg="6"
+              lg="7"
               cols="12"
               :class="$vuetify.breakpoint.smAndDown ? 'text-center' : ''"
             >
