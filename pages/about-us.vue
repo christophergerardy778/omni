@@ -1,211 +1,108 @@
 <template>
-  <div>
-    <div class="text-center header-container">
-      <v-container class="py-10">
+  <v-container
+    fluid
+    class="pa-0 mb-6"
+  >
+  <v-row justify="center">
+      <v-col cols="12">
+        <v-img
+          height="634px"
+          class="align-center"
+          src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+        >
+          <v-row>
+            <v-col
+              lg="6"
+              cols="12"
+              :class="$vuetify.breakpoint.smAndDown ? 'text-center' : ''"
+            >
+              <div
+                v-if="!$vuetify.breakpoint.smAndDown"
+                v-html="txtImg"
+                class="textoImagenPc"
+              ></div>
+              <div
+                v-else
+                v-html="txtImg"
+                class="textoImagenMobile"
+              ></div>
+            </v-col>
+          </v-row>
+        </v-img>
+      </v-col>
+      <v-col
+        cols="12"
+        :class="$vuetify.breakpoint.smAndDown ? 'titulo text-center' : 'tituloSecundario text-center'"
+        :style="'margin-top:' + ($vuetify.breakpoint.smAndDown ? '79px' : '172px')+';'"
+      >
+        About Us
+      </v-col>
+      <v-col
+        lg="10"
+        md="10"
+        sm="11"
+        cols="11"
+        style="margin-top: 90px;"
+      >
         <v-row justify="center">
-          <v-col class="col-md-6">
-            <h1 class="text-header-title white--text">
-              Schedule a <b>call ¡Contact us!</b>
-            </h1>
-          </v-col>
-        </v-row>
-      </v-container>
-    </div>
-    <div class="about-us__background-container">
-      <v-container>
-        <v-row>
-          <v-col class="col-md-4">
-            <h2 class="color-about-us">
-              Do you need to quote a service? Looking to book one of our
-              services? Send us your information and we'll contact you briefly
-            </h2>
-            <p class="mt-8 about-us__text">
-              Contact us to find out how we can help you formulate the solutions
-              to your logistical problems.
-            </p>
-          </v-col>
-          <v-col class="col-md-4">
-            <v-img
-              src="https://img.freepik.com/foto-gratis/mano-persona-sosteniendo-telefono-movil-tienda-ropa_23-2148041841.jpg?size=338&ext=jpg"
+          <v-col
+            v-for="(card, index) in AUCards"
+            :key="index"
+            lg="6"
+            md="6"
+            sm="12"
+            cols="12"
+            style="margin-bottom: 23px;"
+          >
+            <card-about
+              :titulo="card.titulo"
+              :img="card.img"
+              :detalle="card.detalle"
             />
-            <div class="py-4 pl-4">
-              <div class="d-flex align-center">
-                <v-icon color="#E30707">mdi-phone</v-icon>
-                <p class="mb-0 ml-4">(867) 3343939</p>
-              </div>
-
-              <div class="d-flex align-center mt-4">
-                <v-icon color="#E30707">mdi-whatsapp</v-icon>
-                <p class="mb-0 ml-4">+1 (956) 602-5372</p>
-              </div>
-            </div>
           </v-col>
-          <v-col class="col-md-4">
-            <div>
-              <p class="mb-1">Name <span>*</span></p>
-              <v-text-field color="#00126a" outlined dense />
-            </div>
-            <div>
-              <p class="mb-1">Name of company <span>*</span></p>
-              <v-text-field color="#00126a" outlined dense />
-            </div>
-            <div>
-              <p class="mb-1">Email <span>*</span></p>
-              <v-text-field color="#00126a" outlined dense />
-            </div>
-            <div>
-              <p class="mb-1">Telephone <span>*</span></p>
-              <v-text-field color="#00126a" outlined dense />
-            </div>
-            <div>
-              <p class="mb-1">Equipament requiered <span>*</span></p>
-              <v-text-field color="#00126a" outlined dense />
-            </div>
-            <div>
-              <p class="mb-1">Source <span>*</span></p>
-              <v-text-field color="#00126a" outlined dense />
-            </div>
-            <div>
-              <p class="mb-1">Destination <span>*</span></p>
-              <v-text-field color="#00126a" outlined dense />
-            </div>
-            <div>
-              <p class="mb-1">Comments <span>*</span></p>
-              <v-textarea color="#00126a" outlined dense />
-            </div>
-            <div class="d-flex justify-end">
-              <v-btn color="#E30707" dark depressed>more info</v-btn>
-            </div>
+          <v-col cols="12">
+            <omni-about/>
           </v-col>
         </v-row>
-      </v-container>
-    </div>
-    <v-container class="about-us__padding-container">
-      <v-row class="px-4">
-        <v-col class="col-12 col-md-4">
-          <h2 class="color-about-us">
-            Interested in forming part of OMNI as a partner carrier?
-          </h2>
-          <p class="mt-10 about-us__text">
-            We want to build a strong and permanent relationship with people who
-            are passionate about the transportation and logistics industry,
-            become an OMNI Carrier and succeed on your own terms.
-          </p>
-        </v-col>
-        <v-col class="col-12 col-md-8 about-us__background-image">
-          <div class="d-flex justify-end">
-            <div class="about-us__form_background-color">
-              <v-form
-                ref="form"
-                v-model="valid"
-                lazy-validation
-                @submit.prevent="validate"
-              >
-                <div class="about-us__form-container">
-                  <div>
-                    <p class="mb-1 white--text">Destination <span>*</span></p>
-                    <v-text-field
-                      background="white"
-                      outlined
-                      dense
-                      :rules="destinationRules"
-                    />
-                  </div>
-                  <div>
-                    <p class="mb-1 white--text">Phone <span>*</span></p>
-                    <v-text-field color="white" outlined dense />
-                  </div>
-                  <div>
-                    <p class="mb-1 white--text">Email <span>*</span></p>
-                    <v-text-field color="white" outlined dense />
-                  </div>
-                  <div>
-                    <p class="mb-1 white--text">Company <span>*</span></p>
-                    <v-text-field color="white" outlined dense />
-                  </div>
-                  <div>
-                    <p class="mb-1 white--text">Message <span>*</span></p>
-                    <v-textarea color="#00126a" outlined dense />
-                  </div>
-                  <div class="d-flex justify-end">
-                    <v-btn color="#E30707" type="submit" dark depressed
-                      >more info</v-btn
-                    >
-                  </div>
-                </div>
-              </v-form>
-            </div>
-          </div>
-        </v-col>
-      </v-row>
-    </v-container>
-  </div>
+      </v-col>
+  </v-row>
+  </v-container>
 </template>
-
 <script>
+import CardAbout from '@/components/about/CardAbout.vue';
+import OmniAbout from '@/components/about/OmniAbout.vue';
+
 export default {
-  nuxtI18n: {
-    paths: {
-      en: '/about-us',
-      es: '/sobre'
+  components: {
+    CardAbout,
+    OmniAbout,
+  },
+  data() {
+    return {
+      txtImg: `<b>Eficiency</b> in our process <b>Always</b>`,
+      AUCards : [
+        {
+          titulo: 'Our Company',
+          img: 'https://cdn.vuetifyjs.com/images/parallax/material.jpg',
+          detalle: 'Since 2019, we began our journey in establishing our Logistics enterprise Headquarters in Laredo, Tx.',
+        },
+        {
+          titulo: 'Our most important values',
+          img: 'https://cdn.vuetifyjs.com/images/parallax/material.jpg',
+          detalle: 'Omni´s team embody our core values of trust, innovation, expertise and safety.',
+        },
+        {
+          titulo: 'Our vision',
+          img: 'https://cdn.vuetifyjs.com/images/parallax/material.jpg',
+          detalle: 'At OMNI, our vision is to bring compelling value through outsourcing.',
+        },
+        {
+          titulo: 'Our mission',
+          img: 'https://cdn.vuetifyjs.com/images/parallax/material.jpg',
+          detalle: 'Our mission statement says it all: Creating the most efficient transportation network in North America. We continuously look for new ways that our people, process and technology can be used to move freight transportation forward.',
+        },
+      ],
     }
-  },
-  data: () => ({
-    valid: false,
-    destinationRules: [(value) => !!value || 'Required.'],
-  }),
-  methods: {
-    validate() {
-      this.$refs.form.validate()
-    },
-  },
+  }
 }
 </script>
-
-<style scoped lang="scss">
-.color-about-us {
-  color: #00126a;
-}
-
-.header-container {
-  background-color: #071C87;
-}
-
-.text-header-title {
-  font-size: 75px;
-}
-
-.about-us__text {
-  line-height: 32px;
-}
-
-.about-us__background-container {
-  padding: 48px 0;
-  background-color: #f4f4f4;
-}
-
-.about-us__padding-container {
-  padding: 64px 0;
-}
-
-.about-us__form_background-color {
-  background-color: #071c87;
-  width: 60%;
-  border-radius: 8px;
-}
-
-.about-us__form-container {
-  padding: 24px;
-}
-
-.about-us__background-image {
-  background-image: url('https://motoradiesel.com/dev/wp-content/uploads/2019/12/1-7-778x522.jpg');
-  background-size: 100% 100%;
-  background-origin: content-box;
-}
-
-::v-deep .v-input__control > .v-input__slot,
-.v-text-field.v-text-field--enclosed .v-text-field__details {
-  background-color: white;
-}
-</style>

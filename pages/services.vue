@@ -60,7 +60,7 @@
         rates and better service conditions.
       </v-col>
       <v-col
-        lg="10"
+        lg="8"
         md="11"
         sm="11"
         cols="11"
@@ -112,7 +112,7 @@
         We cover the following sectors.
       </v-col>
       <v-col
-        lg="10"
+        lg="8"
         md="10"
         sm="11"
         cols="11"
@@ -340,9 +340,9 @@
   </v-container>
 </template>
 <script>
-import CardServises from '@/components/services/CardServices.vue'
-import CardIndustry from '@/components/services/CardIndustry.vue'
-import CardContactUs from '~/components/services/CardContactUs.vue'
+import CardServises from '@/components/services/CardServices.vue';
+import CardIndustry from '@/components/services/CardIndustry.vue';
+import CardContactUs from '~/components/services/CardContactUs.vue';
 
 export default {
   components: {
@@ -414,54 +414,3 @@ export default {
   },
 }
 </script>
-<style scoped>
-.margenIzquierdo {
-  margin-left: 50px;
-}
-.tituloSecundario {
-  font-size: 48px;
-  color: #071c87;
-  font-weight: 700;
-  line-height: 55px;
-}
-.subTitulo {
-  font-size: 24px;
-  color: #071c87;
-  font-weight: 600;
-  padding: 0 10% 0 10%;
-  margin-top: 49px;
-  line-height: 32px;
-}
-.textoImagenPc {
-  font-size: 75px;
-  color: white;
-  font-weight: 500;
-  line-height: 78px;
-  padding: 0 10% 0 10%;
-  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.82);
-}
-.textoImagenMobile {
-  font-size: 40px;
-  font-weight: 500;
-  line-height: 40px;
-  padding: 0 10% 0 10%;
-  color: white;
-  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.82);
-}
-.parrafo {
-  font-size: 18px;
-  font-weight: normal;
-  padding: 20px 10% 0 10%;
-  line-height: 32px;
-}
-.parrafoTechnology {
-  font-size: 18px;
-  font-weight: normal;
-  line-height: 32px;
-  color: #4d4d4d;
-}
-.marco {
-  border: 1px solid #c9c6c6;
-  margin: 0px 0px 20px 0px;
-}
-</style>

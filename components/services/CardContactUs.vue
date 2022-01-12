@@ -46,19 +46,3 @@ export default {
   },
 }
 </script>
-<style scoped>
-.titulo {
-  color: #00126A;
-  font-size: 30px;
-  font-weight: 700;
-  font-style: normal;
-  line-height: 40px;
-}
-.parrafoContact {
-  color: #4D4D4D;
-  font-size: 18px;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 32px;
-}
-</style>

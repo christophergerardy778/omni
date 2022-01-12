@@ -7,7 +7,7 @@
       <v-btn text color="#071C87" @click="localePathEx('about-us')"
         >About US</v-btn
       >
-      <v-btn text color="#071C87" @click="localePathEx('services')>Services</v-btn>
+      <v-btn text color="#071C87" @click="localePathEx('services')"> Services </v-btn>
       <v-btn text color="#071C87">Coverge</v-btn>
       <v-btn text color="#071C87">Contact US</v-btn>
     </div>
