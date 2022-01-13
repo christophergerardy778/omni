@@ -1,5 +1,15 @@
 <template>
   <div id="home">
+    <div class="home-title-content">
+      <div class="home-title-img">
+        <h2>
+          Logistics services in México and United States
+        </h2>
+        <p>
+          We help you make it possible
+        </p>
+      </div>
+    </div>
     <v-container>
       <v-row justify="center" align="center">
         <v-col class="col-md-8">
@@ -214,6 +224,40 @@ export default {
   color: #00126a;
 }
 
+.home-title-content{
+  align-content: center;
+  height: 100vh;
+  padding-bottom: 2rem;
+
+  text-align: center;
+  letter-spacing: -0.02em;
+
+  color: #FFFFFF;
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.38);
+}
+
+.home-title-content h2{
+  font-style: normal;
+  font-weight: bold;
+  font-size: 56px;
+
+  padding: 7rem 25% 0;
+}
+
+.home-title-content p{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.home-title-img{
+  position: relative;
+  background-image: url("./static/images/imageHome.png");
+  height: 100%;
+  width: 100%;
+  background-position: center;
+}
+
 .home-subtitle-1 {
   font-size: 36px;
   color: #00126a;
@@ -241,5 +285,25 @@ export default {
   background-position-x: right;
   background-size: auto 100%;
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Worldmap-blank.svg/1280px-Worldmap-blank.svg.png');
+}
+
+@media screen and (max-width: 1000px) {
+  .home-title-content h2{
+    padding: 7rem 10% 0;
+    font-size: 48px;
+  }
+  .home-title-content p{
+    padding: 0 10% 0;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .home-title-content h2{
+    padding: 5rem 0 0;
+  }
+  .home-title-content p{
+    padding: 0;
+  }
 }
 </style>
