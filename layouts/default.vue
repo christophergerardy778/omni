@@ -131,5 +131,11 @@ export default {
   color: black;
   font-weight: normal;
 }
+.tituloCreditos {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  font-style: normal;
+}
 </style>
 

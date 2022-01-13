@@ -12,7 +12,11 @@
             where we come from and where we are headed.
           </p>
         </v-col>
-        <v-col class="col-12 col-md-2 offset-md-3 offset-sm0">
+        <v-col class="col-12 col-md-2 offset-md-1 offset-sm0">
+          <img-credits/>
+        </v-col>
+        <!-- <v-col class="col-12 col-md-2 offset-md-3 offset-sm0"> -->
+        <v-col class="col-12 col-md-2">
           <h4 class="white--text">Contact</h4>
           <div class="white--text d-flex align-center mt-4">
             <v-icon color="white">mdi-cellphone</v-icon>
@@ -46,7 +50,12 @@
 </template>
 
 <script>
-export default {}
+import ImgCredits from "@/components/ImgCredits.vue";
+export default {
+  components: {
+    ImgCredits,
+  }
+}
 </script>
 
 <style></style>
