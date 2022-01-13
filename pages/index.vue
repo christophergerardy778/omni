@@ -2,12 +2,8 @@
   <div id="home">
     <div class="home-title-content">
       <div class="home-title-img">
-        <h2>
-          Logistics services in México and United States
-        </h2>
-        <p>
-          We help you make it possible
-        </p>
+        <h2>Logistics services in México and United States</h2>
+        <p>We help you make it possible</p>
       </div>
     </div>
     <v-container>
@@ -23,15 +19,20 @@
           <v-card class="home-card-bg" elevation="0">
             <v-card-text>
               <v-row>
-                <v-col class="col-8">
+                <v-col class="col-12 col-md-8">
                   <v-img
                     height="320"
                     src="https://blog.citytroops.com/wp-content/uploads/2021/03/Untitled-design-41.png"
                   />
                 </v-col>
                 <v-col class="d-flex justify-center flex-column">
-                  <h3 class="card-title-home">Storage</h3>
-                  <v-btn color="#E30707" class="mt-8" text>
+                  <h3 class="card-title-home text-center text-md-left">Storage</h3>
+                  <v-btn
+                    color="#E30707"
+                    class="mt-8"
+                    text
+                    @click="goToServiceSection('storage')"
+                  >
                     View Service
                   </v-btn>
                 </v-col>
@@ -43,15 +44,20 @@
           <v-card class="home-card-bg" elevation="0">
             <v-card-text>
               <v-row>
-                <v-col class="col-8">
+                <v-col class="col-12 col-md-8">
                   <v-img
                     height="320"
                     src="https://nulinetransport.com/wp-content/uploads/2019/09/NulineSocialShare-1.jpg"
                   />
                 </v-col>
                 <v-col class="d-flex justify-center flex-column">
-                  <h3 class="card-title-home">Land Transport</h3>
-                  <v-btn color="#E30707" class="mt-8" text>
+                  <h3 class="card-title-home text-center text-md-left">Land Transport</h3>
+                  <v-btn
+                    color="#E30707"
+                    class="mt-8"
+                    text
+                    @click="goToServiceSection('land')"
+                  >
                     View Service
                   </v-btn>
                 </v-col>
@@ -63,15 +69,20 @@
           <v-card class="home-card-bg" elevation="0">
             <v-card-text>
               <v-row class="home-flex-wrap">
-                <v-col class="col-8">
+                <v-col class="col-12 col-md-8">
                   <v-img
                     height="320"
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmjtV31wOvqAapnpMCQgPcmAlG9g99X_d3zg&usqp=CAU"
                   />
                 </v-col>
                 <v-col class="d-flex justify-center flex-column">
-                  <h3 class="card-title-home">Transport & Distributiont</h3>
-                  <v-btn color="#E30707" class="mt-8" text>
+                  <h3 class="card-title-home text-center text-md-left">Transport & Distributiont</h3>
+                  <v-btn
+                    color="#E30707"
+                    class="mt-8"
+                    text
+                    @click="goToServiceSection('transport')"
+                  >
                     View Service
                   </v-btn>
                 </v-col>
@@ -83,15 +94,20 @@
           <v-card class="home-card-bg" elevation="0">
             <v-card-text>
               <v-row>
-                <v-col class="col-8">
+                <v-col class="col-12 col-md-8">
                   <v-img
                     height="320"
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmjtV31wOvqAapnpMCQgPcmAlG9g99X_d3zg&usqp=CAU"
                   />
                 </v-col>
                 <v-col class="d-flex justify-center flex-column">
-                  <h3 class="card-title-home">Import & Export</h3>
-                  <v-btn color="#E30707" class="mt-8" text>
+                  <h3 class="card-title-home text-center text-md-left">Import & Export</h3>
+                  <v-btn
+                    color="#E30707"
+                    class="mt-8"
+                    text
+                    @click="goToServiceSection('iae')"
+                  >
                     View Service
                   </v-btn>
                 </v-col>
@@ -113,10 +129,14 @@
         <v-col class="col-12 col-md-3">
           <div class="section">
             <div class="section-badge">
-              <div class="section-badge-img"/>
+              <div class="section-badge-img" />
             </div>
             <div class="section-line">
-              <img src="../static/images/home/line1.png" width="165" height="31"/>
+              <img
+                src="../static/images/home/line1.png"
+                width="165"
+                height="31"
+              />
             </div>
           </div>
           <p class="section-txt">
@@ -127,10 +147,14 @@
         <v-col class="col-12 col-md-3">
           <div class="section">
             <div class="section-badge">
-              <div class="section-badge-img"/>
+              <div class="section-badge-img" />
             </div>
             <div class="section-line">
-              <img src="../static/images/home/line2.png" width="165" height="28"/>
+              <img
+                src="../static/images/home/line2.png"
+                width="165"
+                height="28"
+              />
             </div>
           </div>
           <p class="section-txt">
@@ -141,10 +165,14 @@
         <v-col class="col-12 col-md-3">
           <div class="section">
             <div class="section-badge">
-              <div class="section-badge-img"/>
+              <div class="section-badge-img" />
             </div>
             <div class="section-line">
-              <img src="../static/images/home/line3.png" width="165" height="31"/>
+              <img
+                src="../static/images/home/line3.png"
+                width="165"
+                height="31"
+              />
             </div>
           </div>
           <p class="section-txt">
@@ -154,7 +182,7 @@
         <v-col class="col-12 col-md-3">
           <div class="section">
             <div class="section-badge">
-              <div class="section-badge-img"/>
+              <div class="section-badge-img" />
             </div>
           </div>
           <p class="section-txt">
@@ -184,7 +212,13 @@
             <div>
               <h3 class="card-title-home">Coverage</h3>
               <p class="mt-4">Expand your company’s horizons!</p>
-              <v-btn color="#E30707" dark depressed>More info</v-btn>
+              <v-btn
+                color="#E30707"
+                dark
+                depressed
+                @click="$router.push('coverage')"
+                >More info</v-btn
+              >
             </div>
           </v-col>
         </v-row>
@@ -212,7 +246,13 @@
                 logistics needs.
               </p>
               <div class="target-btn">
-                <v-btn color="#E30707" dark depressed>More info</v-btn>
+                <v-btn
+                  color="#E30707"
+                  dark
+                  depressed
+                  @click="goToContactSection('contact')"
+                  >More info</v-btn
+                >
               </div>
             </div>
             <div class="col-md-6">
@@ -233,7 +273,13 @@
                 Carrier?
               </p>
               <div class="target-btn">
-                <v-btn color="#E30707" dark depressed>More info</v-btn>
+                <v-btn
+                  color="#E30707"
+                  dark
+                  depressed
+                  @click="goToContactSection('join')"
+                  >More info</v-btn
+                >
               </div>
             </v-col>
             <div class="col-md-6">
@@ -275,6 +321,14 @@ export default {
     },
   },
   name: 'IndexPage',
+  methods: {
+    goToServiceSection(sectionName) {
+      this.$router.push({ path: 'services', query: { section: sectionName } })
+    },
+    goToContactSection(sectionName) {
+      this.$router.push({ path: 'contact-us', query: { section: sectionName } })
+    },
+  },
 }
 </script>
 <style scoped>
@@ -283,19 +337,19 @@ export default {
   color: #00126a;
 }
 
-.home-title-content{
+.home-title-content {
   align-content: center;
-  height: 100vh;
+  height: 120vh;
   padding-bottom: 2rem;
 
   text-align: center;
   letter-spacing: -0.02em;
 
-  color: #FFFFFF;
+  color: #ffffff;
   text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.38);
 }
 
-.home-title-content h2{
+.home-title-content h2 {
   font-style: normal;
   font-weight: bold;
   font-size: 56px;
@@ -303,16 +357,17 @@ export default {
   padding: 7rem 25% 0;
 }
 
-.home-title-content p{
+.home-title-content p {
   font-style: normal;
   font-weight: 500;
   font-size: 30px;
 }
 
-.home-title-img{
-  background-image: url("../static/images/home/truckHeader.png");
+.home-title-img {
+  background-image: url('../static/images/home/truckHeader.png');
   height: 100%;
   width: 100%;
+  background-size: 100% 100%;
   background-position: center;
 }
 
@@ -345,87 +400,95 @@ export default {
   background-image: url('../static/images/home/continent.png');
 }
 
-.home-bg-coverge-responsive{
+.home-bg-coverge-responsive {
   display: none;
 }
 
-.section{
+.section {
   display: flex;
   margin-bottom: 2rem;
 }
 
-.section-badge{
-  background: #CCD4FF;
+.section-badge {
+  background: #ccd4ff;
   height: 56px;
   width: 56px;
 
   border-radius: 50px;
 }
 
-.section-badge-img{
+.section-badge-img {
   height: 100%;
   width: 100%;
 
-  background-image: url("../static/images/home/img.png");
+  background-image: url('../static/images/home/img.png');
   background-position: center;
 }
 
-.section-line{
+.section-line {
   max-width: 70%;
   padding: 1rem;
   background-position: center;
 }
 
-.target-btn{
+.target-btn {
   text-align: right;
 }
 
 @media screen and (max-width: 1000px) {
-  .home-title-content h2{
+  .home-title-content h2 {
     padding: 7rem 10% 0;
     font-size: 48px;
   }
-  .home-title-content p{
+  .home-title-content p {
     padding: 0 10% 0;
     font-size: 20px;
   }
 }
 
 @media screen and (max-width: 959px) {
-  .section{
+  .home-flex-wrap {
+    flex-wrap: wrap;
+  }
+
+  .target-btn {
+    text-align: center;
+  }
+
+  .section {
     display: none;
   }
-  .section-txt{
+  .section-txt {
     margin: 0;
     padding: 1rem;
-    background: #F2F4F6;
+    background: #f2f4f6;
     border-radius: 3px;
   }
 
-  .home-bg-coverge{
+  .home-bg-coverge {
     background-position: center;
   }
 
-  .home-bg-coverge div{
+  .home-bg-coverge div {
     display: none;
   }
 
-  .home-bg-coverge-responsive{
+  .home-bg-coverge-responsive {
     display: initial;
     text-align: center;
   }
 
-  .home-bg-coverge-responsive h3{
+  .home-bg-coverge-responsive h3 {
     font-style: normal;
     font-weight: normal;
     font-size: 30px;
     line-height: 35px;
 
     letter-spacing: -1px;
-    color: #00126A;
+    color: #00126a;
   }
 
-  .home-bg-coverge-responsive p{
+  .home-bg-coverge-responsive p {
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -434,15 +497,15 @@ export default {
     text-align: center;
     font-feature-settings: 'salt' on, 'liga' off;
 
-    color: #4D4D4D;
+    color: #4d4d4d;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .home-title-content h2{
+  .home-title-content h2 {
     padding: 5rem 0 0;
   }
-  .home-title-content p{
+  .home-title-content p {
     padding: 0;
   }
 }

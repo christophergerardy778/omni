@@ -251,12 +251,14 @@ export default {
     },
   },
   mounted() {
-    if (this.$route.query.section) {
-      window.scrollTo({
-        top: document.getElementById(this.$route.query.section).offsetTop,
-        behavior: 'smooth',
-      })
-    }
+    setTimeout(() => {
+      if (this.$route.query.section) {
+        window.scrollTo({
+          top: document.getElementById(this.$route.query.section).offsetTop,
+          behavior: 'smooth',
+        })
+      }
+    }, 1000)
   },
   validations: {
     contactUsForm: {
