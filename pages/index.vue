@@ -111,24 +111,53 @@
     <v-container class="my-10">
       <v-row>
         <v-col class="col-12 col-md-3">
-          <p>
+          <div class="section">
+            <div class="section-badge">
+              <div class="section-badge-img"/>
+            </div>
+            <div class="section-line">
+              <img src="../static/images/home/line1.png" width="165" height="31"/>
+            </div>
+          </div>
+          <p class="section-txt">
             Solutions up to scale: We offer experience and flexibility to
             satisfy any type of project
           </p>
         </v-col>
         <v-col class="col-12 col-md-3">
-          <p>
+          <div class="section">
+            <div class="section-badge">
+              <div class="section-badge-img"/>
+            </div>
+            <div class="section-line">
+              <img src="../static/images/home/line2.png" width="165" height="28"/>
+            </div>
+          </div>
+          <p class="section-txt">
             Track & Trace: Constant monitoring of merchandise visualizing load’s
             location at all times
           </p>
         </v-col>
         <v-col class="col-12 col-md-3">
-          <p>
+          <div class="section">
+            <div class="section-badge">
+              <div class="section-badge-img"/>
+            </div>
+            <div class="section-line">
+              <img src="../static/images/home/line3.png" width="165" height="31"/>
+            </div>
+          </div>
+          <p class="section-txt">
             Competitive rates: Maintaining quality in our services every time
           </p>
         </v-col>
         <v-col class="col-12 col-md-3">
-          <p>
+          <div class="section">
+            <div class="section-badge">
+              <div class="section-badge-img"/>
+            </div>
+          </div>
+          <p class="section-txt">
             Guaranteed safety: Making sure our strategic partners comply with
             our necesary permits in order to be part of our operation and
             guarantee the safety of your load
@@ -136,13 +165,27 @@
         </v-col>
       </v-row>
     </v-container>
+
+    <div class="home-bg-coverge-responsive">
+      <v-container>
+        <v-row align="center" justify="center">
+          <v-col class="col-12 col-md-10">
+            <h3 class="card-title-home">Coverage</h3>
+            <p class="mt-4">Expand your company’s horizons!</p>
+          </v-col>
+        </v-row>
+      </v-container>
+    </div>
+
     <div class="home-bg-coverge">
       <v-container>
         <v-row align="center" justify="center">
           <v-col class="col-12 col-md-10">
             <h3 class="card-title-home">Coverage</h3>
             <p class="mt-4">Expand your company’s horizons!</p>
-            <v-btn color="#E30707" dark depressed>More info</v-btn>
+            <div>
+              <v-btn color="#E30707" dark depressed>More info</v-btn>
+            </div>
           </v-col>
         </v-row>
       </v-container>
@@ -251,8 +294,7 @@ export default {
 }
 
 .home-title-img{
-  position: relative;
-  background-image: url("./static/images/imageHome.png");
+  background-image: url("../static/images/home/truckHeader.png");
   height: 100%;
   width: 100%;
   background-position: center;
@@ -284,7 +326,38 @@ export default {
   background-color: #f2f4f6;
   background-position-x: right;
   background-size: auto 100%;
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Worldmap-blank.svg/1280px-Worldmap-blank.svg.png');
+  background-image: url('../static/images/home/continent.png');
+}
+
+.home-bg-coverge-responsive{
+  display: none;
+}
+
+.section{
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.section-badge{
+  background: #CCD4FF;
+  height: 56px;
+  width: 56px;
+
+  border-radius: 50px;
+}
+
+.section-badge-img{
+  height: 100%;
+  width: 100%;
+
+  background-image: url("../static/images/home/img.png");
+  background-position: center;
+}
+
+.section-line{
+  max-width: 70%;
+  padding: 1rem;
+  background-position: center;
 }
 
 @media screen and (max-width: 1000px) {
@@ -295,6 +368,62 @@ export default {
   .home-title-content p{
     padding: 0 10% 0;
     font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  .section{
+    display: none;
+  }
+  .section-txt{
+    margin: 0;
+    padding: 1rem;
+    background: #F2F4F6;
+    border-radius: 3px;
+  }
+
+  .home-bg-coverge{
+    background-position: center;
+  }
+
+  .home-bg-coverge h3{
+    display: none;
+  }
+
+  .home-bg-coverge p{
+    display: none;
+  }
+
+  .home-bg-coverge div{
+    margin-top: 5rem;
+    text-align: center;
+  }
+
+  .home-bg-coverge-responsive{
+    display: initial;
+    text-align: center;
+  }
+
+  .home-bg-coverge-responsive h3{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 35px;
+
+    letter-spacing: -1px;
+    color: #00126A;
+  }
+
+  .home-bg-coverge-responsive p{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 32px;
+
+    text-align: center;
+    font-feature-settings: 'salt' on, 'liga' off;
+
+    color: #4D4D4D;
   }
 }
 
