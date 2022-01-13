@@ -14,7 +14,7 @@
     <div class="about-us__background-container">
       <v-container>
         <v-row>
-          <v-col class="col-md-4">
+          <v-col class="col-12 col-md-4">
             <h2 class="color-about-us">
               Do you need to quote a service? Looking to book one of our
               services? Send us your information and we'll contact you briefly
@@ -24,9 +24,12 @@
               to your logistical problems.
             </p>
           </v-col>
-          <v-col class="col-md-4">
-            <v-img
-              src="https://img.freepik.com/foto-gratis/mano-persona-sosteniendo-telefono-movil-tienda-ropa_23-2148041841.jpg?size=338&ext=jpg"
+          <v-col class="col-12 col-md-4">
+            <img
+              width="339"
+              height="308"
+              class="about-us__image-phone d-block mx-auto"
+              src="~/assets/img/contactusphone.jpg"
             />
             <div class="py-4 pl-4">
               <div class="d-flex align-center">
@@ -40,7 +43,7 @@
               </div>
             </div>
           </v-col>
-          <v-col class="col-md-4">
+          <v-col class="col-12 col-md-4">
             <v-form @submit.prevent="sendContactUsEmail">
               <div>
                 <p class="mb-1">Name <span>*</span></p>
@@ -124,7 +127,7 @@
                 />
               </div>
               <div class="d-flex justify-end">
-                <v-btn color="#E30707" dark depressed type="submit"
+                <v-btn color="#E30707" dark depressed type="submit" :loading="isLoadingContact"
                   >more info</v-btn
                 >
               </div>
@@ -134,7 +137,7 @@
       </v-container>
     </div>
     <v-container class="about-us__padding-container">
-      <v-row class="px-4">
+      <v-row>
         <v-col class="col-12 col-md-4">
           <h2 class="color-about-us">
             Interested in forming part of OMNI as a partner carrier?
@@ -145,8 +148,8 @@
             become an OMNI Carrier and succeed on your own terms.
           </p>
         </v-col>
-        <v-col class="col-12 col-md-8 about-us__background-image">
-          <div class="d-flex justify-end">
+        <v-col class="col-12 col-md-8">
+          <div class="d-flex justify-end about-us__background-image">
             <div class="about-us__form_background-color">
               <v-form @submit.prevent="sendJoinUsEmail">
                 <div class="about-us__form-container">
@@ -184,14 +187,24 @@
                   </div>
                   <div>
                     <p class="mb-1 white--text">Company</p>
-                    <v-text-field color="white" outlined dense />
+                    <v-text-field
+                      color="white"
+                      outlined
+                      dense
+                      v-model="joinUsForm.company"
+                    />
                   </div>
                   <div>
                     <p class="mb-1 white--text">Message</p>
-                    <v-textarea color="#00126a" outlined dense />
+                    <v-textarea
+                      color="#00126a"
+                      outlined
+                      dense
+                      v-model="joinUsForm.message"
+                    />
                   </div>
                   <div class="d-flex justify-end">
-                    <v-btn color="#E30707" type="submit" dark depressed
+                    <v-btn color="#E30707" type="submit" dark depressed :loading="isLoadingJoinUs"
                       >more info</v-btn
                     >
                   </div>
@@ -202,6 +215,16 @@
         </v-col>
       </v-row>
     </v-container>
+    <v-dialog v-model="showDialog" max-width="300">
+      <v-card>
+        <v-card-title>Email sended</v-card-title>
+        <v-card-text>Thank U!</v-card-text>
+        <v-card-actions>
+          <v-spacer />
+          <v-btn color="#071C87" dark depressed @click="closeDialog">OK</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
   </div>
 </template>
 
@@ -210,11 +233,6 @@ import { validationMixin } from 'vuelidate'
 import { required, email, minLength } from 'vuelidate/lib/validators'
 
 export default {
-  async mounted() {
-    const re = await this.$axios.post('/api/email-contact-us');
-    console.log('hola');
-    console.log(re);
-  },
   mixins: [validationMixin],
   nuxtI18n: {
     paths: {
@@ -234,6 +252,9 @@ export default {
     },
   },
   data: () => ({
+    isLoadingContact: false,
+    isLoadingJoinUs: false,
+    showDialog: false,
     contactUsForm: {
       type: 0,
       name: '',
@@ -255,21 +276,33 @@ export default {
     },
   }),
   methods: {
+    sendEmailToContact(form) {
+      return this.$axios
+        .post('/api/email-contact-us', form)
+        .finally(() => (this.showDialog = true))
+    },
     sendJoinUsEmail() {
       this.$v.joinUsForm.$touch()
-      if (this.$v.joinUsForm.invalid) {
-        console.log('pasa')
-      } else {
-        console.log('no pasa')
+      if (!this.$v.joinUsForm.$invalid) {
+        this.isLoadingJoinUs = true
+        this.sendEmailToContact(this.joinUsForm).finally(
+          () => (this.isLoadingJoinUs = false)
+        )
       }
     },
     sendContactUsEmail() {
       this.$v.contactUsForm.$touch()
-      if (this.$v.contactUsForm.invalid) {
-        console.log('pasa')
+      if (!this.$v.contactUsForm.$invalid) {
+        this.isLoadingContact = true
+        this.sendEmailToContact(this.contactUsForm).finally(
+          () => (this.isLoadingContact = false)
+        )
       } else {
-        console.log('no pasa')
+        console.log('no pasa');
       }
+    },
+    closeDialog() {
+      this.showDialog = false
     },
   },
   computed: {
@@ -338,7 +371,8 @@ export default {
 }
 
 .about-us__padding-container {
-  padding: 64px 0;
+  padding-top: 64px;
+  padding-bottom: 64px;
 }
 
 .about-us__form_background-color {
@@ -352,13 +386,27 @@ export default {
 }
 
 .about-us__background-image {
-  background-image: url('https://motoradiesel.com/dev/wp-content/uploads/2019/12/1-7-778x522.jpg');
-  background-size: 100% 100%;
-  background-origin: content-box;
+  background-image: url('~/assets/img/carrier_home.png');
+  background-position-x: 0;
+  background-size: auto 100%;
+}
+
+.about-us__image-phone {
+  object-fit: cover;
 }
 
 ::v-deep .v-input__control > .v-input__slot,
 .v-text-field.v-text-field--enclosed .v-text-field__details {
   background-color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .about-us__form_background-color {
+    width: 100%;
+  }
+
+  .text-header-title {
+    font-size: 36px;
+  }
 }
 </style>
