@@ -253,7 +253,7 @@ export default {
   mounted() {
     if (this.$route.query.section) {
       window.scrollTo({
-        top: document.getElementById('join').offsetTop,
+        top: document.getElementById(this.$route.query.section).offsetTop,
         behavior: 'smooth',
       })
     }

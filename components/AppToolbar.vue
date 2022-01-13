@@ -4,10 +4,18 @@
     <v-spacer />
     <div class="d-none d-md-flex">
       <v-btn text color="#071C87" @click="localePathEx('index')">Home</v-btn>
-      <v-btn text color="#071C87">About US</v-btn>
-      <v-btn text color="#071C87">Services</v-btn>
-      <v-btn text color="#071C87">Coverge</v-btn>
-      <v-btn text color="#071C87" @click="localePathEx('contact-us')">Contact US</v-btn>
+      <v-btn text color="#071C87" @click="localePathEx('about-us')"
+        >About US</v-btn
+      >
+      <v-btn text color="#071C87" @click="localePathEx('services')">
+        Services
+      </v-btn>
+      <v-btn text color="#071C87" @click="localePathEx('coverage')"
+        >Coverge</v-btn
+      >
+      <v-btn text color="#071C87" @click="localePathEx('contact-us')"
+        >Contact US</v-btn
+      >
     </div>
     <v-spacer />
     <div class="d-none d-md-flex app-bar-icon-container">

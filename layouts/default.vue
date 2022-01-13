@@ -28,3 +28,108 @@ export default {
   },
 }
 </script>
+<style>
+.tituloSecundario {
+  font-size: 48px;
+  color: #071c87;
+  font-weight: 700;
+  line-height: 55px;
+}
+.subTitulo {
+  font-size: 24px;
+  color: #071c87;
+  font-weight: 600;
+  padding: 0 10% 0 10%;
+  margin-top: 49px;
+  line-height: 32px;
+}
+.textoImagenPc {
+  font-size: 75px;
+  color: white;
+  font-weight: 500;
+  line-height: 78px;
+  padding: 0 10% 0 10%;
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.82);
+}
+.textoImagenMobile {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 40px;
+  padding: 0 10% 0 10%;
+  color: white;
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.82);
+  margin-bottom: 150px;
+}
+.parrafo {
+  font-size: 18px;
+  font-weight: normal;
+  padding: 20px 10% 0 10%;
+  line-height: 32px;
+}
+.parrafoTechnology {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 32px;
+  color: #4d4d4d;
+}
+.marco {
+  border: 1px solid #c9c6c6;
+  margin: 0px 0px 20px 0px;
+}
+.titulo {
+  color: #00126A;
+  font-size: 30px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 40px;
+}
+.parrafoContact {
+  color: #4D4D4D;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 32px;
+}
+.subTituloSimple {
+  font-size: 24px;
+  color: #071c87;
+  margin: 14px 0 0 12px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  /* padding: 0 0 0 0; */
+  font-weight: 600;
+  line-height: 32px;
+}
+.miniTituloSimple {
+  font-size: 16px;
+  color: #071c87;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+}
+.subTituloMobile {
+  font-size: 20px;
+  color: #071c87;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  font-weight: 600;
+  line-height: 32px;
+}
+.textoSimple {
+  font-size: 16px;
+  line-height: 26px;
+  margin: 8px 0 0 12px;
+  padding-top: 0px;
+  color: black;
+  font-weight: normal;
+}
+.textoMobil {
+  font-size: 18px;
+  line-height: 26px;
+  margin: 8px 0 0 12px;
+  padding-top: 0px;
+  color: black;
+  font-weight: normal;
+}
+</style>
+
