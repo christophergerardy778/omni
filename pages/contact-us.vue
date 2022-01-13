@@ -11,7 +11,7 @@
         </v-row>
       </v-container>
     </div>
-    <div class="about-us__background-container">
+    <div class="about-us__background-container" id="contact">
       <v-container>
         <v-row>
           <v-col class="col-12 col-md-4">
@@ -127,7 +127,12 @@
                 />
               </div>
               <div class="d-flex justify-end">
-                <v-btn color="#E30707" dark depressed type="submit" :loading="isLoadingContact"
+                <v-btn
+                  color="#E30707"
+                  dark
+                  depressed
+                  type="submit"
+                  :loading="isLoadingContact"
                   >more info</v-btn
                 >
               </div>
@@ -148,7 +153,7 @@
             become an OMNI Carrier and succeed on your own terms.
           </p>
         </v-col>
-        <v-col class="col-12 col-md-8">
+        <v-col class="col-12 col-md-8" id="join">
           <div class="d-flex justify-end about-us__background-image">
             <div class="about-us__form_background-color">
               <v-form @submit.prevent="sendJoinUsEmail">
@@ -204,7 +209,12 @@
                     />
                   </div>
                   <div class="d-flex justify-end">
-                    <v-btn color="#E30707" type="submit" dark depressed :loading="isLoadingJoinUs"
+                    <v-btn
+                      color="#E30707"
+                      type="submit"
+                      dark
+                      depressed
+                      :loading="isLoadingJoinUs"
                       >more info</v-btn
                     >
                   </div>
@@ -239,6 +249,14 @@ export default {
       en: '/contact-us',
       es: '/contactanos',
     },
+  },
+  mounted() {
+    if (this.$route.query.section) {
+      window.scrollTo({
+        top: document.getElementById('join').offsetTop,
+        behavior: 'smooth',
+      })
+    }
   },
   validations: {
     contactUsForm: {
@@ -298,7 +316,7 @@ export default {
           () => (this.isLoadingContact = false)
         )
       } else {
-        console.log('no pasa');
+        console.log('no pasa')
       }
     },
     closeDialog() {
