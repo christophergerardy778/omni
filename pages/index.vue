@@ -181,11 +181,21 @@
       <v-container>
         <v-row align="center" justify="center">
           <v-col class="col-12 col-md-10">
-            <h3 class="card-title-home">Coverage</h3>
-            <p class="mt-4">Expand your company’s horizons!</p>
             <div>
+              <h3 class="card-title-home">Coverage</h3>
+              <p class="mt-4">Expand your company’s horizons!</p>
               <v-btn color="#E30707" dark depressed>More info</v-btn>
             </div>
+          </v-col>
+        </v-row>
+      </v-container>
+    </div>
+
+    <div class="home-bg-coverge-responsive">
+      <v-container>
+        <v-row align="center" justify="center">
+          <v-col class="col-12 col-md-10">
+            <v-btn color="#E30707" dark depressed>More info</v-btn>
           </v-col>
         </v-row>
       </v-container>
@@ -201,6 +211,9 @@
                 Find out how we can help out and bring solutions to all your
                 logistics needs.
               </p>
+              <div class="target-btn">
+                <v-btn color="#E30707" dark depressed>More info</v-btn>
+              </div>
             </div>
             <div class="col-md-6">
               <v-img
@@ -219,6 +232,9 @@
                 our clients loads in a fast & safe way. Want to be an OMNI
                 Carrier?
               </p>
+              <div class="target-btn">
+                <v-btn color="#E30707" dark depressed>More info</v-btn>
+              </div>
             </v-col>
             <div class="col-md-6">
               <v-img
@@ -360,6 +376,10 @@ export default {
   background-position: center;
 }
 
+.target-btn{
+  text-align: right;
+}
+
 @media screen and (max-width: 1000px) {
   .home-title-content h2{
     padding: 7rem 10% 0;
@@ -386,17 +406,8 @@ export default {
     background-position: center;
   }
 
-  .home-bg-coverge h3{
-    display: none;
-  }
-
-  .home-bg-coverge p{
-    display: none;
-  }
-
   .home-bg-coverge div{
-    margin-top: 5rem;
-    text-align: center;
+    display: none;
   }
 
   .home-bg-coverge-responsive{
