@@ -194,11 +194,15 @@
         </v-col>
       </v-row>
     </v-container>
+
+    <swiper-certificates/>
   </div>
 </template>
 
 <script>
+import SwiperCertificates from "~/components/SwiperCertificates";
 export default {
+  components: {SwiperCertificates},
   nuxtI18n: {
     paths: {
       en: '/home',
