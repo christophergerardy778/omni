@@ -29,6 +29,10 @@ export default {
 }
 </script>
 <style>
+html, body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
 .tituloSecundario {
   font-size: 48px;
   color: #00126A;

@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'CrosstenSoft';
+  src: url('~/assets/fonts/CrosstenSoftBlack.otf') format('opentype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'CrosstenSoft';
+  src: url('~/assets/fonts/CrosstenSoftMedium.otf') format('opentype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'CrosstenSoft';
+  src: url('~/assets/fonts/CrosstenSoftLight.otf') format('opentype');
+  font-weight: lighter;
+}
+
+* {
+  font-family: 'CrosstenSoft', sans-serif !important;
+}

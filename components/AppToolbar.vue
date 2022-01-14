@@ -97,7 +97,7 @@
           Services
         </v-btn>
         <v-btn text color="#071C87" @click="localePathEx('coverage')"
-        >Coverge</v-btn
+        >Coverage</v-btn
         >
         <!--
         <v-btn text color="#071C87" @click="localePathEx('contact-us')"

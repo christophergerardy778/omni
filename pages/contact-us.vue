@@ -44,13 +44,13 @@
             </div>
           </v-col>
           <v-col class="col-12 col-md-4">
-            <p>
+            <!-- <p>
               <b
                 >By completing this form, I understand that my information will
                 be processed by OMNI WEB as described in its
                 <a href="" class="text-decoration-none">Privacy Notice</a></b
               >
-            </p>
+            </p> -->
             <v-form @submit.prevent="sendContactUsEmail">
               <div>
                 <p class="mb-1">Name <span>*</span></p>
@@ -134,12 +134,16 @@
                 />
               </div>
               <privacy v-model="check1" class="py-0 my-0" :check="true"/>
-              <div class="d-flex justify-end mt-4">
+              <!-- <div class="d-flex justify-end mt-4"> -->
+              <div>
+                <recaptcha @success="setContactUsVerified" size="100" />
+              </div>
+              <div class="d-flex justify-end mt-6">
                 <v-btn
                   color="#E30707"
                   dark
                   depressed
-                  :disabled="!check1"
+                  :disabled="!check1 || isContactLock"
                   type="submit"
                   :loading="isLoadingContact"
                   >Submit</v-btn
@@ -167,7 +171,7 @@
             <div class="about-us__form_background-color">
               <v-form @submit.prevent="sendJoinUsEmail">
                 <div class="about-us__form-container">
-                  <p class="white--text">
+                  <!-- <p class="white--text">
                     <b
                       >By completing this form, I understand that my information
                       will be processed by OMNI WEB as described in its
@@ -175,7 +179,7 @@
                         >Privacy Notice</a
                       ></b
                     >
-                  </p>
+                  </p> -->
                   <div>
                     <p class="mb-1 white--text">Destination</p>
                     <v-text-field
@@ -227,19 +231,22 @@
                     />
                   </div>
                   <privacy v-model="check2" class="py-0 my-0" :check="true" color="white"/>
-                  <div class="d-flex justify-end">
+                  <!-- <div class="d-flex justify-end"> -->
+                  <div>
+                    <recaptcha @success="setJoinUsVerified" size="100" />
+                  </div>
+                  <div class="d-flex justify-end mt-6">
                     <v-btn
                       color="#E30707"
                       type="submit"
                       dark
-                      :disabled="!check2"
+                      :disabled="!check2 || isJoinUsLock"
                       depressed
                       :loading="isLoadingJoinUs"
                       >Sibmit</v-btn
                     >
                   </div>
                 </div>
-                <recaptcha class="mb-6" />
               </v-form>
             </div>
           </div>
@@ -299,6 +306,8 @@ export default {
   data: () => ({
     check1: false,
     check2: false,
+    isContactLock: true,
+    isJoinUsLock: true,
     isLoadingContact: false,
     isLoadingJoinUs: false,
     showDialog: false,
@@ -350,6 +359,13 @@ export default {
     },
     closeDialog() {
       this.showDialog = false
+    },
+    setContactUsVerified() {
+      this.isContactLock = false
+    },
+    setJoinUsVerified() {
+      console.log('magia')
+      this.isJoinUsLock = false
     },
   },
   computed: {
@@ -434,7 +450,7 @@ export default {
 
 .about-us__background-image {
   background-image: url('https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133046/Img%20Omni%20WEB/Pag%20CONTACT%20US-%20contactanos/CARRIER_professional-truck-driver-entering-his-truck-long-vehicle-and-holding-thumbs-up_1_uni6ra.png');
-  background-position-x: 0;
+  background-position-x: -100%;
   background-size: auto 100%;
 }
 
