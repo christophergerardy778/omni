@@ -7,9 +7,6 @@
             <v-list-item-title>
               <div class="navigationDrawer--title">
                 <img src="~/assets/img/logo.png" height="50px" />
-                <v-icon>
-                  mdi-close-circle-outline
-                </v-icon>
               </div>
             </v-list-item-title>
           </v-list-item-content>
@@ -17,7 +14,7 @@
       </v-list>
       <v-list>
         <v-list-item>
-          <v-list-item-content>
+          <v-list-item-content @click="localePathEx('index')">
             <v-btn color="#071C87" block text>
               Home
               <v-spacer/>
@@ -27,7 +24,18 @@
             </v-btn>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item>
+        <v-list-item @click="localePathEx('about-us')">
+          <v-list-item-content>
+            <v-btn color="#071C87" block text>
+              About Us
+              <v-spacer/>
+              <v-icon right dark large color="#DD0003">
+                mdi-chevron-right
+              </v-icon>
+            </v-btn>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item @click="localePathEx('services')">
           <v-list-item-content>
             <v-btn color="#071C87" block text>
               Services
@@ -38,18 +46,7 @@
             </v-btn>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item>
-          <v-list-item-content>
-            <v-btn color="#071C87" block text>
-              Industry
-              <v-spacer/>
-              <v-icon right dark large color="#DD0003">
-                mdi-chevron-right
-              </v-icon>
-            </v-btn>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item>
+        <v-list-item @click="localePathEx('coverage')">
           <v-list-item-content>
             <v-btn color="#071C87" block text>
               Coverage
@@ -74,10 +71,10 @@
                   </v-btn>
                 </template>
                 <v-list>
-                  <v-list-item>
+                  <v-list-item @click="goToContactSection('contact')">
                     <v-list-item-title>Quote</v-list-item-title>
                   </v-list-item>
-                  <v-list-item>
+                  <v-list-item @click="goToContactSection('join')">
                     <v-list-item-title>Omni Carriers</v-list-item-title>
                   </v-list-item>
                 </v-list>
@@ -89,7 +86,7 @@
     </v-navigation-drawer>
 
     <v-app-bar app elevate-on-scroll elevation="1" color="white" fixed>
-      <img src="~/assets/img/logo.png" height="100%" />
+      <img @click="localePathEx('index')" src="~/assets/img/logo.png" height="100%" />
       <v-spacer />
       <div class="d-none d-md-flex">
         <v-btn text color="#071C87" @click="localePathEx('index')">Home</v-btn>
@@ -119,10 +116,10 @@
               </v-btn>
             </template>
             <v-list>
-              <v-list-item>
+              <v-list-item @click="goToContactSection('contact')">
                 <v-list-item-title>Quote</v-list-item-title>
               </v-list-item>
-              <v-list-item>
+              <v-list-item @click="goToContactSection('join')">
                 <v-list-item-title>Omni Carriers</v-list-item-title>
               </v-list-item>
             </v-list>
@@ -167,6 +164,9 @@ export default {
   methods: {
     localePathEx(route) {
       this.$router.push(this.localePath(route))
+    },
+    goToContactSection(sectionName) {
+      this.$router.push({ path: 'contact-us', query: { section: sectionName } })
     },
   },
   data: () => ({

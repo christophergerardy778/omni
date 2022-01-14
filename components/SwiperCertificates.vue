@@ -27,7 +27,7 @@
     <swiper-slide>
       <img src="../static/certificates/logo_oea.png">
     </swiper-slide>
-    <div class="swiper-pagination" slot="pagination"></div>
+    <!-- <div class="swiper-pagination" slot="pagination"></div> -->
   </swiper>
 </template>
 
@@ -45,8 +45,8 @@ export default {
   data() {
     return {
       swiperOption: {
-        slidesPerView: 3,
-        spaceBetween: 30,
+        slidesPerView: this.$vuetify.breakpoint.smAndDown ? 3 : 9,
+        spaceBetween: 50,
       }
     }
   }

@@ -1,11 +1,23 @@
 <template>
   <div id="home">
-    <div class="home-title-content">
+    <!-- <div class="home-title-content">
       <div class="home-title-img">
         <h2>Logistics services in México and United States</h2>
         <p>We help you make it possible</p>
       </div>
+    </div> -->
+    <v-container fluid class="fill-height pa-0">
+      <v-img max-height="858" :aspect-ratio="10/10" src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133094/Img%20Omni%20WEB/Pag%20HOME/Header/service_rgib2n.png">
+        <v-row justify="center">
+          <v-col cols="12">
+            <div class="home-title-content">
+        <h2>Logistics services in México and United States</h2>
+        <p>We help you make it possible</p>
     </div>
+          </v-col>
+        </v-row>
+      </v-img>
+    </v-container>
     <v-container>
       <v-row justify="center" align="center">
         <v-col class="col-md-8">
@@ -204,8 +216,20 @@
         </v-row>
       </v-container>
     </div>
-
-    <div class="home-bg-coverge">
+    <v-container v-if="$vuetify.breakpoint.smAndDown" fluid class="pa-0">
+      <v-row justify="center">
+        <v-col cols="11">
+          <v-img class="align-end" position="20%" :aspect-ratio="5/6" src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642134508/Img%20Omni%20WEB/Pag%20HOME/Seccion%20Coverage/continent_dyobdi.png">
+            <v-row justify="center">
+              <v-col cols="12" class="text-center">
+                <v-btn dark color="#E30707">More info</v-btn>
+              </v-col>
+            </v-row>
+          </v-img>
+        </v-col>
+      </v-row>
+    </v-container>
+    <div v-if="!$vuetify.breakpoint.smAndDown" class="home-bg-coverge">
       <v-container>
         <v-row align="center" justify="center">
           <v-col class="col-12 col-md-10">
@@ -225,7 +249,7 @@
       </v-container>
     </div>
 
-    <div class="home-bg-coverge-responsive">
+    <!-- <div class="home-bg-coverge-responsive">
       <v-container>
         <v-row align="center" justify="center">
           <v-col class="col-12 col-md-10">
@@ -233,10 +257,10 @@
           </v-col>
         </v-row>
       </v-container>
-    </div>
+    </div> -->
 
     <v-container class="my-10">
-      <v-row justify="center" align="center">
+      <v-row v-if="!$vuetify.breakpoint.smAndDown" justify="center" align="center">
         <v-col class="col-12 col-md-10 mb-10">
           <v-row>
             <div class="col-md-6">
@@ -292,6 +316,38 @@
         </v-col>
         <v-col class="col-12 col-md-10 mb-10"> </v-col>
       </v-row>
+      <v-row v-if="$vuetify.breakpoint.smAndDown" justify="center" no-gutters class="marco">
+        <v-col cols="12" class="text-center">
+          <v-img
+                :aspect-ratio="5/5"
+                height="319"
+                src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133103/Img%20Omni%20WEB/Pag%20HOME/Seccion%20Contact%20Us/CONTACT_US_ingles_zxum9o.png"
+              />
+        </v-col>
+        <v-col cols="12" class="text-center subTituloMobile my-4">
+          Contact Us <v-btn class="ml-2" small color="#2E51FF"  @click="localePathEx('contact-us')"> <v-icon color="white">mdi-arrow-right</v-icon></v-btn>
+        </v-col>
+        <v-col cols="10" class="textoMobil my-3 mb-9">
+          Find out how we can help out and bring solutions to all your logistics needs.
+        </v-col>
+      </v-row>
+      <v-row v-if="$vuetify.breakpoint.smAndDown" justify="center" no-gutters class="marco mt-12" style="background-color: #f2f4f6">
+        <v-col cols="12" class="text-center">
+          <v-img
+                :aspect-ratio="5/5"
+                height="319"
+                src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133059/Img%20Omni%20WEB/Pag%20HOME/Seccion%20Cartified%20and%20Safe/Home__Certified_376x214_b8vvbe.png"
+              />
+        </v-col>
+        <v-col cols="12" class="text-center subTituloMobile my-4">
+          Certified & Safe Transport <v-btn class="ml-2" small color="#2E51FF"  @click="goToContactSection('join')"> <v-icon color="white">mdi-arrow-right</v-icon></v-btn>
+        </v-col>
+        <v-col cols="10" class="textoMobil my-3 mb-9">
+          We certify only the best carrier in the business to transport
+          our clients loads in a fast & safe way. Want to be an OMNI
+          Carrier?
+        </v-col>
+      </v-row>
     </v-container>
 
     <v-container class="mb-10">
@@ -310,7 +366,13 @@
       </v-row>
     </v-container>
 
-    <swiper-certificates/>
+    <v-container>
+      <v-row justify="center">
+        <v-col lg="12" md="12" sm="11" cols="11">
+          <swiper-certificates/>
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
 

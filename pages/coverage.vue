@@ -23,7 +23,7 @@
               ></div>
               <div
                 v-else
-                v-html="txtImg"
+                v-html="txtImgMobil"
                 class="textoImagenMobile"
               ></div>
             </v-col>
@@ -157,6 +157,7 @@ export default {
   data() {
     return {
       txtImg: 'We <b>Take</b> your <b>company further</b>',
+      txtImgMobil: 'We <b>Take</b><br> your <b>company <br>further</b>',
       mex: [
         'Nuevo León',
         'Jalisco',

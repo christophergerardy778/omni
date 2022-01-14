@@ -126,14 +126,16 @@
                   v-model="contactUsForm.comments"
                 />
               </div>
-              <div class="d-flex justify-end">
+              <privacy v-model="check1" class="py-0 my-0" :check="true"/>
+              <div class="d-flex justify-end mt-4">
                 <v-btn
                   color="#E30707"
                   dark
                   depressed
+                  :disabled="!check1"
                   type="submit"
                   :loading="isLoadingContact"
-                  >more info</v-btn
+                  >Submit</v-btn
                 >
               </div>
             </v-form>
@@ -208,14 +210,16 @@
                       v-model="joinUsForm.message"
                     />
                   </div>
+                  <privacy v-model="check2" class="py-0 my-0" :check="true" color="white"/>
                   <div class="d-flex justify-end">
                     <v-btn
                       color="#E30707"
                       type="submit"
                       dark
+                      :disabled="!check2"
                       depressed
                       :loading="isLoadingJoinUs"
-                      >more info</v-btn
+                      >Sibmit</v-btn
                     >
                   </div>
                 </div>
@@ -239,10 +243,14 @@
 </template>
 
 <script>
-import { validationMixin } from 'vuelidate'
-import { required, email, minLength } from 'vuelidate/lib/validators'
+import { validationMixin } from 'vuelidate';
+import { required, email, minLength } from 'vuelidate/lib/validators';
+import Privacy from "@/components/Privacy.vue";
 
 export default {
+  components: {
+    Privacy
+  },
   mixins: [validationMixin],
   nuxtI18n: {
     paths: {
@@ -272,6 +280,8 @@ export default {
     },
   },
   data: () => ({
+    check1: false,
+    check2: false,
     isLoadingContact: false,
     isLoadingJoinUs: false,
     showDialog: false,

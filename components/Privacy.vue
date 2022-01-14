@@ -8,12 +8,16 @@
   >
     <template v-slot:activator="{ on, attrs }">
       <h4
+        v-if="!check"
         v-bind="attrs"
         v-on="on"
         class="white--text font-weight-light text-end"
       >
         Notice of Privacy
       </h4>
+      <div v-else :style="`color: ${color}`">
+        <input v-model="acepto" type="checkbox"> I have read and agree the <a v-bind="attrs" v-on="on">privacy policy.</a>
+      </div>
     </template>
     <v-card>
       <v-card-title>
@@ -78,9 +82,20 @@
 </template>
 <script>
 export default {
+  props: {
+    check: {
+      type: Boolean,
+      default: false,
+    },
+    color: {
+      type: String,
+      default: 'black',
+    }
+  },
   data() {
     return {
       dialog: false,
+      acepto: false,
       info1: [
         '<a href="https://www.freepik.es/vectores/camara">Vector de Cámara creado por vectorjuice - www.freepik.es</a>',
         '<a href="https://www.freepik.es/fotos/hombre">Foto de Hombre creado por aleksandarlittlewolf - www.freepik.es</a>',
@@ -107,5 +122,15 @@ export default {
       ],
     }
   },
+  methods: {
+    emitir(value){
+      this.$emit('input', value);
+    }
+  },
+  watch: {
+    acepto(value){
+      this.emitir(value);
+    }
+  }
 }
 </script>

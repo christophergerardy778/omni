@@ -11,7 +11,7 @@
               Find out how we can help out and bring solutions to all your logistic needs.
             </v-col>
             <v-col cols="12" class="text-right">
-              <v-btn dark raised color="#E30707">More info</v-btn>
+              <v-btn dark raised color="#E30707" @click="localePathEx('contact-us')">More info</v-btn>
             </v-col>
           </v-row>
         </v-col>
@@ -32,7 +32,7 @@
           />
     </v-col>
     <v-col cols="11" class="titulo text-center">
-              Contact us <v-btn class="ml-2" small color="#2E51FF"> <v-icon color="white">mdi-arrow-right</v-icon></v-btn>
+              Contact us <v-btn class="ml-2" small color="#2E51FF"  @click="localePathEx('contact-us')"> <v-icon color="white">mdi-arrow-right</v-icon></v-btn>
             </v-col>
             <v-col cols="11" class="parrafoContact">
               Find out how we can help out and bring solutions to all your logistic needs.
@@ -44,5 +44,10 @@ export default {
   data() {
     return {}
   },
+  methods: {
+    localePathEx(route) {
+      this.$router.push(this.localePath(route))
+    },
+  }
 }
 </script>
