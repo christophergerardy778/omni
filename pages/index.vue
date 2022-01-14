@@ -8,12 +8,12 @@
     </div> -->
     <v-container fluid class="pa-0">
       <v-img max-height="858" :aspect-ratio="10/10" src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642178291/Img%20Omni%20WEB/Pag%20HOME/Header/trailer_2_toqakc.png">
-        <v-row justify="center">
+        <v-row justify="center" style="margin-top: -40px;">
           <v-col cols="12">
             <div class="home-title-content">
-        <h2>Logistics services in México and United States</h2>
-        <p>We help you make it possible</p>
-    </div>
+              <h2>Logistics services in México and United States</h2>
+              <p>We help you make it possible</p>
+            </div>
           </v-col>
         </v-row>
       </v-img>
@@ -504,9 +504,8 @@ export default {
 .home-title-content h2 {
   font-style: normal;
   font-weight: bold;
-  font-size: 56px;
-
-  padding: 7rem 25% 0;
+  font-size: 75px;
+  padding: 7rem 15% 0;
 }
 
 .home-title-content p {
@@ -589,12 +588,15 @@ export default {
 
 @media screen and (max-width: 1000px) {
   .home-title-content h2 {
-    padding: 7rem 10% 0;
-    font-size: 48px;
+    padding: 7rem 15% 0;
+    line-height: 35px;
+    font-size: 45px;
   }
   .home-title-content p {
-    padding: 0 10% 0;
-    font-size: 20px;
+    padding: 0 15% 0;
+    margin: 15px 0 0 0;
+    font-size: 22px;
+    line-height: 28px;
   }
 }
 
@@ -667,10 +669,11 @@ export default {
 
 @media screen and (max-width: 600px) {
   .home-title-content h2 {
-    padding: 5rem 0 0;
+    padding: 5rem 10% 0;
+    font-size: 29px;
   }
   .home-title-content p {
-    padding: 0;
+    padding: 0 25% 0;
   }
 
   .home-subtitle {
