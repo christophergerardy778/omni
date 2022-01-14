@@ -21,7 +21,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [{ src: '~/plugins/vuelidate' }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -40,21 +40,19 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/i18n',
   ],
+  serverMiddleware: [{
+    path: '/api',
+    handler: '~/api/index.js'
+  }],
   i18n: {
     seo: true,
     parsePages: true,
-    detectBrowserLanguage: {
-      alwaysRedirect: false,
-      fallbackLocale: '',
-      redirectOn: 'root',
-      useCookie: true,
-      cookieCrossOrigin: false,
-      cookieDomain: null,
-      cookieKey: 'i18n_redirected',
-      cookieSecure: false,
+    defaultLocale: 'en',
+    strategy: 'prefix_except_default',
+    rootRedirect: {
+      statusCode: 301,
+      path: 'home',
     },
-    rootRedirect: '/en/home',
-    strategy: 'prefix_and_default',
     locales: ['en', 'es'],
     vueI18n: {
       fallbackLocale: 'en',
