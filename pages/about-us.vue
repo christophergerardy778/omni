@@ -60,7 +60,7 @@
               :detalle="card.detalle"
             />
           </v-col>
-          <v-col cols="12">
+          <v-col cols="12" style="margin: 80px 0 40px 0">
             <omni-about/>
           </v-col>
         </v-row>

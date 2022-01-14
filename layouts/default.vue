@@ -31,13 +31,13 @@ export default {
 <style>
 .tituloSecundario {
   font-size: 48px;
-  color: #071c87;
+  color: #00126A;
   font-weight: 700;
   line-height: 55px;
 }
 .subTitulo {
   font-size: 24px;
-  color: #071c87;
+  color: #00126A;
   font-weight: 600;
   padding: 0 10% 0 10%;
   margin-top: 49px;
@@ -92,7 +92,7 @@ export default {
 }
 .subTituloSimple {
   font-size: 24px;
-  color: #071c87;
+  color: #00126A;
   margin: 14px 0 0 12px;
   padding-top: 0px;
   padding-bottom: 0px;
@@ -102,14 +102,14 @@ export default {
 }
 .miniTituloSimple {
   font-size: 16px;
-  color: #071c87;
+  color: #00126A;
   font-style: normal;
   font-weight: 700;
   line-height: 20px;
 }
 .subTituloMobile {
   font-size: 20px;
-  color: #071c87;
+  color: #00126A;
   padding-top: 0px;
   padding-bottom: 0px;
   font-weight: 600;

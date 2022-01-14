@@ -44,7 +44,7 @@
           <v-row no-gutters style="margin-bottom: 48%;">
             <v-col
               cols="12"
-              class="text-center titulo"
+              class="text-center tituloSecundario"
             >Coverage</v-col>
             <v-col
               cols="12"

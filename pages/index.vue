@@ -7,7 +7,7 @@
       </div>
     </div> -->
     <v-container fluid class="fill-height pa-0">
-      <v-img max-height="858" :aspect-ratio="10/10" src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133094/Img%20Omni%20WEB/Pag%20HOME/Header/service_rgib2n.png">
+      <v-img max-height="858" :aspect-ratio="10/10" src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642178291/Img%20Omni%20WEB/Pag%20HOME/Header/trailer_2_toqakc.png">
         <v-row justify="center">
           <v-col cols="12">
             <div class="home-title-content">
@@ -357,7 +357,7 @@
             We guarantee the safety of your loads by working with today's
             standard carrier certifications.
           </h3>
-          <p class="mt-4">
+          <p class="mt-4 text-center">
             We make sure our strategic partners comply with necessary
             certifications and permits in order to be a part of our operation
             and offer excellent service.
@@ -368,8 +368,9 @@
 
     <v-container>
       <v-row justify="center">
-        <v-col lg="12" md="12" sm="11" cols="11">
-          <swiper-certificates/>
+        <v-col lg="10" md="11" sm="11" cols="11">
+          <swiper-certificates v-if="$vuetify.breakpoint.smAndDown"/>
+          <v-img class="mb-12" v-else src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642179035/Img%20Omni%20WEB/Pag%20HOME/Seccion%20Certification/certificados_luxx0t.png"></v-img>
         </v-col>
       </v-row>
     </v-container>

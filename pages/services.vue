@@ -83,7 +83,7 @@
       >
         <div v-html="industryD"></div>
       </v-col>
-      <v-col lg="8" md="10" sm="11" cols="11" style="margin-top: 90px">
+      <v-col lg="9" md="10" sm="11" cols="11" style="margin-top: 90px">
         <v-row justify="center">
           <v-col
             v-for="(card, index) in ICards"
@@ -262,50 +262,50 @@ export default {
           titulo: 'Land Transport',
           img: 'https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133075/Img%20Omni%20WEB/Pag%20SERVICE-%20servicio/Service/SERVICE__Land_Transport_438x155_eewl4s.png',
           detalle:
-            'Dry Van and Reefer load transport and Delivery nationally. Whith a wide array of partner carriers, we can meet the resources your goods need to reach their destination.',
+            'Dry Van and Reefer load transport and Delivery nationally and internationally. With a wide array of partner carriers, we can meet the resources your goods need to reach their destination.',
         },
         {
           id: 'iae',
           titulo: 'Import / Export',
           img: 'https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133074/Img%20Omni%20WEB/Pag%20SERVICE-%20servicio/Service/SERVICE__importexport_438x155_npgduh.png',
           detalle:
-            'We offer integral services which include all other activities implied in operation matters in import and exports through every country`s customs.',
+            'We offer integral services which include all other activities implied in operation matters in import and exports through every country’s customs.',
         },
         {
           id: 'transport',
           titulo: 'Transport and Distributions',
           img: 'https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133076/Img%20Omni%20WEB/Pag%20SERVICE-%20servicio/Service/SERVICE__Transporand_distrib_438x155_ohfrlw.png',
           detalle:
-            'Door to door services, both on import and Export on both México and US.',
+            'Door to Door services, both on Import and Export on both Mexico and US.',
         },
       ],
       ICards: [
         {
           id: 'auto',
-          titulo: 'Automotriz',
+          titulo: 'Autoparts',
           img: 'https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133072/Img%20Omni%20WEB/Pag%20SERVICE-%20servicio/industry/Service__Industry_Autoparts_384x133_qfhhtn.png',
           detalle:
-            'Transportamos toda clase de piezas automotrices de vehículos de forma nacional e internacional.',
+            'We cover all kinds of autoparts both nationally and internationally.',
         },
         {
           id: 'alimentos',
           titulo: 'Food',
           img: 'https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133073/Img%20Omni%20WEB/Pag%20SERVICE-%20servicio/industry/Service__Industry_food_384x133_fja7i3.png',
           detalle:
-            'Desarrollamos soluciones de almacenamiento y transporte de productos congelados (perecederos y refrigerados) sensibles a la temperatura y procesdos.',
+            'We develop solutions for storage and transport of frozen products (perishable and refrigerated) temperature controlled and processed.',
         },
         {
           id: 'farma',
-          titulo: 'Farmacéutico',
+          titulo: 'Pharmaceutical',
           img: 'https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133073/Img%20Omni%20WEB/Pag%20SERVICE-%20servicio/industry/Service__Industry_Pharma_384x133_lelqme.png',
           detalle:
-            'Contamos con un amplia red de transportistas y servicios logisticos adecuados para el translado de suministros farmacéuticos, sanitarios, cosmeticos y médicos de manera segura.',
+            'We offer a wide array of carriers and logistic services viable for delivering pharmaceutical equipment, sanitary, cosmetic and medical safely.',
         },
         {
           id: 'beers',
-          titulo: 'Bebidas',
+          titulo: 'Beverages',
           img: 'https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133073/Img%20Omni%20WEB/Pag%20SERVICE-%20servicio/industry/Service__Industry_Beverages_384x133_pmtmgv.png',
-          detalle: 'Alcohólicas y no alcohólicas.',
+          detalle: 'Alcohol / non Alcoholic.',
         },
       ],
     }

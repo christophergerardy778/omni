@@ -5,14 +5,14 @@
     elevation="0"
     color="#F2F4F6"
   >
-    <v-card-text class="pa-0">
+    <v-card-text :class="$vuetify.breakpoint.smAndDown ? 'pa-0' : 'pa-0 pt-6'">
       <v-row>
         <v-col
           lg="10"
           md="10"
           sm="12"
           cols="12"
-          :class="'my-0 pb-0 ' + $vuetify.breakpoint.smAndDown ? 'pt-0 pb-0' : 'pt-1'"
+          :class="$vuetify.breakpoint.smAndDown ? 'my-0 pt-0 pb-0' : 'my-0 pb-0 pt-1'"
         >
           <v-img
             :height="$vuetify.breakpoint.smAndDown ? '196px' : '155px'"
