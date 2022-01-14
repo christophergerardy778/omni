@@ -42,7 +42,9 @@
         <v-col
           ><h4 class="white--text font-weight-light">
             © 2022 All rights reserved
-          </h4></v-col
+          </h4>
+          <privacy/>
+        </v-col
         >
       </v-row>
     </v-container>
@@ -51,9 +53,12 @@
 
 <script>
 import ImgCredits from "@/components/ImgCredits.vue";
+import Privacy from "@/components/Privacy.vue";
+
 export default {
   components: {
     ImgCredits,
+    Privacy,
   }
 }
 </script>
