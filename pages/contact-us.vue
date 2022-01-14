@@ -44,6 +44,13 @@
             </div>
           </v-col>
           <v-col class="col-12 col-md-4">
+            <p>
+              <b
+                >By completing this form, I understand that my information will
+                be processed by OMNI WEB as described in its
+                <a href="" class="text-decoration-none">Privacy Notice</a></b
+              >
+            </p>
             <v-form @submit.prevent="sendContactUsEmail">
               <div>
                 <p class="mb-1">Name <span>*</span></p>
@@ -160,6 +167,15 @@
             <div class="about-us__form_background-color">
               <v-form @submit.prevent="sendJoinUsEmail">
                 <div class="about-us__form-container">
+                  <p class="white--text">
+                    <b
+                      >By completing this form, I understand that my information
+                      will be processed by OMNI WEB as described in its
+                      <a href="" class="text-decoration-none"
+                        >Privacy Notice</a
+                      ></b
+                    >
+                  </p>
                   <div>
                     <p class="mb-1 white--text">Destination</p>
                     <v-text-field
@@ -223,6 +239,7 @@
                     >
                   </div>
                 </div>
+                <recaptcha class="mb-6" />
               </v-form>
             </div>
           </div>

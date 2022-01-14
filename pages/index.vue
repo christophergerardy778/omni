@@ -514,6 +514,14 @@ export default {
 }
 
 @media screen and (max-width: 959px) {
+  .home-subtitle {
+    font-size: 36px;
+  }
+
+  .home-subtitle-1 {
+    font-size: 24px;
+  }
+  
   .home-flex-wrap {
     flex-wrap: wrap;
   }
@@ -574,6 +582,10 @@ export default {
   }
   .home-title-content p {
     padding: 0;
+  }
+
+  .home-title-img {
+    background-size: auto 100%;
   }
 }
 </style>

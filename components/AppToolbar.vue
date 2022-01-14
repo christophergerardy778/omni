@@ -171,7 +171,7 @@ export default {
   },
   data: () => ({
     isActive: false,
-  })
+  }),
 }
 </script>
 
@@ -183,7 +183,7 @@ export default {
   gap: 36px;
 }
 
-.navigationDrawer--title{
+.navigationDrawer--title {
   display: flex;
   justify-content: space-between;
 }
