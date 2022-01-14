@@ -5,11 +5,11 @@
         <v-img
           height="634px"
           class="align-center"
-          src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+          src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133072/Img%20Omni%20WEB/Pag%20SERVICE-%20servicio/HEADER_SERVICE__elevate-GAdkOpqbTfo-unsplash_4_aziai4.png"
         >
           <v-row>
             <v-col
-              lg="7"
+              lg="8"
               cols="12"
               :class="$vuetify.breakpoint.smAndDown ? 'text-center' : ''"
             >
@@ -34,21 +34,21 @@
       >
         Services
       </v-col>
-      <v-col lg="7" md="10" sm="12" cols="12" class="subTitulo">
+      <v-col lg="9" md="10" sm="12" cols="12" class="subTitulo">
         We want to be part of your supply and distribution chain!
       </v-col>
-      <v-col lg="7" md="10" sm="12" cols="12" class="parrafo">
+      <v-col lg="9" md="10" sm="12" cols="12" class="parrafo">
         Our knowledge in the market and experience, alongside the partnerships
         and commercial relationships, we`ve grown with carrier companies, allow
         us to obtain competitive rates and better service conditions.
       </v-col>
-      <v-col lg="8" md="11" sm="11" cols="11" style="margin-top: 90px">
+      <v-col lg="10" md="11" sm="11" cols="11" style="margin-top: 90px">
         <v-row justify="center">
           <v-col
             v-for="(card, index) in cards"
             :key="index"
             lg="6"
-            md="6"
+            md="8"
             sm="12"
             cols="12"
             style="margin-bottom: 23px"
@@ -70,35 +70,18 @@
         Industry
       </v-col>
       <v-col
-        lg="7"
+        lg="8"
         md="10"
         sm="12"
         cols="12"
-        class="subTitulo"
+        class="subTitulo text-center"
         :style="
           $vuetify.breakpoint.smAndDown
             ? 'padding: 0 10% 0 10%;'
             : 'padding: 0 10% 0 10%;'
         "
       >
-        Any goods you need to transport? We got you covered! We cover the
-        following commodities.
-      </v-col>
-      <v-col
-        lg="7"
-        md="10"
-        sm="12"
-        cols="12"
-        :class="
-          'parrafo' + ($vuetify.breakpoint.smAndDown ? '' : ' text-center')
-        "
-        :style="
-          $vuetify.breakpoint.smAndDown
-            ? 'padding: 20px 10% 0 10%;'
-            : 'padding: 14px 0 0 0;'
-        "
-      >
-        We cover the following sectors.
+        <div v-html="industryD"></div>
       </v-col>
       <v-col lg="8" md="10" sm="11" cols="11" style="margin-top: 90px">
         <v-row justify="center">
@@ -265,32 +248,33 @@ export default {
   data() {
     return {
       txtImg: `<b>Our service</b> tailored to <b>your needs</b>`,
+      industryD: 'Any goods you need to transport? We got you covered! <br>We cover the following commodities.',
       cards: [
         {
           id: 'storage',
           titulo: 'Storage',
-          img: 'https://cdn.vuetifyjs.com/images/parallax/material.jpg',
+          img: 'https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133075/Img%20Omni%20WEB/Pag%20SERVICE-%20servicio/Service/SERVICE__Storage_438x155_2_xchv1a.png',
           detalle:
             'Our warehouse offers storage in Laredo tx, designed to store your loads both in a safe and viable way.',
         },
         {
           id: 'land',
           titulo: 'Land Transport',
-          img: 'https://cdn.vuetifyjs.com/images/parallax/material.jpg',
+          img: 'https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133075/Img%20Omni%20WEB/Pag%20SERVICE-%20servicio/Service/SERVICE__Land_Transport_438x155_eewl4s.png',
           detalle:
             'Dry Van and Reefer load transport and Delivery nationally. Whith a wide array of partner carriers, we can meet the resources your goods need to reach their destination.',
         },
         {
           id: 'iae',
           titulo: 'Import / Export',
-          img: 'https://cdn.vuetifyjs.com/images/parallax/material.jpg',
+          img: 'https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133074/Img%20Omni%20WEB/Pag%20SERVICE-%20servicio/Service/SERVICE__importexport_438x155_npgduh.png',
           detalle:
             'We offer integral services which include all other activities implied in operation matters in import and exports through every country`s customs.',
         },
         {
           id: 'transport',
           titulo: 'Transport and Distributions',
-          img: 'https://cdn.vuetifyjs.com/images/parallax/material.jpg',
+          img: 'https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133076/Img%20Omni%20WEB/Pag%20SERVICE-%20servicio/Service/SERVICE__Transporand_distrib_438x155_ohfrlw.png',
           detalle:
             'Door to door services, both on import and Export on both México and US.',
         },
@@ -299,28 +283,28 @@ export default {
         {
           id: 'auto',
           titulo: 'Automotriz',
-          img: 'https://cdn.vuetifyjs.com/images/parallax/material.jpg',
+          img: 'https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133072/Img%20Omni%20WEB/Pag%20SERVICE-%20servicio/industry/Service__Industry_Autoparts_384x133_qfhhtn.png',
           detalle:
             'Transportamos toda clase de piezas automotrices de vehículos de forma nacional e internacional.',
         },
         {
           id: 'alimentos',
-          titulo: 'Alimentos',
-          img: 'https://cdn.vuetifyjs.com/images/parallax/material.jpg',
+          titulo: 'Food',
+          img: 'https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133073/Img%20Omni%20WEB/Pag%20SERVICE-%20servicio/industry/Service__Industry_food_384x133_fja7i3.png',
           detalle:
             'Desarrollamos soluciones de almacenamiento y transporte de productos congelados (perecederos y refrigerados) sensibles a la temperatura y procesdos.',
         },
         {
           id: 'farma',
           titulo: 'Farmacéutico',
-          img: 'https://cdn.vuetifyjs.com/images/parallax/material.jpg',
+          img: 'https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133073/Img%20Omni%20WEB/Pag%20SERVICE-%20servicio/industry/Service__Industry_Pharma_384x133_lelqme.png',
           detalle:
             'Contamos con un amplia red de transportistas y servicios logisticos adecuados para el translado de suministros farmacéuticos, sanitarios, cosmeticos y médicos de manera segura.',
         },
         {
           id: 'beers',
           titulo: 'Bebidas',
-          img: 'https://cdn.vuetifyjs.com/images/parallax/material.jpg',
+          img: 'https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133073/Img%20Omni%20WEB/Pag%20SERVICE-%20servicio/industry/Service__Industry_Beverages_384x133_pmtmgv.png',
           detalle: 'Alcohólicas y no alcohólicas.',
         },
       ],

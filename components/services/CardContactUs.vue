@@ -18,7 +18,7 @@
         <v-col cols="5">
           <v-img
             :aspect-ratio="16/10"
-            src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+            src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133103/Img%20Omni%20WEB/Pag%20HOME/Seccion%20Contact%20Us/CONTACT_US_ingles_zxum9o.png"
           />
         </v-col>
       </v-row>
@@ -28,7 +28,7 @@
     <v-col cols="11">
       <v-img
             :aspect-ratio="$vuetify.breakpoint.smAndDown ? 11/10 : 16/10"
-            src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+            src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133103/Img%20Omni%20WEB/Pag%20HOME/Seccion%20Contact%20Us/CONTACT_US_ingles_zxum9o.png"
           />
     </v-col>
     <v-col cols="11" class="titulo text-center">

@@ -3,7 +3,7 @@
     <v-row class="marco" align="center" v-if="$vuetify.breakpoint.smAndDown">
       <v-col cols="7" class="pa-0">
         <v-img
-          :aspect-ratio="10/11"
+          :aspect-ratio="10/10"
           :src="img"
         />
       </v-col>
@@ -27,7 +27,7 @@
       </v-col>
       <v-col cols="4" class="pa-0">
         <v-img
-          :aspect-ratio="10/11"
+          :aspect-ratio="10/10"
           :src="img"
         />
       </v-col>

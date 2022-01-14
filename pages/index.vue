@@ -22,7 +22,7 @@
                 <v-col class="col-12 col-md-8">
                   <v-img
                     height="320"
-                    src="https://blog.citytroops.com/wp-content/uploads/2021/03/Untitled-design-41.png"
+                    src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133070/Img%20Omni%20WEB/Pag%20HOME/Seccion%20Servicios/Home_Service_Storage_309x327_hwpehn.png"
                   />
                 </v-col>
                 <v-col class="d-flex justify-center flex-column">
@@ -47,7 +47,7 @@
                 <v-col class="col-12 col-md-8">
                   <v-img
                     height="320"
-                    src="https://nulinetransport.com/wp-content/uploads/2019/09/NulineSocialShare-1.jpg"
+                    src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133069/Img%20Omni%20WEB/Pag%20HOME/Seccion%20Servicios/Home_Service_Land_Transport__309x327_k9pbts.png"
                   />
                 </v-col>
                 <v-col class="d-flex justify-center flex-column">
@@ -68,20 +68,20 @@
         <v-col class="col-12 col-md-6">
           <v-card class="home-card-bg" elevation="0">
             <v-card-text>
-              <v-row class="home-flex-wrap">
+              <v-row>
                 <v-col class="col-12 col-md-8">
                   <v-img
                     height="320"
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmjtV31wOvqAapnpMCQgPcmAlG9g99X_d3zg&usqp=CAU"
+                    src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133067/Img%20Omni%20WEB/Pag%20HOME/Seccion%20Servicios/Home_Service_import_309x327_hyraqo.png"
                   />
                 </v-col>
                 <v-col class="d-flex justify-center flex-column">
-                  <h3 class="card-title-home text-center text-md-left">Transport & Distributiont</h3>
+                  <h3 class="card-title-home text-center text-md-left">Import & Export</h3>
                   <v-btn
                     color="#E30707"
                     class="mt-8"
                     text
-                    @click="goToServiceSection('transport')"
+                    @click="goToServiceSection('iae')"
                   >
                     View Service
                   </v-btn>
@@ -93,20 +93,20 @@
         <v-col class="col-12 col-md-6">
           <v-card class="home-card-bg" elevation="0">
             <v-card-text>
-              <v-row>
+              <v-row class="home-flex-wrap">
                 <v-col class="col-12 col-md-8">
                   <v-img
                     height="320"
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmjtV31wOvqAapnpMCQgPcmAlG9g99X_d3zg&usqp=CAU"
+                    src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133070/Img%20Omni%20WEB/Pag%20HOME/Seccion%20Servicios/Home_Service_TransportandDistribution_309x327_gjkttz.png"
                   />
                 </v-col>
                 <v-col class="d-flex justify-center flex-column">
-                  <h3 class="card-title-home text-center text-md-left">Import & Export</h3>
+                  <h3 class="card-title-home text-center text-md-left">Transport & Distribution</h3>
                   <v-btn
                     color="#E30707"
                     class="mt-8"
                     text
-                    @click="goToServiceSection('iae')"
+                    @click="goToServiceSection('transport')"
                   >
                     View Service
                   </v-btn>
@@ -258,7 +258,7 @@
             <div class="col-md-6">
               <v-img
                 height="200"
-                src="https://blog.citytroops.com/wp-content/uploads/2021/03/Untitled-design-41.png"
+                src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133103/Img%20Omni%20WEB/Pag%20HOME/Seccion%20Contact%20Us/CONTACT_US_ingles_zxum9o.png"
               />
             </div>
           </v-row>
@@ -285,7 +285,7 @@
             <div class="col-md-6">
               <v-img
                 height="200"
-                src="https://blog.citytroops.com/wp-content/uploads/2021/03/Untitled-design-41.png"
+                src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133059/Img%20Omni%20WEB/Pag%20HOME/Seccion%20Cartified%20and%20Safe/Home__Certified_376x214_b8vvbe.png"
               />
             </div>
           </v-row>
@@ -368,7 +368,7 @@ export default {
 }
 
 .home-title-img {
-  background-image: url('../static/images/home/truckHeader.png');
+  background-image: url('https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133094/Img%20Omni%20WEB/Pag%20HOME/Header/service_rgib2n.png');
   height: 100%;
   width: 100%;
   background-size: 100% 100%;
@@ -401,7 +401,7 @@ export default {
   background-color: #f2f4f6;
   background-position-x: right;
   background-size: auto 100%;
-  background-image: url('../static/images/home/continent.png');
+  background-image: url('https://res.cloudinary.com/omni-international-logistics/image/upload/v1642134508/Img%20Omni%20WEB/Pag%20HOME/Seccion%20Coverage/continent_dyobdi.png');
 }
 
 .home-bg-coverge-responsive {

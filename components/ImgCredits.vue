@@ -35,13 +35,13 @@
             <v-col cols="12" class="subTituloMobile">
               Images Credits
             </v-col>
-            <v-img style="margin-top: 200px;" :aspect-ratio="6/7" src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642124762/Omni/Alert/Dialogo_1_w42nxo.png"/>
+            <v-img style="margin-top: 200px;" :aspect-ratio="6/7" src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133044/Img%20Omni%20WEB/Dialogo_1_nxiurb.png"/>
           </v-col>
           <v-col v-if="$vuetify.breakpoint.smAndDown" cols="12" class="subTituloMobile mt-3 text-center">
               Images Credits
           </v-col>
           <v-col v-if="$vuetify.breakpoint.smAndDown" cols="11">
-            <v-img :aspect-ratio="6/6" src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642124762/Omni/Alert/Dialogo_1_w42nxo.png"/>
+            <v-img :aspect-ratio="6/6" src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133044/Img%20Omni%20WEB/Dialogo_1_nxiurb.png"/>
           </v-col>
           <v-col lg="7" md="7" sm="11" cols="11" class="pb-12">
             <div class="tituloCreditos mb-6">Freepik</div>

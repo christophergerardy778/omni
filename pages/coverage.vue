@@ -8,7 +8,7 @@
         <v-img
           height="634px"
           class="align-center"
-          src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+          src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133059/Img%20Omni%20WEB/Pag%20COVERAGE-%20cobertura/header/header_Coverage_1366x_634_mof8sq.png"
         >
           <v-row>
             <v-col
@@ -39,7 +39,7 @@
           :aspect-ratio="16/12"
           position="top right"
           class="align-end"
-          src="https://res.cloudinary.com/di5ipzjgm/image/upload/v1642008050/Develop/Group_166_2_k9l5cq.png"
+          src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133058/Img%20Omni%20WEB/Pag%20COVERAGE-%20cobertura/Group_166_2_fhrzho.png"
         >
           <v-row no-gutters style="margin-bottom: 48%;">
             <v-col
@@ -100,7 +100,7 @@
             <v-img
               position="top center"
               :aspect-ratio="10/28"
-              src="https://res.cloudinary.com/di5ipzjgm/image/upload/v1642025784/Develop/continente_gris_2_oevreb.png">
+              src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133050/Img%20Omni%20WEB/Pag%20COVERAGE-%20cobertura/continente_gris_2_icxfrd.png">
               <v-row justify="center">
                 <v-col cols="12" class="text-center parrafoTechnology" style="line-height: 23px;">
                   <div>México</div>
@@ -108,7 +108,7 @@
                 </v-col>
                 <v-col cols="12">
                   <v-img
-                    src="https://res.cloudinary.com/di5ipzjgm/image/upload/v1642025590/Develop/Coverage__Mex_562x360_rgb1ay.png"
+                    src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133054/Img%20Omni%20WEB/Pag%20COVERAGE-%20cobertura/Coverage__Mex_562x360_zi8qyj.png"
                   />
                 </v-col>
                 <v-col cols="12">
@@ -142,7 +142,7 @@
             </v-col>
             <v-col cols="12">
               <v-img
-              src="https://res.cloudinary.com/di5ipzjgm/image/upload/v1642025593/Develop/Coverage__USA_509x324_w4acxb.png"/>
+              src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133055/Img%20Omni%20WEB/Pag%20COVERAGE-%20cobertura/Coverage__USA_509x324_lfb7yi.png"/>
             </v-col>
               </v-row>
             </v-img>

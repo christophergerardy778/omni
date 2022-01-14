@@ -12,8 +12,8 @@
       </v-col>
       <v-col cols="12">
         <v-img
-          :aspect-ratio="10/10"
-          src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+          :aspect-ratio="5/5"
+          src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133045/Img%20Omni%20WEB/Pag%20ABOUT%20US-%20Nosotros/Seccion%20Omni%20Headquaters/AboutUs__Headquarters504x419_jjpelw.png"
         />
       </v-col>
       <v-col cols="10" class="parrafoContact">
@@ -32,7 +32,7 @@
         max-height="500px"
         contain
         position="right"
-        src="https://res.cloudinary.com/di5ipzjgm/image/upload/v1642007964/Develop/AboutUs__Headquarters504x419_hnseu2.png">
+        src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133045/Img%20Omni%20WEB/Pag%20ABOUT%20US-%20Nosotros/Seccion%20Omni%20Headquaters/AboutUs__Headquarters504x419_jjpelw.png">
         <v-row justify="center" class="mt-4">
           <v-col lg="8" md="10" cols="10" class="subTituloSimple">
             OMNI Headquarters

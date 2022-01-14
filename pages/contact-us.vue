@@ -29,7 +29,7 @@
               width="339"
               height="308"
               class="about-us__image-phone d-block mx-auto"
-              src="~/assets/img/contactusphone.jpg"
+              src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133103/Img%20Omni%20WEB/Pag%20CONTACT%20US-%20contactanos/CONTACT_US_copy-space-blank-mobile-screen_4_livdfi.png"
             />
             <div class="py-4 pl-4">
               <div class="d-flex align-center">
@@ -406,7 +406,7 @@ export default {
 }
 
 .about-us__background-image {
-  background-image: url('~/assets/img/carrier_home.png');
+  background-image: url('https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133046/Img%20Omni%20WEB/Pag%20CONTACT%20US-%20contactanos/CARRIER_professional-truck-driver-entering-his-truck-long-vehicle-and-holding-thumbs-up_1_uni6ra.png');
   background-position-x: 0;
   background-size: auto 100%;
 }
