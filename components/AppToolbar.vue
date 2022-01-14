@@ -129,7 +129,7 @@
       <v-spacer />
       <div class="d-none d-md-flex app-bar-icon-container">
         <div>
-          <v-btn icon dark small color="#071C87"
+          <v-btn @click="localePathEx('contact-us')" icon dark small color="#071C87"
           ><v-icon>mdi-email</v-icon></v-btn
           >
         </div>
