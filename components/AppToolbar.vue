@@ -7,9 +7,7 @@
             <v-list-item-title>
               <div class="navigationDrawer--title">
                 <img src="~/assets/img/logo.png" height="50px" />
-                <v-icon>
-                  mdi-close-circle-outline
-                </v-icon>
+                <v-icon> mdi-close-circle-outline </v-icon>
               </div>
             </v-list-item-title>
           </v-list-item-content>
@@ -18,9 +16,9 @@
       <v-list>
         <v-list-item>
           <v-list-item-content>
-            <v-btn color="#071C87" block text>
+            <v-btn color="#071C87" block text @click="localePathEx('index')">
               Home
-              <v-spacer/>
+              <v-spacer />
               <v-icon right dark large color="#DD0003">
                 mdi-chevron-right
               </v-icon>
@@ -29,9 +27,9 @@
         </v-list-item>
         <v-list-item>
           <v-list-item-content>
-            <v-btn color="#071C87" block text>
+            <v-btn color="#071C87" block text @click="localePathEx('services')">
               Services
-              <v-spacer/>
+              <v-spacer />
               <v-icon right dark large color="#DD0003">
                 mdi-chevron-right
               </v-icon>
@@ -40,9 +38,9 @@
         </v-list-item>
         <v-list-item>
           <v-list-item-content>
-            <v-btn color="#071C87" block text>
+            <v-btn color="#071C87" block text @click="localePathEx('about-us')">
               Industry
-              <v-spacer/>
+              <v-spacer />
               <v-icon right dark large color="#DD0003">
                 mdi-chevron-right
               </v-icon>
@@ -51,9 +49,9 @@
         </v-list-item>
         <v-list-item>
           <v-list-item-content>
-            <v-btn color="#071C87" block text>
+            <v-btn color="#071C87" block text @click="localePathEx('coverage')">
               Coverage
-              <v-spacer/>
+              <v-spacer />
               <v-icon right dark large color="#DD0003">
                 mdi-chevron-right
               </v-icon>
@@ -67,17 +65,17 @@
                 <template v-slot:activator="{ on, attrs }">
                   <v-btn v-bind="attrs" v-on="on" color="#071C87" block text>
                     Contact
-                    <v-spacer/>
+                    <v-spacer />
                     <v-icon right dark large color="#DD0003">
                       mdi-chevron-right
                     </v-icon>
                   </v-btn>
                 </template>
                 <v-list>
-                  <v-list-item>
+                  <v-list-item @click="goToContactSection('contact')">
                     <v-list-item-title>Quote</v-list-item-title>
                   </v-list-item>
-                  <v-list-item>
+                  <v-list-item @click="goToContactSection('join')">
                     <v-list-item-title>Omni Carriers</v-list-item-title>
                   </v-list-item>
                 </v-list>
@@ -94,13 +92,13 @@
       <div class="d-none d-md-flex">
         <v-btn text color="#071C87" @click="localePathEx('index')">Home</v-btn>
         <v-btn text color="#071C87" @click="localePathEx('about-us')"
-        >About US</v-btn
+          >About US</v-btn
         >
         <v-btn text color="#071C87" @click="localePathEx('services')">
           Services
         </v-btn>
         <v-btn text color="#071C87" @click="localePathEx('coverage')"
-        >Coverge</v-btn
+          >Coverge</v-btn
         >
         <!--
         <v-btn text color="#071C87" @click="localePathEx('contact-us')"
@@ -110,19 +108,15 @@
         <div class="text-center">
           <v-menu offset-y>
             <template v-slot:activator="{ on, attrs }">
-              <v-btn
-                text color="#071C87"
-                v-bind="attrs"
-                v-on="on"
-              >
+              <v-btn text color="#071C87" v-bind="attrs" v-on="on">
                 Contact US
               </v-btn>
             </template>
             <v-list>
-              <v-list-item>
+              <v-list-item @click="goToContactSection('contact')">
                 <v-list-item-title>Quote</v-list-item-title>
               </v-list-item>
-              <v-list-item>
+              <v-list-item @click="goToContactSection('join')">
                 <v-list-item-title>Omni Carriers</v-list-item-title>
               </v-list-item>
             </v-list>
@@ -132,8 +126,13 @@
       <v-spacer />
       <div class="d-none d-md-flex app-bar-icon-container">
         <div>
-          <v-btn icon dark small color="#071C87"
-          ><v-icon>mdi-email</v-icon></v-btn
+          <v-btn
+            icon
+            dark
+            small
+            color="#071C87"
+            @click="localePathEx('contact-us')"
+            ><v-icon>mdi-email</v-icon></v-btn
           >
         </div>
         <div>
@@ -144,7 +143,7 @@
             dark
             small
             color="#071C87"
-          >ES</v-btn
+            >ES</v-btn
           >
           <v-btn
             :outlined="$i18n.locale !== 'en'"
@@ -153,11 +152,15 @@
             dark
             color="#071C87"
             @click="$i18n.setLocale('en')"
-          >EN</v-btn
+            >EN</v-btn
           >
         </div>
       </div>
-      <v-app-bar-nav-icon @click="isActive = true" class="d-flex d-md-none" color="#00126A" />
+      <v-app-bar-nav-icon
+        @click="isActive = true"
+        class="d-flex d-md-none"
+        color="#00126A"
+      />
     </v-app-bar>
   </div>
 </template>
@@ -168,10 +171,13 @@ export default {
     localePathEx(route) {
       this.$router.push(this.localePath(route))
     },
+    goToContactSection(sectionName) {
+      this.$router.push({ path: 'contact-us', query: { section: sectionName } })
+    },
   },
   data: () => ({
     isActive: false,
-  })
+  }),
 }
 </script>
 
@@ -183,7 +189,7 @@ export default {
   gap: 36px;
 }
 
-.navigationDrawer--title{
+.navigationDrawer--title {
   display: flex;
   justify-content: space-between;
 }

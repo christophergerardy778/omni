@@ -3,13 +3,11 @@ const hbs = require('nodemailer-express-handlebars')
 const nodemailer = require('nodemailer')
 
 module.exports = (req, res) => {
-  const { email } = req.body
-
   const transport = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'testtest8913547@gmail.com',
-      pass: 'Banana21',
+      user: 'paginawebomni@gmail.com',
+      pass: 'web2022$',
     },
   })
 

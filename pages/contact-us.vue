@@ -26,10 +26,11 @@
           </v-col>
           <v-col class="col-12 col-md-4">
             <img
-              width="339"
-              height="308"
+              width="100%"
+              max-width="339px"
+              height="308px"
               class="about-us__image-phone d-block mx-auto"
-              src="~/assets/img/contactusphone.jpg"
+              src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642129693/Omni/Home/CONTACT_US_copy-space-blank-mobile-screen_9_p0xt7d.png"
             />
             <div class="py-4 pl-4">
               <div class="d-flex align-center">
@@ -44,6 +45,13 @@
             </div>
           </v-col>
           <v-col class="col-12 col-md-4">
+            <p>
+              <b
+                >By completing this form, I understand that my information will
+                be processed by OMNI WEB as described in its
+                <a href="" class="text-decoration-none">Privacy Notice</a></b
+              >
+            </p>
             <v-form @submit.prevent="sendContactUsEmail">
               <div>
                 <p class="mb-1">Name <span>*</span></p>
@@ -158,6 +166,15 @@
             <div class="about-us__form_background-color">
               <v-form @submit.prevent="sendJoinUsEmail">
                 <div class="about-us__form-container">
+                  <p class="white--text">
+                    <b
+                      >By completing this form, I understand that my information
+                      will be processed by OMNI WEB as described in its
+                      <a href="" class="text-decoration-none"
+                        >Privacy Notice</a
+                      ></b
+                    >
+                  </p>
                   <div>
                     <p class="mb-1 white--text">Destination</p>
                     <v-text-field
@@ -219,6 +236,7 @@
                     >
                   </div>
                 </div>
+                <recaptcha />
               </v-form>
             </div>
           </div>

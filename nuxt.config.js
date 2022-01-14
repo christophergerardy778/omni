@@ -32,6 +32,8 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+    // https://google-analytics.nuxtjs.org
+    '@nuxtjs/google-analytics',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -39,11 +41,21 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/i18n',
+    '@nuxtjs/recaptcha',
   ],
-  serverMiddleware: [{
-    path: '/api',
-    handler: '~/api/index.js'
-  }],
+  serverMiddleware: [
+    {
+      path: '/api',
+      handler: '~/api/index.js',
+    },
+  ],
+
+  recaptcha: {
+    language: 'en',
+    version: 2,
+    siteKey: '6Le1KBAeAAAAAOo4UoCiV00dKuP-0fNnT8H10_aD',
+  },
+
   i18n: {
     seo: true,
     parsePages: true,
@@ -66,6 +78,7 @@ export default {
       },
     },
   },
+
   sitemap: {
     hostname: 'http://localhost:3000',
     i18n: true,
@@ -75,6 +88,14 @@ export default {
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
     baseURL: '/',
+  },
+
+  // Google api: https://google-analytics.nuxtjs.org
+  googleAnalytics: {
+    id: 'G-RX386X7JRL',
+    autoTracking: {
+      screenview: true,
+    },
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify

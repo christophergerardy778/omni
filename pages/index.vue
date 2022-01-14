@@ -22,7 +22,7 @@
                 <v-col class="col-12 col-md-8">
                   <v-img
                     height="320"
-                    src="https://blog.citytroops.com/wp-content/uploads/2021/03/Untitled-design-41.png"
+                    src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642129257/Omni/Home/Home_Service_Storage_309x327_e3nsjz.png"
                   />
                 </v-col>
                 <v-col class="d-flex justify-center flex-column">
@@ -47,7 +47,7 @@
                 <v-col class="col-12 col-md-8">
                   <v-img
                     height="320"
-                    src="https://nulinetransport.com/wp-content/uploads/2019/09/NulineSocialShare-1.jpg"
+                    src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642129257/Omni/Home/Home_Service_Land_Transport__309x327_umhqmf.png"
                   />
                 </v-col>
                 <v-col class="d-flex justify-center flex-column">
@@ -72,7 +72,7 @@
                 <v-col class="col-12 col-md-8">
                   <v-img
                     height="320"
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmjtV31wOvqAapnpMCQgPcmAlG9g99X_d3zg&usqp=CAU"
+                    src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642129258/Omni/Home/Home_Service_TransportandDistribution_309x327_qcqnjx.png"
                   />
                 </v-col>
                 <v-col class="d-flex justify-center flex-column">
@@ -97,7 +97,7 @@
                 <v-col class="col-12 col-md-8">
                   <v-img
                     height="320"
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmjtV31wOvqAapnpMCQgPcmAlG9g99X_d3zg&usqp=CAU"
+                    src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642129257/Omni/Home/Home_Service_import_309x327_dyhgsa.png"
                   />
                 </v-col>
                 <v-col class="d-flex justify-center flex-column">
@@ -257,8 +257,8 @@
             </div>
             <div class="col-md-6">
               <v-img
-                height="200"
-                src="https://blog.citytroops.com/wp-content/uploads/2021/03/Untitled-design-41.png"
+                height="300"
+                src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642129693/Omni/Home/CONTACT_US_copy-space-blank-mobile-screen_9_p0xt7d.png"
               />
             </div>
           </v-row>
@@ -284,8 +284,8 @@
             </v-col>
             <div class="col-md-6">
               <v-img
-                height="200"
-                src="https://blog.citytroops.com/wp-content/uploads/2021/03/Untitled-design-41.png"
+                height="300"
+                src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642129968/Omni/Home/Home__Certified_376x214_kcerbn.png"
               />
             </div>
           </v-row>
@@ -447,6 +447,14 @@ export default {
 }
 
 @media screen and (max-width: 959px) {
+  .home-subtitle {
+    font-size: 36px;
+  }
+
+  .home-subtitle-1 {
+    font-size: 24px;
+  }
+  
   .home-flex-wrap {
     flex-wrap: wrap;
   }
@@ -507,6 +515,10 @@ export default {
   }
   .home-title-content p {
     padding: 0;
+  }
+
+  .home-title-img {
+    background-size: auto 100%;
   }
 }
 </style>
