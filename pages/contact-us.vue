@@ -134,12 +134,16 @@
                   v-model="contactUsForm.comments"
                 />
               </div>
-              <div class="d-flex justify-end">
+              <div>
+                <recaptcha @success="setContactUsVerified" size="100" />
+              </div>
+              <div class="d-flex justify-end mt-6">
                 <v-btn
                   color="#E30707"
                   dark
                   depressed
                   type="submit"
+                  :disabled="isContactLock"
                   :loading="isLoadingContact"
                   >more info</v-btn
                 >
@@ -225,18 +229,21 @@
                       v-model="joinUsForm.message"
                     />
                   </div>
-                  <div class="d-flex justify-end">
+                  <div>
+                    <recaptcha @success="setJoinUsVerified" size="100" />
+                  </div>
+                  <div class="d-flex justify-end mt-6">
                     <v-btn
                       color="#E30707"
                       type="submit"
                       dark
                       depressed
+                      :disabled="isJoinUsLock"
                       :loading="isLoadingJoinUs"
                       >more info</v-btn
                     >
                   </div>
                 </div>
-                <recaptcha />
               </v-form>
             </div>
           </div>
@@ -290,6 +297,8 @@ export default {
     },
   },
   data: () => ({
+    isContactLock: true,
+    isJoinUsLock: true,
     isLoadingContact: false,
     isLoadingJoinUs: false,
     showDialog: false,
@@ -341,6 +350,13 @@ export default {
     },
     closeDialog() {
       this.showDialog = false
+    },
+    setContactUsVerified() {
+      this.isContactLock = false
+    },
+    setJoinUsVerified() {
+      console.log('magia')
+      this.isJoinUsLock = false
     },
   },
   computed: {
@@ -425,7 +441,7 @@ export default {
 
 .about-us__background-image {
   background-image: url('~/assets/img/carrier_home.png');
-  background-position-x: 0;
+  background-position-x: -100%;
   background-size: auto 100%;
 }
 

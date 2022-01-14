@@ -26,7 +26,9 @@
                   />
                 </v-col>
                 <v-col class="d-flex justify-center flex-column">
-                  <h3 class="card-title-home text-center text-md-left">Storage</h3>
+                  <h3 class="card-title-home text-center text-md-left">
+                    Storage
+                  </h3>
                   <v-btn
                     color="#E30707"
                     class="mt-8"
@@ -51,7 +53,9 @@
                   />
                 </v-col>
                 <v-col class="d-flex justify-center flex-column">
-                  <h3 class="card-title-home text-center text-md-left">Land Transport</h3>
+                  <h3 class="card-title-home text-center text-md-left">
+                    Land Transport
+                  </h3>
                   <v-btn
                     color="#E30707"
                     class="mt-8"
@@ -76,7 +80,9 @@
                   />
                 </v-col>
                 <v-col class="d-flex justify-center flex-column">
-                  <h3 class="card-title-home text-center text-md-left">Transport & Distributiont</h3>
+                  <h3 class="card-title-home text-center text-md-left">
+                    Transport & Distributiont
+                  </h3>
                   <v-btn
                     color="#E30707"
                     class="mt-8"
@@ -101,7 +107,9 @@
                   />
                 </v-col>
                 <v-col class="d-flex justify-center flex-column">
-                  <h3 class="card-title-home text-center text-md-left">Import & Export</h3>
+                  <h3 class="card-title-home text-center text-md-left">
+                    Import & Export
+                  </h3>
                   <v-btn
                     color="#E30707"
                     class="mt-8"
@@ -238,7 +246,7 @@
     <v-container class="my-10">
       <v-row justify="center" align="center">
         <v-col class="col-12 col-md-10 mb-10">
-          <v-row>
+          <v-row class="flex-column-reverse flex-md-row">
             <div class="col-md-6">
               <h4 class="home-subtitle-1">Contact us</h4>
               <p class="mt-4">
@@ -264,15 +272,15 @@
           </v-row>
         </v-col>
         <v-col class="col-12 col-md-10 mb-10">
-          <v-row>
-            <v-col class="col-md-6">
+          <v-row class="flex-column-reverse flex-md-row">
+            <v-col class="col-md-6 fill-height">
               <h4 class="home-subtitle-1">Certified & Safe Transport</h4>
               <p class="mt-4">
                 We certify only the best carrier in the business to transport
-                our clients loads in a fast & safe way. Want to be an OMNI
-                Carrier?
+                our clients loads in a fast & safe way.
               </p>
-              <div class="target-btn">
+              <div class="align-center justify-space-between d-sm-flex text-center">
+                <p class="mb-2 mb-md-0">Want to be an OMNI Carrier?</p>
                 <v-btn
                   color="#E30707"
                   dark
@@ -297,15 +305,83 @@
     <v-container class="mb-10">
       <v-row align="center" justify="center">
         <v-col class="col-12 col-md-10">
-          <h3 class="home-subtitle-1">
+          <h3 class="home-subtitle-1 text-center text-md-left">
             We guarantee the safety of your loads by working with today's
             standard carrier certifications.
           </h3>
-          <p class="mt-4">
+          <p class="mt-4 text-center">
             We make sure our strategic partners comply with necessary
             certifications and permits in order to be a part of our operation
             and offer excellent service.
           </p>
+        </v-col>
+        <v-col class="col-12">
+          <div class="home-certifications">
+            <div class="d-flex justify-center align-center">
+              <img
+                width="auto"
+                height="48"
+                src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642182261/Omni/Home/Certificado_logo_fast_107.92x30.35_sayzkz.png"
+              />
+            </div>
+            <div class="d-flex justify-center align-center">
+              <img
+                width="auto"
+                height="48"
+                src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642182262/Omni/Home/CTPAT_140.52x46.09_hckgfd.png"
+              />
+            </div>
+            <div class="d-flex justify-center align-center">
+              <img
+                width="auto"
+                height="48"
+                src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642182262/Omni/Home/iso_91.06x41.59_fems2p.png"
+              />
+            </div>
+            <div class="d-flex justify-center align-center">
+              <img
+                width="auto"
+                height="48"
+                src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642182262/Omni/Home/UIIAL_115.79x38.35_rs3dkd.png"
+              />
+            </div>
+            <div class="d-flex justify-center align-center">
+              <img
+                width="auto"
+                height="48"
+                src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642182261/Omni/Home/Logo_SCT_97.74x40.54_kf2fx8.png"
+              />
+            </div>
+            <div class="d-flex justify-center align-center">
+              <img
+                width="auto"
+                height="94"
+                src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642182261/Omni/Home/logo_semarnat_119.46x119.46_rija1f.png"
+              />
+            </div>
+            <div class="d-flex justify-center align-center">
+              <img
+                width="auto"
+                height="70"
+                src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642182262/Omni/Home/logo_transporte-limpio_84.71x67.33_qoxspv.png"
+              />
+            </div>
+            <div class="d-flex justify-center align-center">
+              <img
+                width="auto"
+                height="64"
+                src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642182262/Omni/Home/iso_int_55.02x59.37_ehxzuu.png"
+              />
+            </div>
+            <div class="d-flex justify-center align-center">
+              <img
+                width="auto"
+                height="64"
+                src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642182262/Omni/Home/OEA_81.81x44.16_nkpolt.png"
+              />
+            </div>
+          </div>
+          <SwiperCertificates />
         </v-col>
       </v-row>
     </v-container>
@@ -313,14 +389,19 @@
 </template>
 
 <script>
+import SwiperCertificates from '../components/SwiperCertificates.vue'
+
 export default {
+  name: 'IndexPage',
   nuxtI18n: {
     paths: {
       en: '/home',
       es: '/inicio',
     },
   },
-  name: 'IndexPage',
+  components: {
+    SwiperCertificates,
+  },
   methods: {
     goToServiceSection(sectionName) {
       this.$router.push({ path: 'services', query: { section: sectionName } })
@@ -335,6 +416,13 @@ export default {
 .home-subtitle {
   font-size: 48px;
   color: #00126a;
+}
+
+.home-certifications {
+  grid-template-columns: repeat(5, 1fr);
+  display: grid;
+  grid-column-gap: 18px;
+  grid-row-gap: 1em;
 }
 
 .home-title-content {
@@ -387,7 +475,7 @@ export default {
 .card-title-home {
   line-height: normal;
   color: #00126a;
-  font-size: 32px;
+  font-size: 24px;
 }
 
 .home-bg-coverge {
@@ -447,6 +535,10 @@ export default {
 }
 
 @media screen and (max-width: 959px) {
+  .home-certifications {
+    display: none;
+  }
+
   .home-subtitle {
     font-size: 36px;
   }
@@ -454,7 +546,7 @@ export default {
   .home-subtitle-1 {
     font-size: 24px;
   }
-  
+
   .home-flex-wrap {
     flex-wrap: wrap;
   }
@@ -511,10 +603,15 @@ export default {
 
 @media screen and (max-width: 600px) {
   .home-title-content h2 {
+    font-size: 36px;
     padding: 5rem 0 0;
   }
   .home-title-content p {
     padding: 0;
+  }
+
+  .home-subtitle {
+    font-size: 24px;
   }
 
   .home-title-img {

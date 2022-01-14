@@ -18,7 +18,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ['~/assets/css/fonts.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [{ src: '~/plugins/vuelidate' }],
@@ -54,6 +54,7 @@ export default {
     language: 'en',
     version: 2,
     siteKey: '6Le1KBAeAAAAAOo4UoCiV00dKuP-0fNnT8H10_aD',
+    size: 'normal',
   },
 
   i18n: {
