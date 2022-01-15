@@ -71,10 +71,74 @@ export default {
       fallbackLocale: 'en',
       messages: {
         en: {
-          welcome: 'Welcome',
+          navitationMenu: {
+            home: 'home',
+            aboutUs: 'about us',
+            services: 'services',
+            coverage: 'coverage',
+            contactUs: 'contact us',
+            contactUsQuote: 'Quote',
+            contactUsCarrier: 'Omni Carriers',
+          },
+          home: {
+            title: 'Logistics services in México and United States',
+            titleSubText: 'We help you make it possible',
+            servicesSection: {
+              title:
+                'We want to be part of your supply and distribution chain!',
+              storage: 'Storage',
+              ltransport: 'Land Transport',
+              taDistributiont: 'Transport & Distributiont',
+              iae: 'Import & Export',
+              view: 'view service',
+            },
+            reasonswhy: {
+              title: 'Reasons why we are your best option!',
+              textOne:
+                'Solutions up to scale: We offer experience and flexibility to satisfy any type of project',
+              textTwo:
+                'Track & Trace: Constant monitoring of merchandise visualizing load’s location at all times',
+              textThree:
+                'Competitive rates: Maintaining quality in our services every time',
+              textFour:
+                'Guaranteed safety: Making sure our strategic partners comply with our necesary permits in order to be part of our operation and guarantee the safety of your load',
+            },
+          },
         },
         es: {
-          welcome: 'Bienvenido',
+          navitationMenu: {
+            home: 'Inicio',
+            aboutUs: 'Sobre',
+            services: 'Servicios',
+            coverage: 'Covertura',
+            contactUs: 'Contactanos',
+            contactUsQuote: 'Cuota',
+            contactUsCarrier: 'Omni Carrier',
+          },
+          home: {
+            title: 'Servicios Logísticos en México & Estados  Unidos',
+            titleSubText: 'Te ayudamos a hacerlo posible',
+            servicesSection: {
+              title:
+                '¡Queremos ser parte de tu cadena de distribución y suministro!',
+              storage: 'Almacenaje',
+              ltransport: 'Transporte Terrestre',
+              taDistributiont: 'Transporte & Distribución',
+              iae: 'Importación & Exportación',
+              view: 'ver servicio',
+            },
+            reasonswhy: {
+              title: 'Razones por las cuales somos tu mejor opción!',
+              textOne:
+                'Soluciones a la medida: Contamos con experiencia y flexibilidad para satisfacer cualquier tipo de proyecto.',
+              textTwo:
+                'Trazabilidad: Monitoreamos constantemente su mercancía para que usted sepa en todo momento dónde se encuentra su carga.',
+              textThree:
+                'Tarifas competitivas: Manteniendo en todo momento la calidad de nuestros servicios.',
+              textFour:
+                'Seguridad garantizada: Asegurándonos que nuestros aliados estratégicos cumplan con los permisos necesarios para poder ser parte de nuestra operación y garantizar la seguridad de su carga. ',
+            },
+          },
         },
       },
     },
@@ -93,9 +157,19 @@ export default {
 
   // Google api: https://google-analytics.nuxtjs.org
   googleAnalytics: {
-    id: 'G-RX386X7JRL',
+    id: 'UA-217218723-1',
+    disabled: true,
     autoTracking: {
       screenview: true,
+    },
+    debug: {
+      enabled: true,
+      sendHitTask: true,
+    },
+  },
+  publicRuntimeConfig: {
+    googleAnalytics: {
+      id: 'UA-217218723-1',
     },
   },
 

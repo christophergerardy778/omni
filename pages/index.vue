@@ -1,18 +1,16 @@
 <template>
   <div id="home">
-    <!-- <div class="home-title-content">
-      <div class="home-title-img">
-        <h2>Logistics services in México and United States</h2>
-        <p>We help you make it possible</p>
-      </div>
-    </div> -->
     <v-container fluid class="pa-0">
-      <v-img max-height="858" :aspect-ratio="10/10" src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642178291/Img%20Omni%20WEB/Pag%20HOME/Header/trailer_2_toqakc.png">
-        <v-row justify="center" style="margin-top: -40px;">
+      <v-img
+        max-height="858"
+        :aspect-ratio="10 / 10"
+        src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642178291/Img%20Omni%20WEB/Pag%20HOME/Header/trailer_2_toqakc.png"
+      >
+        <v-row justify="center" style="margin-top: -40px">
           <v-col cols="12">
             <div class="home-title-content">
-              <h2>Logistics services in México and United States</h2>
-              <p>We help you make it possible</p>
+              <h2>{{ $t('home.title') }}</h2>
+              <p>{{ $t('home.titleSubText') }}</p>
             </div>
           </v-col>
         </v-row>
@@ -22,7 +20,7 @@
       <v-row justify="center" align="center">
         <v-col class="col-md-8">
           <h2 class="text-center home-subtitle">
-            We want to be part of your supply and distribution chain!
+            {{ $t('home.servicesSection.title') }}
           </h2>
         </v-col>
       </v-row>
@@ -38,14 +36,16 @@
                   />
                 </v-col>
                 <v-col class="d-flex justify-center flex-column">
-                  <h3 class="card-title-home text-center text-md-left">Storage</h3>
+                  <h3 class="card-title-home text-center text-md-left">
+                    {{ $t('home.servicesSection.storage') }}
+                  </h3>
                   <v-btn
                     color="#E30707"
                     class="mt-8"
                     text
                     @click="goToServiceSection('storage')"
                   >
-                    View Service
+                    {{ $t('home.servicesSection.view') }}
                   </v-btn>
                 </v-col>
               </v-row>
@@ -63,14 +63,16 @@
                   />
                 </v-col>
                 <v-col class="d-flex justify-center flex-column">
-                  <h3 class="card-title-home text-center text-md-left">Land Transport</h3>
+                  <h3 class="card-title-home text-center text-md-left">
+                    {{ $t('home.servicesSection.ltransport') }}
+                  </h3>
                   <v-btn
                     color="#E30707"
                     class="mt-8"
                     text
                     @click="goToServiceSection('land')"
                   >
-                    View Service
+                    {{ $t('home.servicesSection.view') }}
                   </v-btn>
                 </v-col>
               </v-row>
@@ -89,7 +91,7 @@
                 </v-col>
                 <v-col class="d-flex justify-center flex-column">
                   <h3 class="card-title-home text-center text-md-left">
-                    Transport & Distributiont
+                    {{ $t('home.servicesSection.taDistributiont') }}
                   </h3>
                   <v-btn
                     color="#E30707"
@@ -97,7 +99,7 @@
                     text
                     @click="goToServiceSection('iae')"
                   >
-                    View Service
+                    {{ $t('home.servicesSection.view') }}
                   </v-btn>
                 </v-col>
               </v-row>
@@ -116,7 +118,7 @@
                 </v-col>
                 <v-col class="d-flex justify-center flex-column">
                   <h3 class="card-title-home text-center text-md-left">
-                    Import & Export
+                    {{ $t('home.servicesSection.iae') }}
                   </h3>
                   <v-btn
                     color="#E30707"
@@ -124,7 +126,7 @@
                     text
                     @click="goToServiceSection('transport')"
                   >
-                    View Service
+                    {{ $t('home.servicesSection.view') }}
                   </v-btn>
                 </v-col>
               </v-row>
@@ -135,7 +137,7 @@
       <v-row justify="center" align="center" class="my-10">
         <v-col class="col-md-8">
           <h2 class="text-center home-subtitle">
-            Reasons why we are your best option!
+            {{ $t('home.reasonswhy.title') }}
           </h2>
         </v-col>
       </v-row>
@@ -156,8 +158,7 @@
             </div>
           </div>
           <p class="section-txt">
-            Solutions up to scale: We offer experience and flexibility to
-            satisfy any type of project
+            {{ $t('home.reasonswhy.textOne') }}
           </p>
         </v-col>
         <v-col class="col-12 col-md-3">
@@ -174,8 +175,7 @@
             </div>
           </div>
           <p class="section-txt">
-            Track & Trace: Constant monitoring of merchandise visualizing load’s
-            location at all times
+            {{ $t('home.reasonswhy.textTwo') }}
           </p>
         </v-col>
         <v-col class="col-12 col-md-3">
@@ -192,7 +192,7 @@
             </div>
           </div>
           <p class="section-txt">
-            Competitive rates: Maintaining quality in our services every time
+            {{ $t('home.reasonswhy.textThree') }}
           </p>
         </v-col>
         <v-col class="col-12 col-md-3">
@@ -202,9 +202,7 @@
             </div>
           </div>
           <p class="section-txt">
-            Guaranteed safety: Making sure our strategic partners comply with
-            our necesary permits in order to be part of our operation and
-            guarantee the safety of your load
+            {{ $t('home.reasonswhy.textFour') }}
           </p>
         </v-col>
       </v-row>
@@ -223,10 +221,17 @@
     <v-container v-if="$vuetify.breakpoint.smAndDown" fluid class="pa-0">
       <v-row justify="center">
         <v-col cols="11">
-          <v-img class="align-end" position="20%" :aspect-ratio="5/6" src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642134508/Img%20Omni%20WEB/Pag%20HOME/Seccion%20Coverage/continent_dyobdi.png">
+          <v-img
+            class="align-end"
+            position="20%"
+            :aspect-ratio="5 / 6"
+            src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642134508/Img%20Omni%20WEB/Pag%20HOME/Seccion%20Coverage/continent_dyobdi.png"
+          >
             <v-row justify="center">
               <v-col cols="12" class="text-center">
-                <v-btn @click="localePathEx('coverage')" dark color="#E30707">More info</v-btn>
+                <v-btn @click="localePathEx('coverage')" dark color="#E30707"
+                  >More info</v-btn
+                >
               </v-col>
             </v-row>
           </v-img>
@@ -264,7 +269,11 @@
     </div> -->
 
     <v-container class="my-10">
-      <v-row v-if="!$vuetify.breakpoint.smAndDown" justify="center" align="center">
+      <v-row
+        v-if="!$vuetify.breakpoint.smAndDown"
+        justify="center"
+        align="center"
+      >
         <v-col class="col-12 col-md-10 mb-10">
           <v-row class="flex-column-reverse flex-md-row">
             <div class="col-md-6">
@@ -299,7 +308,9 @@
                 We certify only the best carrier in the business to transport
                 our clients loads in a fast & safe way.
               </p>
-              <div class="align-center justify-space-between d-sm-flex text-center">
+              <div
+                class="align-center justify-space-between d-sm-flex text-center"
+              >
                 <p class="mb-2 mb-md-0">Want to be an OMNI Carrier?</p>
                 <v-btn
                   color="#E30707"
@@ -320,36 +331,63 @@
         </v-col>
         <v-col class="col-12 col-md-10 mb-10"> </v-col>
       </v-row>
-      <v-row v-if="$vuetify.breakpoint.smAndDown" justify="center" no-gutters class="marco">
+      <v-row
+        v-if="$vuetify.breakpoint.smAndDown"
+        justify="center"
+        no-gutters
+        class="marco"
+      >
         <v-col cols="12" class="text-center">
           <v-img
-                :aspect-ratio="5/5"
-                height="319"
-                src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133103/Img%20Omni%20WEB/Pag%20HOME/Seccion%20Contact%20Us/CONTACT_US_ingles_zxum9o.png"
-              />
+            :aspect-ratio="5 / 5"
+            height="319"
+            src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133103/Img%20Omni%20WEB/Pag%20HOME/Seccion%20Contact%20Us/CONTACT_US_ingles_zxum9o.png"
+          />
         </v-col>
         <v-col cols="12" class="text-center subTituloMobile my-4">
-          Contact Us <v-btn class="ml-2" small color="#2E51FF"  @click="localePathEx('contact-us')"> <v-icon color="white">mdi-arrow-right</v-icon></v-btn>
+          Contact Us
+          <v-btn
+            class="ml-2"
+            small
+            color="#2E51FF"
+            @click="localePathEx('contact-us')"
+          >
+            <v-icon color="white">mdi-arrow-right</v-icon></v-btn
+          >
         </v-col>
         <v-col cols="10" class="textoMobil my-3 mb-9">
-          Find out how we can help out and bring solutions to all your logistics needs.
+          Find out how we can help out and bring solutions to all your logistics
+          needs.
         </v-col>
       </v-row>
-      <v-row v-if="$vuetify.breakpoint.smAndDown" justify="center" no-gutters class="marco mt-12" style="background-color: #f2f4f6">
+      <v-row
+        v-if="$vuetify.breakpoint.smAndDown"
+        justify="center"
+        no-gutters
+        class="marco mt-12"
+        style="background-color: #f2f4f6"
+      >
         <v-col cols="12" class="text-center">
           <v-img
-                :aspect-ratio="5/5"
-                height="319"
-                src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133059/Img%20Omni%20WEB/Pag%20HOME/Seccion%20Cartified%20and%20Safe/Home__Certified_376x214_b8vvbe.png"
-              />
+            :aspect-ratio="5 / 5"
+            height="319"
+            src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133059/Img%20Omni%20WEB/Pag%20HOME/Seccion%20Cartified%20and%20Safe/Home__Certified_376x214_b8vvbe.png"
+          />
         </v-col>
         <v-col cols="12" class="text-center subTituloMobile my-4">
-          Certified & Safe Transport <v-btn class="ml-2" small color="#2E51FF"  @click="goToContactSection('join')"> <v-icon color="white">mdi-arrow-right</v-icon></v-btn>
+          Certified & Safe Transport
+          <v-btn
+            class="ml-2"
+            small
+            color="#2E51FF"
+            @click="goToContactSection('join')"
+          >
+            <v-icon color="white">mdi-arrow-right</v-icon></v-btn
+          >
         </v-col>
         <v-col cols="10" class="textoMobil my-3 mb-9">
-          We certify only the best carrier in the business to transport
-          our clients loads in a fast & safe way. Want to be an OMNI
-          Carrier?
+          We certify only the best carrier in the business to transport our
+          clients loads in a fast & safe way. Want to be an OMNI Carrier?
         </v-col>
       </v-row>
     </v-container>

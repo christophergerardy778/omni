@@ -26,8 +26,8 @@
           </v-col>
           <v-col class="col-12 col-md-4">
             <img
-              width="339"
-              height="308"
+              width="290"
+              height="290"
               class="about-us__image-phone d-block mx-auto"
               src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133103/Img%20Omni%20WEB/Pag%20CONTACT%20US-%20contactanos/CONTACT_US_copy-space-blank-mobile-screen_4_livdfi.png"
             />
@@ -137,7 +137,7 @@
               </div>
               <privacy v-model="check1" class="py-0 my-0" :check="true" />
               <!-- <div class="d-flex justify-end mt-4"> -->
-              <div>
+              <div class="mt-4">
                 <recaptcha @success="setContactUsVerified" size="100" />
               </div>
               <div class="d-flex justify-end mt-6">
@@ -239,7 +239,7 @@
                     color="white"
                   />
                   <!-- <div class="d-flex justify-end"> -->
-                  <div>
+                  <div class="mt-4">
                     <recaptcha @success="setJoinUsVerified" size="100" />
                   </div>
                   <div class="d-flex justify-end mt-6">
@@ -461,7 +461,7 @@ export default {
 
 .about-us__background-image {
   background-image: url('https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133046/Img%20Omni%20WEB/Pag%20CONTACT%20US-%20contactanos/CARRIER_professional-truck-driver-entering-his-truck-long-vehicle-and-holding-thumbs-up_1_uni6ra.png');
-  background-position-x: -100%;
+  background-position-x: -50%;
   background-size: auto 100%;
 }
 
@@ -481,6 +481,18 @@ export default {
 
   .text-header-title {
     font-size: 36px;
+  }
+
+  .about-us__form-container {
+    padding: 24px 10px;
+  }
+
+  .about-us__form_background-color {
+    border-radius: 0;
+  }
+
+  #join {
+    padding: 0;
   }
 }
 </style>
