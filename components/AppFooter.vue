@@ -13,14 +13,16 @@
           </p>
         </v-col>
         <v-col class="col-12 col-md-2 offset-md-1 offset-sm0">
-          <img-credits/>
+          <img-credits />
         </v-col>
         <!-- <v-col class="col-12 col-md-2 offset-md-3 offset-sm0"> -->
         <v-col class="col-12 col-md-2">
           <h4 class="white--text">Contact</h4>
           <div class="white--text d-flex align-center mt-4">
-            <v-icon color="white">mdi-cellphone</v-icon>
-            <p class="mb-0 ml-4">(867) 3343939</p>
+            <a href="tel:8673343939" class="call-to">
+              <v-icon color="white">mdi-cellphone</v-icon>
+              <p class="mb-0 ml-4">(867) 3343939</p>
+            </a>
           </div>
         </v-col>
         <v-col class="col-12 col-md-4">
@@ -43,24 +45,30 @@
           ><h4 class="white--text font-weight-light">
             © 2022 All rights reserved
           </h4>
-          <privacy/>
-        </v-col
-        >
+          <privacy />
+        </v-col>
       </v-row>
     </v-container>
   </v-footer>
 </template>
 
 <script>
-import ImgCredits from "@/components/ImgCredits.vue";
-import Privacy from "@/components/Privacy.vue";
+import ImgCredits from '@/components/ImgCredits.vue'
+import Privacy from '@/components/Privacy.vue'
 
 export default {
   components: {
     ImgCredits,
     Privacy,
-  }
+  },
 }
 </script>
 
-<style></style>
+<style>
+.call-to {
+  display: flex;
+  align-items: center;
+  color: white !important;
+  text-decoration: none;
+}
+</style>

@@ -18,7 +18,7 @@
         </v-row>
       </v-img>
     </v-container>
-    <v-container>
+    <v-container class="mt-10">
       <v-row justify="center" align="center">
         <v-col class="col-md-8">
           <h2 class="text-center home-subtitle">

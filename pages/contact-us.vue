@@ -33,8 +33,10 @@
             />
             <div class="py-4 pl-4">
               <div class="d-flex align-center">
-                <v-icon color="#E30707">mdi-phone</v-icon>
-                <p class="mb-0 ml-4">(867) 3343939</p>
+                <a href="tel:8673343939" class="call-to">
+                  <v-icon color="#E30707">mdi-phone</v-icon>
+                  <p class="mb-0 ml-4 dark-text">(867) 3343939</p>
+                </a>
               </div>
 
               <div class="d-flex align-center mt-4">
@@ -133,7 +135,7 @@
                   v-model="contactUsForm.comments"
                 />
               </div>
-              <privacy v-model="check1" class="py-0 my-0" :check="true"/>
+              <privacy v-model="check1" class="py-0 my-0" :check="true" />
               <!-- <div class="d-flex justify-end mt-4"> -->
               <div>
                 <recaptcha @success="setContactUsVerified" size="100" />
@@ -230,7 +232,12 @@
                       v-model="joinUsForm.message"
                     />
                   </div>
-                  <privacy v-model="check2" class="py-0 my-0" :check="true" color="white"/>
+                  <privacy
+                    v-model="check2"
+                    class="py-0 my-0"
+                    :check="true"
+                    color="white"
+                  />
                   <!-- <div class="d-flex justify-end"> -->
                   <div>
                     <recaptcha @success="setJoinUsVerified" size="100" />
@@ -267,13 +274,13 @@
 </template>
 
 <script>
-import { validationMixin } from 'vuelidate';
-import { required, email, minLength } from 'vuelidate/lib/validators';
-import Privacy from "@/components/Privacy.vue";
+import { validationMixin } from 'vuelidate'
+import { required, email, minLength } from 'vuelidate/lib/validators'
+import Privacy from '@/components/Privacy.vue'
 
 export default {
   components: {
-    Privacy
+    Privacy,
   },
   mixins: [validationMixin],
   nuxtI18n: {
@@ -412,6 +419,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.dark-text {
+  color: #181818;
+}
+
 .color-about-us {
   color: #00126a;
 }
