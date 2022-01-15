@@ -103,6 +103,11 @@ export default {
               textFour:
                 'Guaranteed safety: Making sure our strategic partners comply with our necesary permits in order to be part of our operation and guarantee the safety of your load',
             },
+            coverageSection: {
+              title: 'Coverage',
+              text: 'Expand your company’s horizons!',
+              btn: 'more info',
+            },
           },
         },
         es: {
@@ -137,6 +142,11 @@ export default {
                 'Tarifas competitivas: Manteniendo en todo momento la calidad de nuestros servicios.',
               textFour:
                 'Seguridad garantizada: Asegurándonos que nuestros aliados estratégicos cumplan con los permisos necesarios para poder ser parte de nuestra operación y garantizar la seguridad de su carga. ',
+            },
+            coverageSection: {
+              title: 'Cobertura',
+              text: '¡Llevamos a tu empresa más lejos! Explora nuestra cobertura',
+              btn: 'conoce mas',
             },
           },
         },

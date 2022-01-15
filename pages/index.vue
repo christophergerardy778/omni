@@ -212,8 +212,10 @@
       <v-container>
         <v-row align="center" justify="center">
           <v-col class="col-12 col-md-10">
-            <h3 class="card-title-home">Coverage</h3>
-            <p class="mt-4">Expand your company’s horizons!</p>
+            <h3 class="card-title-home">
+              {{ $t('home.coverageSection.title') }}
+            </h3>
+            <p class="mt-4">{{ $t('home.coverageSection.text') }}</p>
           </v-col>
         </v-row>
       </v-container>
@@ -230,7 +232,7 @@
             <v-row justify="center">
               <v-col cols="12" class="text-center">
                 <v-btn @click="localePathEx('coverage')" dark color="#E30707"
-                  >More info</v-btn
+                  >{{ $t('home.coverageSection.btn') }}</v-btn
                 >
               </v-col>
             </v-row>
