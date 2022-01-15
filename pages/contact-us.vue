@@ -276,6 +276,7 @@ export default {
     Privacy
   },
   mixins: [validationMixin],
+  name: 'contact-us',
   nuxtI18n: {
     paths: {
       en: '/contact-us',

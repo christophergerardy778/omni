@@ -230,6 +230,13 @@ import CardIndustry from '@/components/services/CardIndustry.vue'
 import CardContactUs from '~/components/services/CardContactUs.vue'
 
 export default {
+  name: 'services',
+  nuxtI18n: {
+    paths: {
+      en: '/services',
+      es: '/servicios',
+    },
+  },
   mounted() {
     setTimeout(() => {
       if (this.$route.query.section) {

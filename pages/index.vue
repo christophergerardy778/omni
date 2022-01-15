@@ -12,7 +12,7 @@
           <v-col cols="12">
             <div class="home-title-content">
               <h2>Logistics services in México and United States</h2>
-              <p>We help you make it possible</p>
+              <p>We help you make it possible {{ $t('welcome') }}</p>
             </div>
           </v-col>
         </v-row>
