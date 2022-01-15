@@ -11,7 +11,8 @@
         v-if="!check"
         v-bind="attrs"
         v-on="on"
-        class="white--text font-weight-light text-end"
+        class="font-weight-light text-end"
+        style="color: #ffeb00;"
       >
         Notice of Privacy
       </h4>
@@ -44,7 +45,7 @@
             OMNI INTERNATIONAL LOGISTICS (persona a quien para los efectos de este aviso de privacidad se le nombra (¨El Responsable ̈) con el objetivo de respetar los derechos e intereses de cada individuo en relación con su intimidad y sus datos personales. En cumplimiento a los principios y directrices prescritos por la Ley Federal de Protección en Mexico de datos Personales en Posesión de Particulares (en lo sucesivo a la ley), se pone a disposición de todos y cada una de las personas físicas, en cualquiera de sus caracteres, ya sea como clientes, empleados, trabajadores, candidatos, proveedores, contratistas o transportistas, (en adelante ¨titular¨ en lo individual y ¨titulares¨ en lo colectivo), de las cuales sea necesario el tratamiento de datos personales.
             El presente Aviso de Privacidad, motivo por el cual se manifiesta lo siguiente:
             <br/>
-            Identidad y domicilio del responsable del Tratamiento de Datos Personales: (El ̈responsable ̈) quien señala como domicilio en 14203 Distribution Ave, Laredo, TX 78045, Estados Unidos, por medio del presente Aviso, hace de su conocimiento que los datos personales, los cuales son debidamente citados en apartado siguiente. y que nos proporciona el ̈titular ̈ activo o potencial, serán tratados estrictamente para los fines que más adelante se señalan, siendo el único responsable del tratamiento de dichos datos, el área de Mercadotecnia, ubicada en el domicilio referido, con numero de telefono (867)3343939 y correo electrónico sales@omniintllc.us
+            Identidad y domicilio del responsable del Tratamiento de Datos Personales: (El ̈responsable ̈) quien señala como domicilio en 14203 Distribution Ave, Laredo, TX 78045, Estados Unidos, por medio del presente Aviso, hace de su conocimiento que los datos personales, los cuales son debidamente citados en apartado siguiente. y que nos proporciona el ̈titular ̈ activo o potencial, serán tratados estrictamente para los fines que más adelante se señalan, siendo el único responsable del tratamiento de dichos datos, el área de Mercadotecnia, ubicada en el domicilio referido, con numero de telefono (867)3343939 y correo electrónico privacy@omniintllc.us
             Datos Personales y finalidades del tratamiento de los mismos: Los datos personales de los ¨titulares¨, que serán tratados por el ¨responsable¨ consisten en información personal, la cual puede comprender: su nombre, dirección de correo electrónico, domicilio fisico, domicilio fiscal, numero de telefono, asi como datos financieros y patrimoniales, direccion de pagina web, entre otros. Estrictamente indispensables para los fines que más adelante se señalan. El ̈responsable ̈ recabará sus datos personales y serán tratados únicamente para los siguientes fines, conforme le sean aplicables, a cada titular, según su relación jurídica con el mismo:
             A) Evaluación como proveedor, contratista, transportista, cliente, empleado, o trabajador potencial.
             B) Para efectos de la elaboración y celebración de (los) contrato(s) que, acorde a la relación jurídica correspondiente, en su caso se requieran.

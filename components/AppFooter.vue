@@ -12,11 +12,11 @@
             where we come from and where we are headed.
           </p>
         </v-col>
-        <v-col class="col-12 col-md-2 offset-md-1 offset-sm0">
+        <!-- <v-col class="col-12 col-md-2 offset-md-1 offset-sm0">
           <img-credits/>
-        </v-col>
-        <!-- <v-col class="col-12 col-md-2 offset-md-3 offset-sm0"> -->
-        <v-col class="col-12 col-md-2">
+        </v-col> -->
+        <v-col class="col-12 col-md-2 offset-md-3 offset-sm0">
+        <!-- <v-col class="col-12 col-md-2"> -->
           <h4 class="white--text">Contact</h4>
           <div class="white--text d-flex align-center mt-4">
             <v-icon color="white">mdi-cellphone</v-icon>
@@ -39,13 +39,17 @@
         </v-col>
       </v-row>
       <v-row class="my-10">
-        <v-col
-          ><h4 class="white--text font-weight-light">
+        <v-col v-if="$vuetify.breakpoint.smAndDown" lg="4" md="4" sm="12" cols="12" class="offset-lg-2 offset-md-2" style="display: flex;">
+            <img-credits/><p style="color: white; margin: 0 10px 0 10px;">|</p><privacy/>
+        </v-col>
+        <v-col lg="6" md="6" sm="12" cols="12">
+          <h4 class="white--text font-weight-light">
             © 2022 All rights reserved
           </h4>
-          <privacy/>
-        </v-col
-        >
+        </v-col>
+        <v-col v-if="!$vuetify.breakpoint.smAndDown" lg="4" md="4" sm="12" cols="12" style="display: flex;" class="offset-lg-2 offset-md-2">
+            <img-credits/><p style="color: white; margin: 0 10px 0 10px;">|</p><privacy/>
+        </v-col>
       </v-row>
     </v-container>
   </v-footer>

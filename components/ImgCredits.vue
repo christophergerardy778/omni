@@ -9,15 +9,10 @@
       <h4
         v-bind="attrs"
         v-on="on"
-        class="white--text"
+        class="font-weight-light text-end"
+        style="color: #ffeb00;"
       >
         Images Credit
-        <v-icon
-          color="white"
-          left
-        >
-          mdi-chevron-down
-        </v-icon>
       </h4>
     </template>
     <v-card>
