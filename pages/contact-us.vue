@@ -477,7 +477,7 @@ export default {
 .about-us__background-image {
   background-image: url('https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133046/Img%20Omni%20WEB/Pag%20CONTACT%20US-%20contactanos/CARRIER_professional-truck-driver-entering-his-truck-long-vehicle-and-holding-thumbs-up_1_uni6ra.png');
   background-position-x: -50%;
-  background-size: auto 100%;
+  background-size: 60% 100%;
 }
 
 .about-us__image-phone {
