@@ -7,17 +7,12 @@
         </v-col>
         <v-col class="col-12 col-md-3 white--text">
           <p class="mt-4">
-            Omni International Logistics is more than just a logistics agency.
-            We're your complete solution for cross border commerce. Get to know
-            where we come from and where we are headed.
+            {{$t('fotter.details')}}
           </p>
         </v-col>
-        <v-col class="col-12 col-md-2 offset-md-1 offset-sm0">
-          <img-credits />
-        </v-col>
-        <!-- <v-col class="col-12 col-md-2 offset-md-3 offset-sm0"> -->
-        <v-col class="col-12 col-md-2">
-          <h4 class="white--text">Contact</h4>
+        <v-col class="col-12 col-md-2 offset-md-3 offset-sm0">
+        <!-- <v-col class="col-12 col-md-2"> -->
+          <h4 class="white--text">{{$t('fotter.contact')}}</h4>
           <div class="white--text d-flex align-center mt-4">
             <a href="tel:8673343939" class="call-to">
               <v-icon color="white">mdi-cellphone</v-icon>
@@ -26,7 +21,7 @@
           </div>
         </v-col>
         <v-col class="col-12 col-md-4">
-          <h4 class="white--text">Locations</h4>
+          <h4 class="white--text">{{$t('fotter.locations')}}</h4>
           <div class="white--text d-flex align-center mt-4">
             <v-icon color="white">mdi-map-marker</v-icon>
             <p class="mb-0 ml-4">
@@ -40,12 +35,17 @@
           </div>
         </v-col>
       </v-row>
-      <v-row class="my-10">
-        <v-col
-          ><h4 class="white--text font-weight-light">
-            © 2022 All rights reserved
+      <v-row class="my-10" justify="center">
+        <v-col v-if="$vuetify.breakpoint.smAndDown" lg="4" md="4" sm="12" cols="12" class="offset-lg-2 offset-md-2" style="display: flex;">
+            <img-credits/><p style="color: white; margin: 0 10px 0 10px;">|</p><privacy/>
+        </v-col>
+        <v-col lg="6" md="6" sm="12" cols="12">
+          <h4 class="white--text font-weight-light">
+            {{$t('fotter.copyright')}}
           </h4>
-          <privacy />
+        </v-col>
+        <v-col v-if="!$vuetify.breakpoint.smAndDown" lg="4" md="4" sm="12" cols="12" style="display: flex;" class="offset-lg-2 offset-md-2">
+            <img-credits/><p style="color: white; margin: 0 10px 0 10px;">|</p><privacy/>
         </v-col>
       </v-row>
     </v-container>

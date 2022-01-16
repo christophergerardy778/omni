@@ -4,8 +4,7 @@
       <v-container class="py-10">
         <v-row justify="center">
           <v-col class="col-md-6">
-            <h1 class="text-header-title white--text">
-              Schedule a <b>call ¡Contact us!</b>
+            <h1 class="text-header-title white--text" v-html="$t('contact.title')">
             </h1>
           </v-col>
         </v-row>
@@ -16,12 +15,9 @@
         <v-row>
           <v-col class="col-12 col-md-4">
             <h2 class="color-about-us">
-              Do you need to quote a service? Looking to book one of our
-              services? Send us your information and we'll contact you briefly
+              {{$t('contact.section_one')}}
             </h2>
-            <p class="mt-8 about-us__text">
-              Contact us to find out how we can help you formulate the solutions
-              to your logistical problems.
+            <p class="mt-8 about-us__text" v-html="$t('contact.so_details')">
             </p>
           </v-col>
           <v-col class="col-12 col-md-4">
@@ -55,7 +51,7 @@
             </p> -->
             <v-form @submit.prevent="sendContactUsEmail">
               <div>
-                <p class="mb-1">Name <span>*</span></p>
+                <p class="mb-1">{{$t('contact.ff_name')}} <span>*</span></p>
                 <v-text-field
                   color="#00126a"
                   outlined
@@ -67,7 +63,7 @@
                 />
               </div>
               <div>
-                <p class="mb-1">Name of company</p>
+                <p class="mb-1">{{$t('contact.ff_name_company')}}</p>
                 <v-text-field
                   color="#00126a"
                   outlined
@@ -76,7 +72,7 @@
                 />
               </div>
               <div>
-                <p class="mb-1">Email <span>*</span></p>
+                <p class="mb-1">{{$t('contact.ff_email')}} <span>*</span></p>
                 <v-text-field
                   color="#00126a"
                   outlined
@@ -88,7 +84,7 @@
                 />
               </div>
               <div>
-                <p class="mb-1">Telephone <span>*</span></p>
+                <p class="mb-1">{{$t('contact.ff_phone')}} <span>*</span></p>
                 <v-text-field
                   color="#00126a"
                   outlined
@@ -100,7 +96,7 @@
                 />
               </div>
               <div>
-                <p class="mb-1">Equipament requiered</p>
+                <p class="mb-1">{{$t('contact.ff_equip')}}</p>
                 <v-text-field
                   color="#00126a"
                   outlined
@@ -109,7 +105,7 @@
                 />
               </div>
               <div>
-                <p class="mb-1">Source</p>
+                <p class="mb-1">{{$t('contact.ff_source')}}</p>
                 <v-text-field
                   color="#00126a"
                   outlined
@@ -118,7 +114,7 @@
                 />
               </div>
               <div>
-                <p class="mb-1">Destination</p>
+                <p class="mb-1">{{$t('contact.ff_destination')}}</p>
                 <v-text-field
                   color="#00126a"
                   outlined
@@ -127,7 +123,7 @@
                 />
               </div>
               <div>
-                <p class="mb-1">Comments</p>
+                <p class="mb-1">{{$t('contact.ff_comments')}}</p>
                 <v-textarea
                   color="#00126a"
                   outlined
@@ -135,7 +131,7 @@
                   v-model="contactUsForm.comments"
                 />
               </div>
-              <privacy v-model="check1" class="py-0 my-0" :check="true" />
+              <privacy :textAcepto="$t('contact.ff_privacy')" :textPrivacy="$t('contact.ff_privacy_link')" v-model="check1" class="py-0 my-0" :check="true" />
               <!-- <div class="d-flex justify-end mt-4"> -->
               <div class="mt-4">
                 <recaptcha @success="setContactUsVerified" size="100" />
@@ -148,7 +144,7 @@
                   :disabled="!check1 || isContactLock"
                   type="submit"
                   :loading="isLoadingContact"
-                  >Submit</v-btn
+                  >{{$t('contact.ff_btn')}}</v-btn
                 >
               </div>
             </v-form>
@@ -160,12 +156,10 @@
       <v-row>
         <v-col class="col-12 col-md-4">
           <h2 class="color-about-us">
-            Interested in forming part of OMNI as a partner carrier?
+            {{$t('contact.section_two')}}
           </h2>
           <p class="mt-10 about-us__text">
-            We want to build a strong and permanent relationship with people who
-            are passionate about the transportation and logistics industry,
-            become an OMNI Carrier and succeed on your own terms.
+            {{$t('contact.st_details')}}
           </p>
         </v-col>
         <v-col class="col-12 col-md-8" id="join">
@@ -183,15 +177,15 @@
                     >
                   </p> -->
                   <div>
-                    <p class="mb-1 white--text">Destination</p>
+                    <p class="mb-1 white--text">{{$t('contact.sf_name')}}</p>
                     <v-text-field
                       dense
                       outlined
-                      v-model="joinUsForm.destination"
+                      v-model="joinUsForm.name"
                     />
                   </div>
                   <div>
-                    <p class="mb-1 white--text">Phone <span>*</span></p>
+                    <p class="mb-1 white--text">{{$t('contact.sf_phone')}} <span>*</span></p>
                     <v-text-field
                       dense
                       outlined
@@ -203,7 +197,7 @@
                     />
                   </div>
                   <div>
-                    <p class="mb-1 white--text">Email <span>*</span></p>
+                    <p class="mb-1 white--text">{{$t('contact.sf_email')}} <span>*</span></p>
                     <v-text-field
                       color="white"
                       outlined
@@ -215,7 +209,7 @@
                     />
                   </div>
                   <div>
-                    <p class="mb-1 white--text">Company</p>
+                    <p class="mb-1 white--text">{{$t('contact.sf_company')}}</p>
                     <v-text-field
                       color="white"
                       outlined
@@ -224,7 +218,7 @@
                     />
                   </div>
                   <div>
-                    <p class="mb-1 white--text">Message</p>
+                    <p class="mb-1 white--text">{{$t('contact.sf_message')}}</p>
                     <v-textarea
                       color="#00126a"
                       outlined
@@ -234,6 +228,8 @@
                   </div>
                   <privacy
                     v-model="check2"
+                    :textAcepto="$t('contact.sf_privacy')"
+                    :textPrivacy="$t('contact.sf_privacy_link')"
                     class="py-0 my-0"
                     :check="true"
                     color="white"
@@ -250,7 +246,7 @@
                       :disabled="!check2 || isJoinUsLock"
                       depressed
                       :loading="isLoadingJoinUs"
-                      >Sibmit</v-btn
+                      >{{$t('contact.ff_btn')}}</v-btn
                     >
                   </div>
                 </div>
@@ -262,11 +258,11 @@
     </v-container>
     <v-dialog v-model="showDialog" max-width="300">
       <v-card>
-        <v-card-title>Email sended</v-card-title>
-        <v-card-text>Thank U!</v-card-text>
+        <v-card-title>{{$t('contact.e_title')}}</v-card-title>
+        <v-card-text>{{$t('contact.e_subtitle')}}</v-card-text>
         <v-card-actions>
           <v-spacer />
-          <v-btn color="#071C87" dark depressed @click="closeDialog">OK</v-btn>
+          <v-btn color="#071C87" dark depressed @click="closeDialog">{{$t('contact.e_ok')}}</v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
@@ -331,7 +327,7 @@ export default {
     },
     joinUsForm: {
       type: 1,
-      destination: '',
+      name: '',
       telephone: '',
       email: '',
       company: '',

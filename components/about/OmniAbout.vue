@@ -8,7 +8,7 @@
         cols="12"
         class="titulo text-center"
       >
-        OMNI Headquarters
+        {{$t('about.headquarters')}}
       </v-col>
       <v-col cols="12">
         <v-img
@@ -17,13 +17,13 @@
         />
       </v-col>
       <v-col cols="10" class="parrafoContact">
-        With offices across the Unites States and Mexico, we will work with you to find solutions in your region.
+        {{$t('about.h_details')}}
       </v-col>
       <v-col cols="10" class="textoSimple ml-0">
-        <div v-html="Unites"> </div>
+        <div v-html="$t('about.h_unites')"> </div>
       </v-col>
       <v-col cols="10" class="textoSimple ml-0">
-        <div v-html="Mex"> </div>
+        <div v-html="$t('about.h_mex')"> </div>
       </v-col>
     </v-row>
     <v-card v-else elevation="0" color="#F2F4F6">
@@ -35,14 +35,14 @@
         src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133045/Img%20Omni%20WEB/Pag%20ABOUT%20US-%20Nosotros/Seccion%20Omni%20Headquaters/AboutUs__Headquarters504x419_jjpelw.png">
         <v-row justify="center" class="mt-4">
           <v-col lg="8" md="10" cols="10" class="subTituloSimple">
-            OMNI Headquarters
+            {{$t('about.headquarters')}}
           </v-col>
           <v-col lg="8" md="10" cols="10" class="parrafoContact pl-4 mt-1">
             <div style="max-width: 237px;">
-              With offices across the Unites States and Mexico, we will work with you to find solutions in your region.
+              {{$t('about.h_details')}}
             </div>
-            <div v-html="Unites" class="mt-4"></div>
-            <div v-html="Mex" class="mt-4"></div>
+            <div v-html="$t('about.h_unites')" class="mt-4"></div>
+            <div v-html="$t('about.h_mex')" class="mt-4"></div>
           </v-col>
         </v-row>
       </v-img>

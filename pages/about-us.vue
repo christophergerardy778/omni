@@ -18,12 +18,12 @@
             >
               <div
                 v-if="!$vuetify.breakpoint.smAndDown"
-                v-html="txtImg"
+                v-html="$t('about.title')"
                 class="textoImagenPc"
               ></div>
               <div
                 v-else
-                v-html="txtImg"
+                v-html="$t('about.title')"
                 class="textoImagenMobile"
               ></div>
             </v-col>
@@ -35,7 +35,7 @@
         :class="$vuetify.breakpoint.smAndDown ? 'titulo text-center' : 'tituloSecundario text-center'"
         :style="'margin-top:' + ($vuetify.breakpoint.smAndDown ? '79px' : '172px')+';'"
       >
-        About Us
+        {{$t('about.section_one')}}
       </v-col>
       <v-col
         lg="10"
@@ -46,7 +46,7 @@
       >
         <v-row justify="center">
           <v-col
-            v-for="(card, index) in AUCards"
+            v-for="(card, index) in $t('about.so_card_about')"
             :key="index"
             lg="6"
             md="6"
@@ -79,29 +79,6 @@ export default {
   },
   data() {
     return {
-      txtImg: `<b>Efficiency</b> in our process.<br><b>Always.</b>`,
-      AUCards : [
-        {
-          titulo: 'Our Company',
-          img: 'https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133045/Img%20Omni%20WEB/Pag%20ABOUT%20US-%20Nosotros/Seccion%20About%20Us/AboutUs_Ourcompany_185x189_utzlte.png',
-          detalle: 'Since 2019, we began our journey in establishing our Logistics enterprise Headquarters in Laredo, Tx.',
-        },
-        {
-          titulo: 'Our most important values',
-          img: 'https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133044/Img%20Omni%20WEB/Pag%20ABOUT%20US-%20Nosotros/Seccion%20About%20Us/AboutUs_Most_important_185x189_phzece.png',
-          detalle: 'Omni´s team embody our core values of trust, innovation, expertise and safety.',
-        },
-        {
-          titulo: 'Our vision',
-          img: 'https://res.cloudinary.com/omni-international-logistics/image/upload/v1642129820/Omni/AboutUs/ABOUT_US_medium-shot-woman-wearing-face-mask_uicbi4.jpg',
-          detalle: 'At OMNI, our vision is to bring compelling value through outsourcing.',
-        },
-        {
-          titulo: 'Our mission',
-          img: 'https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133045/Img%20Omni%20WEB/Pag%20ABOUT%20US-%20Nosotros/Seccion%20About%20Us/AboutUs_Ourmission_185x189_pd6zhf.png',
-          detalle: 'Our mission statement says it all: Creating the most efficient transportation network in North America. We continuously look for new ways that our people, process and technology can be used to move freight transportation forward.',
-        },
-      ],
     }
   }
 }

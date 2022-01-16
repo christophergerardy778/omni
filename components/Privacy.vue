@@ -11,12 +11,13 @@
         v-if="!check"
         v-bind="attrs"
         v-on="on"
-        class="white--text font-weight-light text-end"
+        class="font-weight-light text-end"
+        style="color: #ffeb00;"
       >
-        Notice of Privacy
+        {{$t('privacy.title')}}
       </h4>
       <div v-else :style="`color: ${color}`">
-        <input v-model="acepto" type="checkbox"> I have read and agree the <a v-bind="attrs" v-on="on">privacy policy.</a>
+        <input v-model="acepto" type="checkbox"> {{textAcepto}} <a v-bind="attrs" v-on="on">{{textPrivacy}}</a>
       </div>
     </template>
     <v-card>
@@ -34,7 +35,7 @@
             cols="12"
             class="subTituloMobile mt-3 text-center"
           >
-            Notice of Privacy
+            {{$t('privacy.title')}}
           </v-col>
           <v-col
             cols="11"
@@ -90,6 +91,14 @@ export default {
     color: {
       type: String,
       default: 'black',
+    },
+    textAcepto: {
+      type: String,
+      default: 'I have read and agree the ',
+    },
+    textPrivacy: {
+      type: String,
+      default: 'privacy policy.',
     }
   },
   data() {

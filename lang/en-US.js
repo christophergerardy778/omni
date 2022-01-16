@@ -31,6 +31,18 @@ export default {
       textFour:
         'Guaranteed safety: Making sure our strategic partners comply with our necesary permits in order to be part of our operation and guarantee the safety of your load',
     },
+    coverage: 'Coverage',
+    coverage_details: 'Expand your company’s horizons!',
+    coverage_btn: 'More info',
+    contact: 'Contact us:',
+    contact_details: 'Find out how we can help out and bring solutions to all your logistics needs.',
+    contact_btn: 'More Info',
+    certified: 'Certified & Safe Transport',
+    certified_details: 'We certify only the best carrier in the business to transport our clients loads in a fast & safe way.',
+    certified_details_two: 'Want to be an OMNI Carrier?',
+    certified_btn: 'More Info',
+    section_three: 'We guarantee the safety of your loads by working with today’s standard carrier certifications.',
+    st_details: 'We make sure our strategic partners comply with necessary certifications and permits in order to be a part of our operation and offer excellent service. ',
   },
   about: {
     title: '<b>Efficiency</b> in our process.<br><b>Always.</b>',
@@ -59,7 +71,7 @@ export default {
     ],
     headquarters: 'OMNI Headquarters',
     h_details: 'With offices across the United States and Mexico, we will work with you to find solutions in your region. ',
-    h_nites: '<b>Unites States</b> <br/> Laredo Texas <br/> Fresno California',
+    h_unites: '<b>Unites States</b> <br/> Laredo Texas <br/> Fresno California',
     h_mex: '<b>México</b> <br/> Nuevo Laredo Tamaulipas',
   },
   services: {
@@ -144,6 +156,7 @@ export default {
     title_mobil: 'We <b>Take</b><br> your <b>company <br>further</b>',
     coverage: 'Coverage',
     c_details: 'Expand your company’s horizons!',
+    mex: 'México<br>Logistic points:',
     c_mex: [
       'Nuevo León',
       'Jalisco',
@@ -158,7 +171,8 @@ export default {
       'Guanajuato',
       'Hidalgo',
     ],
-  c_usa: [
+    usa: 'All USA',
+    c_usa: [
     '(Exept Alaska and Hawaii)'
     ],
   },
@@ -166,10 +180,10 @@ export default {
     title: 'Schedule a <b>call ¡Contact us!</b>',
     section_one: 'Do you need to quote a service? Looking to book one of our services? Send us your information and we’ll contact you briefly',
     so_details: 'Contact us to find out how we can help you formulate the solutions to your logistical problems.',
-    ff_name: 'Name *',
+    ff_name: 'Name',
     ff_name_company: 'Name of the company',
-    ff_email: 'E-mail *',
-    ff_phone: 'Telephone *',
+    ff_email: 'E-mail',
+    ff_phone: 'Telephone',
     ff_equip: 'Equipment Required',
     ff_source: 'Source',
     ff_destination: 'Destination',
@@ -187,6 +201,9 @@ export default {
     sf_privacy: 'I have read and agree the ',
     sf_privacy_link: 'privacy policy.',
     ff_btn: 'Submit',
+    e_title: 'Email sended',
+    e_subtitle: 'Thank U!',
+    e_ok: 'Ok',
   },
   fotter: {
     details: 'Omni International Logistics is more than just a logistics agency. We’re your complete solution for cross border commerce. Get to know where we come from and where we are headed.',
@@ -195,5 +212,11 @@ export default {
     copyright: '© 2022 All rights reserved',
     credits: 'Images Credit',
     privacy: 'Privacy Policy',
+  },
+  credits: {
+    title: 'Images Credits',
+  },
+  privacy: {
+    title: 'Notice of Privacy',
   },
 }

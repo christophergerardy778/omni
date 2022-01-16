@@ -212,8 +212,8 @@
       <v-container>
         <v-row align="center" justify="center">
           <v-col class="col-12 col-md-10">
-            <h3 class="card-title-home">Coverage</h3>
-            <p class="mt-4">Expand your company’s horizons!</p>
+            <h3 class="card-title-home">{{ $t('home.coverage') }}</h3>
+            <p class="mt-4">{{ $t('home.coverage_details') }}</p>
           </v-col>
         </v-row>
       </v-container>
@@ -230,7 +230,7 @@
             <v-row justify="center">
               <v-col cols="12" class="text-center">
                 <v-btn @click="localePathEx('coverage')" dark color="#E30707"
-                  >More info</v-btn
+                  >{{ $t('home.coverage_btn') }}</v-btn
                 >
               </v-col>
             </v-row>
@@ -243,14 +243,14 @@
         <v-row align="center" justify="center">
           <v-col class="col-12 col-md-10">
             <div>
-              <h3 class="card-title-home">Coverage</h3>
-              <p class="mt-4">Expand your company’s horizons!</p>
+              <h3 class="card-title-home">{{ $t('home.coverage') }}</h3>
+              <p class="mt-4">{{ $t('home.coverage_details') }}</p>
               <v-btn
                 color="#E30707"
                 dark
                 depressed
                 @click="$router.push('coverage')"
-                >More info</v-btn
+                >{{ $t('home.coverage_btn') }}</v-btn
               >
             </div>
           </v-col>
@@ -277,10 +277,9 @@
         <v-col class="col-12 col-md-10 mb-10">
           <v-row class="flex-column-reverse flex-md-row">
             <div class="col-md-6">
-              <h4 class="home-subtitle-1">Contact us</h4>
+              <h4 class="home-subtitle-1">{{ $t('home.contact') }}</h4>
               <p class="mt-4">
-                Find out how we can help out and bring solutions to all your
-                logistics needs.
+                {{ $t('home.contact_details') }}
               </p>
               <div class="target-btn">
                 <v-btn
@@ -288,7 +287,7 @@
                   dark
                   depressed
                   @click="goToContactSection('contact')"
-                  >More info</v-btn
+                  >{{ $t('home.contact_btn') }}</v-btn
                 >
               </div>
             </div>
@@ -303,21 +302,18 @@
         <v-col class="col-12 col-md-10 mb-10">
           <v-row class="flex-column-reverse flex-md-row">
             <v-col class="col-md-6 fill-height">
-              <h4 class="home-subtitle-1">Certified & Safe Transport</h4>
-              <p class="mt-4">
-                We certify only the best carrier in the business to transport
-                our clients loads in a fast & safe way.
-              </p>
+              <h4 class="home-subtitle-1">{{ $t('home.certified') }}</h4>
+              <p class="mt-4">{{ $t('home.certified_details') }}
               <div
                 class="align-center justify-space-between d-sm-flex text-center"
               >
-                <p class="mb-2 mb-md-0">Want to be an OMNI Carrier?</p>
+                <p class="mb-2 mb-md-0">{{ $t('home.certified_details_two') }}</p>
                 <v-btn
                   color="#E30707"
                   dark
                   depressed
                   @click="goToContactSection('join')"
-                  >More info</v-btn
+                  >{{ $t('home.certified_btn') }}</v-btn
                 >
               </div>
             </v-col>
@@ -345,7 +341,7 @@
           />
         </v-col>
         <v-col cols="12" class="text-center subTituloMobile my-4">
-          Contact Us
+          {{ $t('home.contact') }}
           <v-btn
             class="ml-2"
             small
@@ -355,9 +351,7 @@
             <v-icon color="white">mdi-arrow-right</v-icon></v-btn
           >
         </v-col>
-        <v-col cols="10" class="textoMobil my-3 mb-9">
-          Find out how we can help out and bring solutions to all your logistics
-          needs.
+        <v-col cols="10" class="textoMobil my-3 mb-9">{{ $t('home.contact_details') }}
         </v-col>
       </v-row>
       <v-row
@@ -375,7 +369,7 @@
           />
         </v-col>
         <v-col cols="12" class="text-center subTituloMobile my-4">
-          Certified & Safe Transport
+          {{ $t('home.certified') }}
           <v-btn
             class="ml-2"
             small
@@ -385,9 +379,7 @@
             <v-icon color="white">mdi-arrow-right</v-icon></v-btn
           >
         </v-col>
-        <v-col cols="10" class="textoMobil my-3 mb-9">
-          We certify only the best carrier in the business to transport our
-          clients loads in a fast & safe way. Want to be an OMNI Carrier?
+        <v-col cols="10" class="textoMobil my-3 mb-9">{{ $t('home.certified_details') }}
         </v-col>
       </v-row>
     </v-container>
@@ -395,14 +387,9 @@
     <v-container class="mb-10">
       <v-row align="center" justify="center">
         <v-col class="col-12 col-md-10">
-          <h3 class="home-subtitle-1 text-center text-md-left">
-            We guarantee the safety of your loads by working with today's
-            standard carrier certifications.
+          <h3 class="home-subtitle-1 text-center text-md-left">{{ $t('home.section_three') }}
           </h3>
-          <p class="mt-4 text-center">
-            We make sure our strategic partners comply with necessary
-            certifications and permits in order to be a part of our operation
-            and offer excellent service.
+          <p class="mt-4 text-center">{{ $t('home.st_details') }}
           </p>
         </v-col>
         <v-col class="col-12">

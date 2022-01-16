@@ -18,12 +18,12 @@
             >
               <div
                 v-if="!$vuetify.breakpoint.smAndDown"
-                v-html="txtImg"
+                v-html="$t('coverage.title')"
                 class="textoImagenPc"
               ></div>
               <div
                 v-else
-                v-html="txtImgMobil"
+                v-html="$t('coverage.title_mobil')"
                 class="textoImagenMobile"
               ></div>
             </v-col>
@@ -45,22 +45,22 @@
             <v-col
               cols="12"
               class="text-center tituloSecundario"
-            >Coverage</v-col>
+            > {{$t('coverage.coverage')}}</v-col>
             <v-col
               cols="12"
               class="text-center textoMobil"
-            >Expand your company´s horizonts!</v-col>
+            >{{$t('coverage.c_details')}}</v-col>
           </v-row>
           <v-row
             align="end"
             class="mb-12"
           >
             <v-col cols="4">
-              <div class="miniTituloSimple ml-3 mb-6">México Logistic points:</div>
+              <div class="miniTituloSimple ml-3 mb-6" v-html="$t('coverage.mex')"></div>
               <v-row no-gutters>
                 <v-col
                   class="textoSimple"
-                  v-for="(m, i) in mex"
+                  v-for="(m, i) in $t('coverage.c_mex')"
                   :key="i"
                   cols="5"
                 >
@@ -73,11 +73,11 @@
               align-self="start"
               cols="4"
             >
-              <div class="miniTituloSimple ml-3 mb-6">All USA</div>
+              <div class="miniTituloSimple ml-3 mb-6">{{$t('coverage.usa')}}</div>
               <v-row no-gutters>
                 <v-col
                   class="textoSimple"
-                  v-for="(m, i) in usa"
+                  v-for="(m, i) in $t('coverage.c_usa')"
                   :key="i"
                   cols="12"
                 >
@@ -91,10 +91,10 @@
       <v-col v-else cols="12">
         <v-row justify="center" style="margin-top: 100px;">
           <v-col cols="11" class="titulo text-center">
-            Coverage
+            {{$t('coverage.coverage')}}
           </v-col>
           <v-col cols="8" class="parrafoTechnology mt-2">
-            Expand your company´s horizonts!
+            {{$t('coverage.c_details')}}
           </v-col>
           <v-col cols="11">
             <v-img
@@ -103,8 +103,9 @@
               src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133050/Img%20Omni%20WEB/Pag%20COVERAGE-%20cobertura/continente_gris_2_icxfrd.png">
               <v-row justify="center">
                 <v-col cols="12" class="text-center parrafoTechnology" style="line-height: 23px;">
-                  <div>México</div>
-                  <div>Logistics Points</div>
+                  <!-- <div>México</div>
+                  <div>Logistics Points</div> -->
+                  <div v-html="$t('coverage.mex')"></div>
                 </v-col>
                 <v-col cols="12">
                   <v-img
@@ -115,7 +116,7 @@
               <v-row no-gutters>
                 <v-col
                   class="textoSimple"
-                  v-for="(m, i) in mex"
+                  v-for="(m, i) in $t('coverage.c_mex')"
                   :key="i"
                   cols="5"
                 >
@@ -128,11 +129,11 @@
               class="text-center"
               style="margin-top: 100px;"
             >
-              <div class="textoSimple">All USA</div>
+              <div class="textoSimple">{{$t('coverage.usa')}}</div>
               <v-row no-gutters>
                 <v-col
                   class="textoSimple"
-                  v-for="(m, i) in usa"
+                  v-for="(m, i) in $t('coverage.c_usa')"
                   :key="i"
                   cols="12"
                 >
@@ -156,23 +157,6 @@
 export default {
   data() {
     return {
-      txtImg: 'We <b>Take</b> your <b>company further</b>',
-      txtImgMobil: 'We <b>Take</b><br> your <b>company <br>further</b>',
-      mex: [
-        'Nuevo León',
-        'Jalisco',
-        'Coahuila',
-        'Michoacán',
-        'Zacatecas',
-        'Puebla',
-        'San Luis Potosí',
-        'Estado de México',
-        'Querétaro',
-        'CDMX',
-        'Guanajuato',
-        'Hidalgo',
-      ],
-      usa: ['(Exept Alaska and Hawaii)'],
     }
   },
 }

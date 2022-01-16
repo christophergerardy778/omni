@@ -9,15 +9,10 @@
       <h4
         v-bind="attrs"
         v-on="on"
-        class="white--text"
+        class="font-weight-light text-end"
+        style="color: #ffeb00;"
       >
         Images Credit
-        <v-icon
-          color="white"
-          left
-        >
-          mdi-chevron-down
-        </v-icon>
       </h4>
     </template>
     <v-card>
@@ -33,12 +28,12 @@
         <v-row>
           <v-col v-if="!$vuetify.breakpoint.smAndDown" cols="5">
             <v-col cols="12" class="subTituloMobile">
-              Images Credits
+              {{$t('credits.title')}}
             </v-col>
             <v-img style="margin-top: 200px;" :aspect-ratio="6/7" src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133044/Img%20Omni%20WEB/Dialogo_1_nxiurb.png"/>
           </v-col>
           <v-col v-if="$vuetify.breakpoint.smAndDown" cols="12" class="subTituloMobile mt-3 text-center">
-              Images Credits
+              {{$t('credits.title')}}
           </v-col>
           <v-col v-if="$vuetify.breakpoint.smAndDown" cols="11">
             <v-img :aspect-ratio="6/6" src="https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133044/Img%20Omni%20WEB/Dialogo_1_nxiurb.png"/>

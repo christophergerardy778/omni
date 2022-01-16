@@ -15,10 +15,10 @@
             >
               <div
                 v-if="!$vuetify.breakpoint.smAndDown"
-                v-html="txtImg"
+                v-html="$t('services.title')"
                 class="textoImagenPc"
               ></div>
-              <div v-else v-html="txtImg" class="textoImagenMobile"></div>
+              <div v-else v-html="$t('services.title')" class="textoImagenMobile"></div>
             </v-col>
           </v-row>
         </v-img>
@@ -32,20 +32,18 @@
           ';'
         "
       >
-        Services
+        {{$t('services.section_one')}}
       </v-col>
       <v-col lg="9" md="10" sm="12" cols="12" class="subTitulo">
-        We want to be part of your supply and distribution chain!
+        {{$t('services.so_subtitle')}}
       </v-col>
       <v-col lg="9" md="10" sm="12" cols="12" class="parrafo">
-        Our knowledge in the market and experience, alongside the partnerships
-        and commercial relationships, we`ve grown with carrier companies, allow
-        us to obtain competitive rates and better service conditions.
+        {{$t('services.so_details')}}
       </v-col>
       <v-col lg="10" md="11" sm="11" cols="11" style="margin-top: 90px">
         <v-row justify="center">
           <v-col
-            v-for="(card, index) in cards"
+            v-for="(card, index) in $t('services.so_crads')"
             :key="index"
             lg="6"
             md="8"
@@ -67,7 +65,7 @@
         class="text-center tituloSecundario"
         style="margin-top: 6px"
       >
-        Industry
+        {{$t('services.industry')}}
       </v-col>
       <v-col
         lg="8"
@@ -81,12 +79,12 @@
             : 'padding: 0 10% 0 10%;'
         "
       >
-        <div v-html="industryD"></div>
+        <div v-html="$t('services.i_subtitle')"></div>
       </v-col>
       <v-col lg="9" md="10" sm="11" cols="11" style="margin-top: 90px">
         <v-row justify="center">
           <v-col
-            v-for="(card, index) in ICards"
+            v-for="(card, index) in $t('services.i_cards')"
             :key="index"
             lg="6"
             md="6"
@@ -108,11 +106,10 @@
         class="text-center tituloSecundario"
         style="margin-top: 6px"
       >
-        Technology
+        {{$t('services.tech')}}
       </v-col>
       <v-col lg="7" md="10" sm="12" cols="12" class="parrafo">
-        Logistics tech support and our development systems team help us operate
-        efficiently and are the key to our logistics operation success.
+        {{$t('services.t_subtitle')}}
       </v-col>
       <v-col
         lg="10"
@@ -126,21 +123,21 @@
             <div class="text-center mb-3">
               <img src="@/assets/Icon/GraphicStar.svg" />
             </div>
-            <div>Industry standar technology</div>
+            <div>{{$t('services.t_one')}}</div>
           </v-col>
           <v-divider vertical></v-divider>
           <v-col lg="2" md="2" sm="12" cols="12">
             <div class="text-center mb-3">
               <img src="@/assets/Icon/NoteText.svg" />
             </div>
-            <div>Inventory management</div>
+            <div>{{$t('services.t_two')}}</div>
           </v-col>
           <v-divider vertical></v-divider>
           <v-col lg="2" md="2" sm="12" cols="12">
             <div class="text-center mb-3">
               <img src="@/assets/Icon/Clock.svg" />
             </div>
-            <div>24/7 real time tracking</div>
+            <div>{{$t('services.t_three')}}</div>
           </v-col>
           <v-divider vertical></v-divider>
           <v-col lg="3" md="3" sm="12" cols="12">
@@ -148,7 +145,7 @@
               <img src="@/assets/Icon/Locate.svg" />
             </div>
             <div>
-              Track & Trace programs: Four kites, Macro Point, among others
+              {{$t('services.t_four')}}
             </div>
           </v-col>
           <v-divider vertical></v-divider>
@@ -156,7 +153,7 @@
             <div class="text-center mb-3">
               <img src="@/assets/Icon/Box.svg" />
             </div>
-            <div>Wherehouse management system</div>
+            <div>{{$t('services.t_five')}}</div>
           </v-col>
         </v-row>
       </v-col>
@@ -172,7 +169,7 @@
                 <img src="@/assets/Icon/GraphicStar.svg" />
               </v-col>
               <v-col cols="9" class="parrafoTechnology">
-                Industry standar technology
+                {{$t('services.t_one')}}
               </v-col>
             </v-row>
           </v-col>
@@ -182,7 +179,7 @@
                 <img src="@/assets/Icon/NoteText.svg" />
               </v-col>
               <v-col cols="9" class="parrafoTechnology">
-                Inventory management
+                {{$t('services.t_two')}}
               </v-col>
             </v-row>
           </v-col>
@@ -192,7 +189,7 @@
                 <img src="@/assets/Icon/Clock.svg" />
               </v-col>
               <v-col cols="9" class="parrafoTechnology">
-                24/7 real time tracking
+                {{$t('services.t_three')}}
               </v-col>
             </v-row>
           </v-col>
@@ -202,7 +199,7 @@
                 <img src="@/assets/Icon/Locate.svg" />
               </v-col>
               <v-col cols="9" class="parrafoTechnology">
-                Track & Trace programs: Four kites, Macro Point, among others
+                {{$t('services.t_four')}}
               </v-col>
             </v-row>
           </v-col>
@@ -212,7 +209,7 @@
                 <img src="@/assets/Icon/Box.svg" />
               </v-col>
               <v-col cols="9" class="parrafoTechnology">
-                Wherehouse management system
+                {{$t('services.t_five')}}
               </v-col>
             </v-row>
           </v-col>
@@ -247,67 +244,6 @@ export default {
   },
   data() {
     return {
-      txtImg: `<b>Our service</b> tailored to <b>your needs</b>`,
-      industryD: 'Any goods you need to transport? We got you covered! <br>We cover the following commodities.',
-      cards: [
-        {
-          id: 'storage',
-          titulo: 'Storage',
-          img: 'https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133075/Img%20Omni%20WEB/Pag%20SERVICE-%20servicio/Service/SERVICE__Storage_438x155_2_xchv1a.png',
-          detalle:
-            'Our warehouse offers storage in Laredo tx, designed to store your loads both in a safe and viable way.',
-        },
-        {
-          id: 'land',
-          titulo: 'Land Transport',
-          img: 'https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133075/Img%20Omni%20WEB/Pag%20SERVICE-%20servicio/Service/SERVICE__Land_Transport_438x155_eewl4s.png',
-          detalle:
-            'Dry Van and Reefer load transport and Delivery nationally and internationally. With a wide array of partner carriers, we can meet the resources your goods need to reach their destination.',
-        },
-        {
-          id: 'iae',
-          titulo: 'Import / Export',
-          img: 'https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133074/Img%20Omni%20WEB/Pag%20SERVICE-%20servicio/Service/SERVICE__importexport_438x155_npgduh.png',
-          detalle:
-            'We offer integral services which include all other activities implied in operation matters in import and exports through every country’s customs.',
-        },
-        {
-          id: 'transport',
-          titulo: 'Transport and Distributions',
-          img: 'https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133076/Img%20Omni%20WEB/Pag%20SERVICE-%20servicio/Service/SERVICE__Transporand_distrib_438x155_ohfrlw.png',
-          detalle:
-            'Door to Door services, both on Import and Export on both Mexico and US.',
-        },
-      ],
-      ICards: [
-        {
-          id: 'auto',
-          titulo: 'Autoparts',
-          img: 'https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133072/Img%20Omni%20WEB/Pag%20SERVICE-%20servicio/industry/Service__Industry_Autoparts_384x133_qfhhtn.png',
-          detalle:
-            'We cover all kinds of autoparts both nationally and internationally.',
-        },
-        {
-          id: 'alimentos',
-          titulo: 'Food',
-          img: 'https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133073/Img%20Omni%20WEB/Pag%20SERVICE-%20servicio/industry/Service__Industry_food_384x133_fja7i3.png',
-          detalle:
-            'We develop solutions for storage and transport of frozen products (perishable and refrigerated) temperature controlled and processed.',
-        },
-        {
-          id: 'farma',
-          titulo: 'Pharmaceutical',
-          img: 'https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133073/Img%20Omni%20WEB/Pag%20SERVICE-%20servicio/industry/Service__Industry_Pharma_384x133_lelqme.png',
-          detalle:
-            'We offer a wide array of carriers and logistic services viable for delivering pharmaceutical equipment, sanitary, cosmetic and medical safely.',
-        },
-        {
-          id: 'beers',
-          titulo: 'Beverages',
-          img: 'https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133073/Img%20Omni%20WEB/Pag%20SERVICE-%20servicio/industry/Service__Industry_Beverages_384x133_pmtmgv.png',
-          detalle: 'Alcohol / non Alcoholic.',
-        },
-      ],
     }
   },
   computed: {
