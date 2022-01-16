@@ -164,11 +164,19 @@
           >
         </div>
       </div>
-      <v-app-bar-nav-icon
-        @click="isActive = true"
-        class="d-flex d-md-none"
-        color="#00126A"
-      />
+      <div class="d-md-none d-flex app-bar-icon-container-mini">
+        <div style="display: flex;" class="pt-5">
+            <p @click="$i18n.setLocale('es')" :class="$i18n.locale !== 'es' ? 'mr-2 inactivo':'mr-2 activo'">ES</p>
+            <p @click="$i18n.setLocale('en')" :class="$i18n.locale !== 'en' ? 'inactivo':'activo'">ENG</p>
+        </div>
+        <div>
+          <v-app-bar-nav-icon
+            @click="isActive = true"
+            class="d-flex"
+            color="#00126A"
+          />
+        </div>
+      </div>
     </v-app-bar>
   </div>
 </template>
@@ -196,9 +204,33 @@ export default {
   align-items: center;
   gap: 36px;
 }
+.app-bar-icon-container-mini {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0px;
+}
 
 .navigationDrawer--title {
   display: flex;
   justify-content: space-between;
+}
+.activo {
+  font-family: Crossten Soft;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 20px;
+  /* identical to box height, or 133% */
+  color: #00126A;
+}
+.inactivo {
+  font-family: Crossten Soft;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 20px;
+  /* identical to box height, or 133% */
+  color: #C4C4C4;
 }
 </style>
