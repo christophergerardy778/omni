@@ -279,6 +279,21 @@ import { required, email, minLength } from 'vuelidate/lib/validators'
 import Privacy from '@/components/Privacy.vue'
 
 export default {
+  nuxtI18n: {
+    paths: {
+      en: '/contact-us',
+      es: '/contactanos',
+    },
+  },
+  head() {
+    return {
+      title: this.$t('contact.seo.title'),
+      meta: [
+        { name: 'descripción', content: this.$t('contact.seo.description') },
+        { name: 'keywords', content: this.$t('contact.seo.keywords') },
+      ],
+    }
+  },
   components: {
     Privacy,
   },

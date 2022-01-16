@@ -9,11 +9,15 @@ export default {
     contactUsCarrier: 'Omni Carriers',
   },
   home: {
+    seo: {
+      title: 'Home',
+      description: 'Logistics services in México and United States',
+      keywords: 'Logistics, services, México, United States, LandTransport',
+    },
     title: 'Logistics services in México and United States',
     titleSubText: 'We help you make it possible',
     servicesSection: {
-      title:
-        'We want to be part of your supply and distribution chain!',
+      title: 'We want to be part of your supply and distribution chain!',
       storage: 'Storage',
       ltransport: 'Land Transport',
       taDistributiont: 'Transport & Distributiont',
@@ -33,40 +37,59 @@ export default {
     },
   },
   about: {
+    seo: {
+      title: 'About OMNI',
+      description:
+        'About OMNI (Logistic Services in Mexico and the United States)',
+      keywords:
+        'Logistics Services, Logistics Services in Mexico, Logistics Services in the United States',
+    },
     title: '<b>Efficiency</b> in our process.<br><b>Always.</b>',
     section_one: 'About Us',
     so_card_about: [
       {
         titulo: 'Our Company',
         img: 'https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133045/Img%20Omni%20WEB/Pag%20ABOUT%20US-%20Nosotros/Seccion%20About%20Us/AboutUs_Ourcompany_185x189_utzlte.png',
-        detalle: 'Since 2019, we began our journey in establishing our Logistics enterprise Headquarters in Laredo, Tx.',
+        detalle:
+          'Since 2019, we began our journey in establishing our Logistics enterprise Headquarters in Laredo, Tx.',
       },
       {
         titulo: 'Our most important values',
         img: 'https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133044/Img%20Omni%20WEB/Pag%20ABOUT%20US-%20Nosotros/Seccion%20About%20Us/AboutUs_Most_important_185x189_phzece.png',
-        detalle: 'Omni´s team embody our core values of trust, innovation, expertise and safety.',
+        detalle:
+          'Omni´s team embody our core values of trust, innovation, expertise and safety.',
       },
       {
         titulo: 'Our vision',
         img: 'https://res.cloudinary.com/omni-international-logistics/image/upload/v1642129820/Omni/AboutUs/ABOUT_US_medium-shot-woman-wearing-face-mask_uicbi4.jpg',
-        detalle: 'At OMNI, our vision is to bring compelling value through outsourcing.',
+        detalle:
+          'At OMNI, our vision is to bring compelling value through outsourcing.',
       },
       {
         titulo: 'Our mission',
         img: 'https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133045/Img%20Omni%20WEB/Pag%20ABOUT%20US-%20Nosotros/Seccion%20About%20Us/AboutUs_Ourmission_185x189_pd6zhf.png',
-        detalle: 'Our mission statement says it all: Creating the most efficient transportation network in North America. We continuously look for new ways that our people, process and technology can be used to move freight transportation forward.',
+        detalle:
+          'Our mission statement says it all: Creating the most efficient transportation network in North America. We continuously look for new ways that our people, process and technology can be used to move freight transportation forward.',
       },
     ],
     headquarters: 'OMNI Headquarters',
-    h_details: 'With offices across the United States and Mexico, we will work with you to find solutions in your region. ',
+    h_details:
+      'With offices across the United States and Mexico, we will work with you to find solutions in your region. ',
     h_nites: '<b>Unites States</b> <br/> Laredo Texas <br/> Fresno California',
     h_mex: '<b>México</b> <br/> Nuevo Laredo Tamaulipas',
   },
   services: {
+    seo: {
+      title: 'Services',
+      description: 'Our service tailored to your needs',
+      keywords:
+        'Logistics Services, Logistics Services in Mexico, Logistics Services in the United States',
+    },
     title: '<b>Our service</b> tailored to <b>your needs</b>',
     section_one: 'Services',
     so_subtitle: 'We want to be part of your supply and distribution chain!',
-    so_details: 'Our knowledge in the market and experience, alongside the partnerships and commercial relationships we’ve grown with carrier companies, allow us to obtain competitive rates and better service conditions',
+    so_details:
+      'Our knowledge in the market and experience, alongside the partnerships and commercial relationships we’ve grown with carrier companies, allow us to obtain competitive rates and better service conditions',
     so_crads: [
       {
         id: 'storage',
@@ -98,7 +121,8 @@ export default {
       },
     ],
     industry: 'Industry',
-    i_subtitle: 'Any goods you need to transport? We got you covered! <br>We cover the following commodities.',
+    i_subtitle:
+      'Any goods you need to transport? We got you covered! <br>We cover the following commodities.',
     i_cards: [
       {
         id: 'auto',
@@ -129,17 +153,25 @@ export default {
       },
     ],
     tech: 'Technology',
-    t_subtitle: 'Logistics tech support and our development systems team help us operate efficiently and are the key to our logistics operation success.',
+    t_subtitle:
+      'Logistics tech support and our development systems team help us operate efficiently and are the key to our logistics operation success.',
     t_one: 'Industry standard technology',
     t_two: 'Inventory management',
     t_three: '24/7 real time tracking',
     t_four: 'Track & Trace programs: Four Kites, Macro Point, among others',
     t_five: 'Warehouse management system',
     contact: 'Contact us',
-    c_subtitle: 'Find out how we can help out and bring solutions to all your logistic needs.',
+    c_subtitle:
+      'Find out how we can help out and bring solutions to all your logistic needs.',
     c_btn: 'More Info',
   },
   coverage: {
+    seo: {
+      title: 'Coverage',
+      description: 'We Take your company further',
+      keywords:
+        'Logistics Services, Logistics Services in Mexico, Logistics Services in the United States',
+    },
     title: 'We <b>Take</b> your <b>company further</b>',
     title_mobil: 'We <b>Take</b><br> your <b>company <br>further</b>',
     coverage: 'Coverage',
@@ -158,14 +190,20 @@ export default {
       'Guanajuato',
       'Hidalgo',
     ],
-  c_usa: [
-    '(Exept Alaska and Hawaii)'
-    ],
+    c_usa: ['(Exept Alaska and Hawaii)'],
   },
   contact: {
+    seo: {
+      title: 'Schedule a call ¡Contact us!',
+      description: 'Schedule a call ¡Contact us!',
+      keywords:
+        'Servicios Logísticos, Servicios Logísticos en México, Servicios Logísticos en Estados  Unidos',
+    },
     title: 'Schedule a <b>call ¡Contact us!</b>',
-    section_one: 'Do you need to quote a service? Looking to book one of our services? Send us your information and we’ll contact you briefly',
-    so_details: 'Contact us to find out how we can help you formulate the solutions to your logistical problems.',
+    section_one:
+      'Do you need to quote a service? Looking to book one of our services? Send us your information and we’ll contact you briefly',
+    so_details:
+      'Contact us to find out how we can help you formulate the solutions to your logistical problems.',
     ff_name: 'Name *',
     ff_name_company: 'Name of the company',
     ff_email: 'E-mail *',
@@ -178,7 +216,8 @@ export default {
     ff_privacy_link: 'privacy policy.',
     ff_btn: 'Submit',
     section_two: 'Interested in forming part of OMNI as a partner carrier?',
-    st_details: 'We want to build a strong and permanent relationship with people who are passionate about the transportation and logistics industry, become an OMNI Carrier and succeed on your own terms.',
+    st_details:
+      'We want to build a strong and permanent relationship with people who are passionate about the transportation and logistics industry, become an OMNI Carrier and succeed on your own terms.',
     sf_name: 'Name',
     sf_phone: 'Phone',
     sf_email: 'Email',
@@ -189,7 +228,8 @@ export default {
     ff_btn: 'Submit',
   },
   fotter: {
-    details: 'Omni International Logistics is more than just a logistics agency. We’re your complete solution for cross border commerce. Get to know where we come from and where we are headed.',
+    details:
+      'Omni International Logistics is more than just a logistics agency. We’re your complete solution for cross border commerce. Get to know where we come from and where we are headed.',
     contact: 'Contact',
     locations: 'Locations',
     copyright: '© 2022 All rights reserved',

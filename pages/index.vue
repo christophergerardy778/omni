@@ -231,9 +231,9 @@
           >
             <v-row justify="center">
               <v-col cols="12" class="text-center">
-                <v-btn @click="localePathEx('coverage')" dark color="#E30707"
-                  >{{ $t('home.coverageSection.btn') }}</v-btn
-                >
+                <v-btn @click="localePathEx('coverage')" dark color="#E30707">{{
+                  $t('home.coverageSection.btn')
+                }}</v-btn>
               </v-col>
             </v-row>
           </v-img>
@@ -500,6 +500,17 @@ export default {
       es: '/inicio',
     },
   },
+
+  head() {
+    return {
+      title: this.$t('home.seo.title'),
+      meta: [
+        { name: 'descripción', content: this.$t('home.seo.description') },
+        { name: 'keywords', content: this.$t('home.seo.keywords') },
+      ]
+    }
+  },
+
   components: {
     SwiperCertificates,
   },

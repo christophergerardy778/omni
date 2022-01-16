@@ -4,19 +4,22 @@ import es from './lang/es-ES.js'
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
-  head: {
-    titleTemplate: '%s - omni-web',
-    title: 'omni-web',
-    htmlAttrs: {
-      lang: 'en',
-    },
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' },
-    ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+  head() {
+    const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true })
+    return {
+      titleTemplate: '%s - omni-web',
+      ...i18nHead.title,
+      htmlAttrs: {
+        lang: 'en',
+      },
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { name: 'format-detection', content: 'telephone=no' },
+        ...i18nHead.meta,
+      ],
+      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    }
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -60,6 +63,8 @@ export default {
   },
 
   i18n: {
+    // SEO
+    baseUrl: 'https://my-nuxt-app.com',
     seo: true,
     parsePages: true,
     defaultLocale: 'en',
@@ -68,11 +73,21 @@ export default {
       statusCode: 301,
       path: 'home',
     },
-    locales: ['en', 'es'],
+    locales: [
+      {
+        code: 'en',
+        iso: 'en-US',
+      },
+      {
+        code: 'es',
+        iso: 'es-ES',
+      },
+    ],
     vueI18n: {
       fallbackLocale: 'en',
       messages: {
-        en, es
+        en,
+        es,
         // en: {
         //   navitationMenu: {
         //     home: 'home',

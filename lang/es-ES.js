@@ -9,11 +9,16 @@ export default {
     contactUsCarrier: 'Omni Carrier',
   },
   home: {
+    seo: {
+      title: 'Inicio',
+      description: 'Servicios Logísticos en México y Estados  Unidos',
+      keywords:
+        'Servicios Logísticos, Servicios Logísticos en México, Servicios Logísticos en Estados  Unidos',
+    },
     title: 'Servicios Logísticos en México & Estados  Unidos',
     titleSubText: 'Te ayudamos a hacerlo posible',
     servicesSection: {
-      title:
-        '¡Queremos ser parte de tu cadena de distribución y suministro!',
+      title: '¡Queremos ser parte de tu cadena de distribución y suministro!',
       storage: 'Almacenaje',
       ltransport: 'Transporte Terrestre',
       taDistributiont: 'Transporte & Distribución',
@@ -34,27 +39,38 @@ export default {
   },
   about: {
     title: '',
+    seo: {
+      title: 'Sobre OMNI',
+      description:
+        'Acerca de OMNI (Servicios Logísticos en México y Estados  Unidos)',
+      keywords:
+        'Servicios Logísticos, Servicios Logísticos en México, Servicios Logísticos en Estados  Unidos',
+    },
     section_one: '',
     so_card_about: [
       {
         titulo: 'Our Company',
         img: 'https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133045/Img%20Omni%20WEB/Pag%20ABOUT%20US-%20Nosotros/Seccion%20About%20Us/AboutUs_Ourcompany_185x189_utzlte.png',
-        detalle: 'Since 2019, we began our journey in establishing our Logistics enterprise Headquarters in Laredo, Tx.',
+        detalle:
+          'Since 2019, we began our journey in establishing our Logistics enterprise Headquarters in Laredo, Tx.',
       },
       {
         titulo: 'Our most important values',
         img: 'https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133044/Img%20Omni%20WEB/Pag%20ABOUT%20US-%20Nosotros/Seccion%20About%20Us/AboutUs_Most_important_185x189_phzece.png',
-        detalle: 'Omni´s team embody our core values of trust, innovation, expertise and safety.',
+        detalle:
+          'Omni´s team embody our core values of trust, innovation, expertise and safety.',
       },
       {
         titulo: 'Our vision',
         img: 'https://res.cloudinary.com/omni-international-logistics/image/upload/v1642129820/Omni/AboutUs/ABOUT_US_medium-shot-woman-wearing-face-mask_uicbi4.jpg',
-        detalle: 'At OMNI, our vision is to bring compelling value through outsourcing.',
+        detalle:
+          'At OMNI, our vision is to bring compelling value through outsourcing.',
       },
       {
         titulo: 'Our mission',
         img: 'https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133045/Img%20Omni%20WEB/Pag%20ABOUT%20US-%20Nosotros/Seccion%20About%20Us/AboutUs_Ourmission_185x189_pd6zhf.png',
-        detalle: 'Our mission statement says it all: Creating the most efficient transportation network in North America. We continuously look for new ways that our people, process and technology can be used to move freight transportation forward.',
+        detalle:
+          'Our mission statement says it all: Creating the most efficient transportation network in North America. We continuously look for new ways that our people, process and technology can be used to move freight transportation forward.',
       },
     ],
     headquarters: '',
@@ -63,6 +79,12 @@ export default {
     h_mex: '<b>México</b> <br/> Nuevo Laredo Tamaulipas',
   },
   services: {
+    seo: {
+      title: 'Nuestros servicios',
+      description: 'Nuestro servicio a la medida de tus necesidades',
+      keywords:
+        'Servicios Logísticos, Servicios Logísticos en México, Servicios Logísticos en Estados  Unidos',
+    },
     title: '',
     section_one: '',
     so_subtitle: '',
@@ -140,6 +162,12 @@ export default {
     c_btn: '',
   },
   coverage: {
+    seo: {
+      title: 'Cobertura',
+      description: 'Nosotras llevamos tu empresa mas lejos',
+      keywords:
+        'Servicios Logísticos, Servicios Logísticos en México, Servicios Logísticos en Estados  Unidos',
+    },
     title: '',
     title_mobil: '',
     coverage: '',
@@ -158,11 +186,15 @@ export default {
       'Guanajuato',
       'Hidalgo',
     ],
-  c_usa: [
-    '(Exept Alaska and Hawaii)'
-    ],
+    c_usa: ['(Exept Alaska and Hawaii)'],
   },
   contact: {
+    seo: {
+      title: 'Contactanos',
+      description: 'Agendemos una llamada y crezcamos juntos',
+      keywords:
+        'Servicios Logísticos, Servicios Logísticos en México, Servicios Logísticos en Estados  Unidos',
+    },
     title: '',
     section_one: '',
     so_details: '',
