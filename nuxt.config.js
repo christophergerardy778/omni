@@ -64,6 +64,10 @@ export default {
 
   i18n: {
     // SEO
+    detectBrowserLanguage: {
+      useCookie: false,
+      redirectOn: 'root',
+    },
     baseUrl: 'https://my-nuxt-app.com',
     seo: true,
     parsePages: true,
