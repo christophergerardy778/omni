@@ -227,4 +227,18 @@ export default {
     title: 'Aviso de privacidad',
     text: p_es,
   },
+  cookies: {
+    title: 'Tu privacidad es<br>importante para nosotros.',
+    description: `Este sitio web utiliza cookies para brindar su correcta funcionalidad, así como para obtener datos estadísticos para poder brindar un mejor servicio a nuestros clientes.
+    <br>Puedes configurarlas en la seccion de la parte inferior, y al finalizar, pulsando el boton "Confirmar preferencia de cookies". También puedes aceptarlas todas pulsando
+    “Aceptar todas las cookies”. Para más información, lee nuestra Política
+    de privacidad.`,
+    btn_one: 'ACEPTAR TODAS LAS COOKIES',
+    option_one: 'Cookies estrictamente necesarias.',
+    message: '(Siempre activo)',
+    oo_description: 'Estas cookies son estrictamente necesarias para el correcto funcionamiento del sitio web y no se pueden desactivar.',
+    option_two: 'Cookies estadística.',
+    od_description: 'Estas cookies se utilizan para poder analizar datos estadísticos y mejorar la calidad de nuestros servicios, así como la experiencia en el sitio web.',
+    btn_two: 'CONFIRMAR PREFERENCIA DE COOKIES',
+  },
 }

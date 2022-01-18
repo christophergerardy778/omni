@@ -4,7 +4,7 @@
     <v-main>
       <Nuxt />
       <v-btn fab fixed bottom right color="#00E676" dark @click="goToWhatsApp">
-        <v-icon>mdi-whatsapp</v-icon>
+        <v-icon color="white">mdi-whatsapp</v-icon>
       </v-btn>
     </v-main>
     <app-footer />

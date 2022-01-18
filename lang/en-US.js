@@ -251,4 +251,20 @@ export default {
     title: 'Notice of Privacy',
     text: p_en,
   },
+  cookies: {
+    title: 'These cookies are<br>strictly needed for the website to work properly and can’t be deactivated.',
+    description: `This website uses cookies to work properly, as well as to obtain statistical data used to provide a better service to our clients.<br>
+    You can customize them in the section down below, once finished use the “Confirm cookies preferences”, You can also accept them all by using the “Accept all cookies” Button.
+    For more information, please read our Privacy Policy.`,
+    btn_one: 'Accept all Cookies',
+    option_one: 'Strictly needed Cookies',
+    message: '(Always active)',
+    oo_description: `These cookies are strictly needed for the website to work properly and can’t be deactivated.
+    This website uses cookies to work properly, as well as to obtain statistical data used to provide a better service to our clients.
+    You can customize them in the section down below, once finished use the “Confirm cookies preferences”, You can also accept them all by using the “Accept all cookies” Button.
+    For more information, please read our Privacy Policy.`,
+    option_two: 'Statistical Cookies',
+    od_description: 'These cookies are used to analyze statistical data and improve the quality of our services, as well as the user experience on the website.',
+    btn_two: 'Confirm cookie’s preferences',
+  }
 }
