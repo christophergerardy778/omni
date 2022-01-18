@@ -227,6 +227,22 @@ import CardIndustry from '@/components/services/CardIndustry.vue'
 import CardContactUs from '~/components/services/CardContactUs.vue'
 
 export default {
+  nuxtI18n: {
+    paths: {
+      en: '/services',
+      es: '/servicios',
+    },
+  },
+  head() {
+    return {
+      title: this.$t('services.seo.title'),
+      meta: [
+        { name: 'descripción', content: this.$t('services.seo.description') },
+        { name: 'keywords', content: this.$t('services.seo.keywords') },
+      ],
+    }
+  },
+
   mounted() {
     setTimeout(() => {
       if (this.$route.query.section) {

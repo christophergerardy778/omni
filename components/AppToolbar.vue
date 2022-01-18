@@ -113,7 +113,7 @@
           <v-menu offset-y>
             <template v-slot:activator="{ on, attrs }">
               <v-btn text color="#071C87" v-bind="attrs" v-on="on">
-                Contact US
+                {{ $t('navitationMenu.contactUs') }}
               </v-btn>
             </template>
             <v-list>
@@ -188,7 +188,7 @@ export default {
       this.$router.push(this.localePath(route))
     },
     goToContactSection(sectionName) {
-      this.$router.push({ path: 'contact-us', query: { section: sectionName } })
+      this.$router.push({ path: this.localePath('contact-us'), query: { section: sectionName } })
     },
     changeI18n(idioma){
       this.$i18n.setLocale(idioma);

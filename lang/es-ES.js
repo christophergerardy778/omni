@@ -10,6 +10,12 @@ export default {
     contactUsCarrier: 'Omni Carrier',
   },
   home: {
+    seo: {
+      title: 'Inicio',
+      description: 'Servicios Logísticos en México y Estados  Unidos',
+      keywords:
+        'Servicios Logísticos, Servicios Logísticos en México, Servicios Logísticos en Estados  Unidos',
+    },
     title: 'Servicios Logísticos en México & Estados  Unidos',
     titleSubText: 'Te ayudamos a hacerlo posible',
     servicesSection: {

@@ -485,6 +485,17 @@ export default {
       es: '/inicio',
     },
   },
+
+  head() {
+    return {
+      title: this.$t('home.seo.title'),
+      meta: [
+        { name: 'descripción', content: this.$t('home.seo.description') },
+        { name: 'keywords', content: this.$t('home.seo.keywords') },
+      ]
+    }
+  },
+
   components: {
     SwiperCertificates,
   },

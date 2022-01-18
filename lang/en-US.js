@@ -10,6 +10,11 @@ export default {
     contactUsCarrier: 'Omni Carriers',
   },
   home: {
+    seo: {
+      title: 'Home',
+      description: 'Logistics services in México and United States',
+      keywords: 'Logistics, services, México, United States, LandTransport',
+    },
     title: 'Logistics services in México and United States',
     titleSubText: 'We help you make it possible',
     servicesSection: {
@@ -46,6 +51,13 @@ export default {
     st_details: 'We make sure our strategic partners comply with necessary certifications and permits in order to be a part of our operation and offer excellent service. ',
   },
   about: {
+    seo: {
+      title: 'About OMNI',
+      description:
+        'About OMNI (Logistic Services in Mexico and the United States)',
+      keywords:
+        'Logistics Services, Logistics Services in Mexico, Logistics Services in the United States',
+    },
     title: '<b>Efficiency</b> in our process.<br><b>Always.</b>',
     section_one: 'About Us',
     so_card_about: [
@@ -76,6 +88,12 @@ export default {
     h_mex: '<b>México</b> <br/> Nuevo Laredo Tamaulipas',
   },
   services: {
+    seo: {
+      title: 'Services',
+      description: 'Our service tailored to your needs',
+      keywords:
+        'Logistics Services, Logistics Services in Mexico, Logistics Services in the United States',
+    },
     title: '<b>Our service</b> tailored to <b>your needs</b>',
     section_one: 'Services',
     so_subtitle: 'We want to be part of your supply and distribution chain!',
@@ -153,6 +171,12 @@ export default {
     c_btn: 'More Info',
   },
   coverage: {
+    seo: {
+      title: 'Coverage',
+      description: 'We Take your company further',
+      keywords:
+        'Logistics Services, Logistics Services in Mexico, Logistics Services in the United States',
+    },
     title: 'We <b>Take</b> your <b>company further</b>',
     title_mobil: 'We <b>Take</b><br> your <b>company <br>further</b>',
     coverage: 'Coverage',
@@ -178,6 +202,12 @@ export default {
     ],
   },
   contact: {
+    seo: {
+      title: 'Schedule a call ¡Contact us!',
+      description: 'Schedule a call ¡Contact us!',
+      keywords:
+        'Servicios Logísticos, Servicios Logísticos en México, Servicios Logísticos en Estados  Unidos',
+    },
     title: 'Schedule a <b>call ¡Contact us!</b>',
     section_one: 'Do you need to quote a service? Looking to book one of our services? Send us your information and we’ll contact you briefly',
     so_details: 'Contact us to find out how we can help you formulate the solutions to your logistical problems.',

@@ -275,6 +275,21 @@ import { required, email, minLength } from 'vuelidate/lib/validators'
 import Privacy from '@/components/Privacy.vue'
 
 export default {
+  nuxtI18n: {
+    paths: {
+      en: '/contact-us',
+      es: '/contactanos',
+    },
+  },
+  head() {
+    return {
+      title: this.$t('contact.seo.title'),
+      meta: [
+        { name: 'descripción', content: this.$t('contact.seo.description') },
+        { name: 'keywords', content: this.$t('contact.seo.keywords') },
+      ],
+    }
+  },
   components: {
     Privacy,
   },
@@ -458,7 +473,7 @@ export default {
 .about-us__background-image {
   background-image: url('https://res.cloudinary.com/omni-international-logistics/image/upload/v1642133046/Img%20Omni%20WEB/Pag%20CONTACT%20US-%20contactanos/CARRIER_professional-truck-driver-entering-his-truck-long-vehicle-and-holding-thumbs-up_1_uni6ra.png');
   background-position-x: -50%;
-  background-size: auto 100%;
+  background-size: 60% 100%;
 }
 
 .about-us__image-phone {

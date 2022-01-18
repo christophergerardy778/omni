@@ -155,6 +155,22 @@
 </template>
 <script>
 export default {
+  nuxtI18n: {
+    paths: {
+      en: '/coverage',
+      es: '/cobertura',
+    },
+  },
+  head() {
+    return {
+      title: this.$t('coverage.seo.title'),
+      meta: [
+        { name: 'descripción', content: this.$t('coverage.seo.description') },
+        { name: 'keywords', content: this.$t('coverage.seo.keywords') },
+      ],
+    }
+  },
+
   data() {
     return {
     }

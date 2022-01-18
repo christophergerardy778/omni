@@ -73,6 +73,21 @@ import CardAbout from '@/components/about/CardAbout.vue';
 import OmniAbout from '@/components/about/OmniAbout.vue';
 
 export default {
+  nuxtI18n: {
+    paths: {
+      en: '/about-us',
+      es: '/sobre-nosotros',
+    },
+  },
+  head() {
+    return {
+      title: this.$t('about.seo.title'),
+      meta: [
+        { name: 'descripción', content: this.$t('about.seo.description') },
+        { name: 'keywords', content: this.$t('about.seo.keywords') },
+      ]
+    }
+  },
   components: {
     CardAbout,
     OmniAbout,
