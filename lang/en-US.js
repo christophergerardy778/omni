@@ -1,3 +1,4 @@
+import { p_en } from './privacyText';
 export default {
   navitationMenu: {
     home: 'home',
@@ -218,5 +219,6 @@ export default {
   },
   privacy: {
     title: 'Notice of Privacy',
+    text: p_en,
   },
 }

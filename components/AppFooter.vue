@@ -45,7 +45,8 @@
           </h4>
         </v-col>
         <v-col v-if="!$vuetify.breakpoint.smAndDown" lg="4" md="4" sm="12" cols="12" style="display: flex;" class="offset-lg-2 offset-md-2">
-            <img-credits/><p style="color: white; margin: 0 10px 0 10px;">|</p><privacy/>
+            <img-credits/><p style="color: white; margin: 0 10px 0 10px;">|</p><a @click="localePathEx('privacy')" style="color: #ffeb00;">{{$t('privacy.title')}}</a>
+            <!-- <privacy/> -->
         </v-col>
       </v-row>
     </v-container>
@@ -61,6 +62,11 @@ export default {
     ImgCredits,
     Privacy,
   },
+  methods: {
+    localePathEx(route) {
+      this.$router.push(this.localePath(route))
+    },
+  }
 }
 </script>
 

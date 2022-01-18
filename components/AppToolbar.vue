@@ -145,7 +145,7 @@
         </div>
         <div>
           <v-btn
-            @click="$i18n.setLocale('es')"
+            @click="changeI18n('es')"
             :outlined="$i18n.locale !== 'es'"
             depressed
             dark
@@ -159,15 +159,15 @@
             small
             dark
             color="#071C87"
-            @click="$i18n.setLocale('en')"
+            @click="changeI18n('en')"
             >EN</v-btn
           >
         </div>
       </div>
       <div class="d-md-none d-flex app-bar-icon-container-mini">
         <div style="display: flex;" class="pt-5">
-            <p @click="$i18n.setLocale('es')" :class="$i18n.locale !== 'es' ? 'mr-2 inactivo':'mr-2 activo'">ES</p>
-            <p @click="$i18n.setLocale('en')" :class="$i18n.locale !== 'en' ? 'inactivo':'activo'">ENG</p>
+            <p @click="changeI18n('es')" :class="$i18n.locale !== 'es' ? 'mr-2 inactivo':'mr-2 activo'">ES</p>
+            <p @click="changeI18n('en')" :class="$i18n.locale !== 'en' ? 'inactivo':'activo'">ENG</p>
         </div>
         <div>
           <v-app-bar-nav-icon
@@ -189,6 +189,9 @@ export default {
     },
     goToContactSection(sectionName) {
       this.$router.push({ path: 'contact-us', query: { section: sectionName } })
+    },
+    changeI18n(idioma){
+      this.$i18n.setLocale(idioma);
     },
   },
   data: () => ({

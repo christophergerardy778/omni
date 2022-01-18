@@ -8,14 +8,16 @@
       </v-btn>
     </v-main>
     <app-footer />
+    <app-cookies/>
   </v-app>
 </template>
 
 <script>
-import AppFooter from '~/components/AppFooter.vue'
-import AppToolbar from '~/components/AppToolbar.vue'
+import AppFooter from '~/components/AppFooter.vue';
+import AppToolbar from '~/components/AppToolbar.vue';
+import AppCookies from '~/components/AppCookies.vue';
 export default {
-  components: { AppToolbar, AppFooter },
+  components: { AppToolbar, AppFooter, AppCookies },
   name: 'DefaultLayout',
   data: () => ({}),
   methods: {

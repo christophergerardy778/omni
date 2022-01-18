@@ -6,14 +6,14 @@ module.exports = (req, res) => {
   const transport = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'paginawebomni@gmail.com',
-      pass: 'web2022$',
+      user: 'webomni2022@gmail.com',
+      pass: 'WEBOMNI2022',
     },
   })
 
   const mailOptions = {
     from: 'OMNI WEB SOLUTION BOT',
-    to: 'christophergerardy778@gmail.com',
+    to: 'sales@omniintllc.us',
     subject: req.body.type === 0 ? 'I need Quote service' : 'I wanna be part of the team',
     template: 'contact',
     context: req.body
