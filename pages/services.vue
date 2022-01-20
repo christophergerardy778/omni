@@ -121,28 +121,28 @@
         <v-row justify="center" class="my-9">
           <v-col lg="2" md="2" sm="12" cols="12">
             <div class="text-center mb-3">
-              <img src="@/assets/Icon/GraphicStar.svg" />
+              <img src="@/assets/Iconos/GraphicStar.svg" />
             </div>
             <div>{{$t('services.t_one')}}</div>
           </v-col>
           <v-divider vertical></v-divider>
           <v-col lg="2" md="2" sm="12" cols="12">
             <div class="text-center mb-3">
-              <img src="@/assets/Icon/NoteText.svg" />
+              <img src="@/assets/Iconos/NoteText.svg" />
             </div>
             <div>{{$t('services.t_two')}}</div>
           </v-col>
           <v-divider vertical></v-divider>
           <v-col lg="2" md="2" sm="12" cols="12">
             <div class="text-center mb-3">
-              <img src="@/assets/Icon/Clock.svg" />
+              <img src="@/assets/Iconos/Clock.svg" />
             </div>
             <div>{{$t('services.t_three')}}</div>
           </v-col>
           <v-divider vertical></v-divider>
           <v-col lg="3" md="3" sm="12" cols="12">
             <div class="text-center mb-3">
-              <img src="@/assets/Icon/Locate.svg" />
+              <img src="@/assets/Iconos/Locate.svg" />
             </div>
             <div>
               {{$t('services.t_four')}}
@@ -151,7 +151,7 @@
           <v-divider vertical></v-divider>
           <v-col lg="2" md="2" sm="12" cols="12">
             <div class="text-center mb-3">
-              <img src="@/assets/Icon/Box.svg" />
+              <img src="@/assets/Iconos/Box.svg" />
             </div>
             <div>{{$t('services.t_five')}}</div>
           </v-col>
@@ -166,7 +166,7 @@
           <v-col class="marco" cols="10">
             <v-row align="center">
               <v-col cols="3" class="text-center mt-2">
-                <img src="@/assets/Icon/GraphicStar.svg" />
+                <img src="@/assets/Iconos/GraphicStar.svg" />
               </v-col>
               <v-col cols="9" class="parrafoTechnology">
                 {{$t('services.t_one')}}
@@ -176,7 +176,7 @@
           <v-col class="marco" cols="10">
             <v-row align="center">
               <v-col cols="3" class="text-center mt-2">
-                <img src="@/assets/Icon/NoteText.svg" />
+                <img src="@/assets/Iconos/NoteText.svg" />
               </v-col>
               <v-col cols="9" class="parrafoTechnology">
                 {{$t('services.t_two')}}
@@ -186,7 +186,7 @@
           <v-col class="marco" cols="10">
             <v-row align="center">
               <v-col cols="3" class="text-center mt-2">
-                <img src="@/assets/Icon/Clock.svg" />
+                <img src="@/assets/Iconos/Clock.svg" />
               </v-col>
               <v-col cols="9" class="parrafoTechnology">
                 {{$t('services.t_three')}}
@@ -196,7 +196,7 @@
           <v-col class="marco" cols="10">
             <v-row align="center">
               <v-col cols="3" class="text-center mt-2">
-                <img src="@/assets/Icon/Locate.svg" />
+                <img src="@/assets/Iconos/Locate.svg" />
               </v-col>
               <v-col cols="9" class="parrafoTechnology">
                 {{$t('services.t_four')}}
@@ -206,7 +206,7 @@
           <v-col class="marco" cols="10">
             <v-row align="center">
               <v-col cols="3" class="text-center mt-2">
-                <img src="@/assets/Icon/Box.svg" />
+                <img src="@/assets/Iconos/Box.svg" />
               </v-col>
               <v-col cols="9" class="parrafoTechnology">
                 {{$t('services.t_five')}}
@@ -265,7 +265,7 @@ export default {
   computed: {
     getImg(imagen) {
       console.log(imagen)
-      return require('../assets/Icon/' + imagen)
+      return require('../assets/Iconos/' + imagen)
     },
   },
 }
